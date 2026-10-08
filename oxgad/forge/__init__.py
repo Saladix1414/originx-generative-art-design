@@ -1,3 +1,13 @@
+from oxgad.forge.backend import (
+    LOCAL_FORGE_BACKEND_SCHEMA_PATH,
+    LOCAL_FORGE_BACKEND_VERSION,
+    LocalForgeBackendCompatibilityError,
+    LocalForgeBackendValidationError,
+    declare_local_forge_backend,
+    load_local_forge_backend_schema,
+    validate_local_forge_backend,
+    validate_local_forge_backend_for_request,
+)
 from oxgad.forge.boundary import (
     LOCAL_FORGE_EXECUTION_BOUNDARY_VERSION,
     LOCAL_FORGE_EXECUTION_DECISION_SCHEMA_PATH,
@@ -24,23 +34,30 @@ from oxgad.forge.validator import (
 )
 
 __all__ = [
+    "LOCAL_FORGE_BACKEND_SCHEMA_PATH",
+    "LOCAL_FORGE_BACKEND_VERSION",
     "LOCAL_FORGE_EXECUTION_BOUNDARY_VERSION",
     "LOCAL_FORGE_EXECUTION_DECISION_SCHEMA_PATH",
     "LOCAL_FORGE_EXECUTION_DECISION_VERSION",
-    "LocalForgeExecutionBlocked",
-    "LocalForgeExecutionDecisionValidationError",
-    "assess_local_forge_execution",
-    "load_local_forge_execution_decision_schema",
-    "require_local_forge_execution",
-    "validate_local_forge_execution_decision",
-
     "LOCAL_FORGE_PREPARATION_VERSION",
     "LOCAL_FORGE_SCHEMA_PATH",
     "LOCAL_FORGE_VERSION",
+    "LocalForgeBackendCompatibilityError",
+    "LocalForgeBackendValidationError",
+    "LocalForgeExecutionBlocked",
+    "LocalForgeExecutionDecisionValidationError",
     "LocalForgePreparationError",
     "LocalForgeValidationError",
+    "assess_local_forge_execution",
+    "declare_local_forge_backend",
     "is_valid_local_forge_request",
+    "load_local_forge_backend_schema",
+    "load_local_forge_execution_decision_schema",
     "load_local_forge_schema",
     "prepare_local_forge_request",
+    "require_local_forge_execution",
+    "validate_local_forge_backend",
+    "validate_local_forge_backend_for_request",
+    "validate_local_forge_execution_decision",
     "validate_local_forge_request",
 ]
