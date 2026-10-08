@@ -1,0 +1,15 @@
+{
+  "phase": "phase21",
+  "title": "Documentation Index",
+  "status": "closed",
+  "guarantees": [
+    "phase documentation index exists",
+    "phases 8 through 20 are linked",
+    "phase closure files are verified",
+    "documentation states the local-first boundary",
+    "no runtime behavior is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase22-cli-entrypoints"
+}
