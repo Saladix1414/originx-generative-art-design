@@ -1,0 +1,15 @@
+{
+  "phase": "phase29",
+  "title": "CLI Contract Report",
+  "status": "closed",
+  "guarantees": [
+    "CLI can list known local contract schemas",
+    "contract report uses local schema paths",
+    "contract report is read-only",
+    "contract report does not write files",
+    "contract report does not call network services",
+    "contract report does not execute models",
+    "no push is executed"
+  ],
+  "next": "phase30-cli-contract-validation"
+}

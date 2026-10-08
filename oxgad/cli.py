@@ -7,6 +7,23 @@ from pathlib import Path
 from typing import Any
 
 
+CONTRACT_SCHEMAS = {
+    "provenance": "schemas/ox-provenance-manifest-1.schema.json",
+    "quality": "schemas/ox-quality-gate-report-1.schema.json",
+    "promotion": "schemas/ox-canonical-promotion-1.schema.json",
+    "ledger": "schemas/ox-canonical-ledger-1.schema.json",
+    "output": "schemas/ox-canonical-output-manifest-1.schema.json",
+    "review": "schemas/ox-review-pack-1.schema.json",
+    "release": "schemas/ox-release-readiness-1.schema.json",
+    "release-ledger": "schemas/ox-release-ledger-1.schema.json",
+    "export-plan": "schemas/ox-local-export-plan-1.schema.json",
+    "export-dry-run": "schemas/ox-local-export-dry-run-1.schema.json",
+    "export-result": "schemas/ox-local-export-result-1.schema.json",
+    "export-audit": "schemas/ox-export-audit-ledger-1.schema.json",
+    "project-readiness": "schemas/ox-project-readiness-summary-1.schema.json",
+}
+
+
 FIXTURE_SCHEMA_MAP = {
     "canonical-promotion.json": "schemas/ox-canonical-promotion-1.schema.json",
     "project-readiness-summary.json": "schemas/ox-project-readiness-summary-1.schema.json",
@@ -133,6 +150,32 @@ def _command_validate_fixtures(args: argparse.Namespace) -> int:
     return 0 if valid else 2
 
 
+def _command_contracts(args: argparse.Namespace) -> int:
+    contracts = []
+
+    for name, schema_path in sorted(CONTRACT_SCHEMAS.items()):
+        schema = _load_json(schema_path)
+        contracts.append(
+            {
+                "name": name,
+                "schema_id": schema.get("$id"),
+                "path": schema_path,
+            }
+        )
+
+    print(
+        json.dumps(
+            {
+                "count": len(contracts),
+                "contracts": contracts,
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -169,6 +212,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     validate_fixtures.add_argument("directory")
     validate_fixtures.set_defaults(func=_command_validate_fixtures)
+
+    contracts = subcommands.add_parser(
+        "contracts",
+        help="List local contract schemas known to the CLI.",
+    )
+    contracts.set_defaults(func=_command_contracts)
 
     return parser
 
