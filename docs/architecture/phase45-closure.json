@@ -1,0 +1,16 @@
+{
+  "phase": "phase45",
+  "title": "Final Local Release Check",
+  "status": "closed",
+  "guarantees": [
+    "CLI version reports 0.41.0",
+    "readiness reports true",
+    "stability reports read-only consistency",
+    "contracts validate",
+    "fixtures validate",
+    "release documentation exists",
+    "no release tag is created",
+    "no push is executed"
+  ],
+  "next": "phase46-user-approved-tag"
+}
