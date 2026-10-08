@@ -1,0 +1,15 @@
+{
+  "phase": "phase51",
+  "title": "Art Spec Expansion Loader",
+  "status": "closed",
+  "guarantees": [
+    "art spec expansion catalog can be loaded",
+    "catalog is validated against schema",
+    "catalog summary exposes controlled vocabulary counts",
+    "invalid catalog is rejected",
+    "master prompt roadmap is prepared",
+    "no prompt generation is introduced",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase1-audit-baseline"
+}
