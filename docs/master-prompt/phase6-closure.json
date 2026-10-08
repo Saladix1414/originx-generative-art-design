@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase6",
+  "title": "Art Spec Binding",
+  "status": "closed",
+  "guarantees": [
+    "master prompt can bind to OX-ART-SPEC-1",
+    "master prompt can bind to OX-RENDER-1",
+    "art spec hash is preserved",
+    "render seed is preserved",
+    "binding is deterministic",
+    "local-first boundary is preserved",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase7-prompt-hashing"
+}
