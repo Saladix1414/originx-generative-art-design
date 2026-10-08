@@ -1,0 +1,16 @@
+{
+  "phase": "phase18",
+  "title": "Local Export Executor",
+  "status": "closed",
+  "guarantees": [
+    "local export result schema exists",
+    "export requires ready dry run",
+    "export writes canonical manifest json",
+    "export copies one explicit artifact source",
+    "destination paths are restricted to output/canonical",
+    "path traversal is rejected",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase19-export-audit-ledger"
+}
