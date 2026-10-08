@@ -1,0 +1,15 @@
+{
+  "phase": "phase44",
+  "title": "Release Tag Plan",
+  "status": "closed",
+  "guarantees": [
+    "planned tag v0.41.0 is documented",
+    "target version 0.41.0 is documented",
+    "tag preconditions are documented",
+    "tag creation boundary is documented",
+    "no git tag is created",
+    "no push is executed",
+    "no package publishing is introduced"
+  ],
+  "next": "phase45-final-local-release-check"
+}
