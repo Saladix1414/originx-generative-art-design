@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase11",
+  "title": "CLI Inspection",
+  "status": "closed",
+  "guarantees": [
+    "CLI can inspect master prompt payloads",
+    "inspection reports render intent",
+    "inspection reports composition profile",
+    "inspection reports master prompt hash",
+    "inspection is deterministic",
+    "inspection is read-only",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase12-cli-validation"
+}

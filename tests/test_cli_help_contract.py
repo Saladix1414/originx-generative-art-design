@@ -14,6 +14,7 @@ COMMANDS = {
     "readiness",
     "version",
     "stability",
+    "prompt-inspect",
 }
 
 

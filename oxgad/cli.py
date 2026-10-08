@@ -8,6 +8,8 @@ from jsonschema import Draft202012Validator
 from pathlib import Path
 from typing import Any
 
+from oxgad.master_prompt import master_prompt_hash
+
 
 EVIDENCE_CHAIN = [
     {
@@ -377,6 +379,30 @@ def _command_stability(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_prompt_inspect(args: argparse.Namespace) -> int:
+    payload = _load_json(args.path)
+    controlled = payload.get("controlled_vocabulary", {})
+    prompt = payload.get("prompt", {})
+
+    print(
+        json.dumps(
+            {
+                "schema_version": payload.get("schema_version"),
+                "prompt_id": payload.get("prompt_id"),
+                "render_intent": controlled.get("render_intent"),
+                "composition_profile": controlled.get("composition_profile"),
+                "trait_family_count": len(controlled.get("trait_families", [])),
+                "positive_length": len(str(prompt.get("positive", ""))),
+                "negative_length": len(str(prompt.get("negative", ""))),
+                "master_prompt_hash": master_prompt_hash(payload),
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -454,6 +480,13 @@ def build_parser() -> argparse.ArgumentParser:
         help="Print local CLI stability summary.",
     )
     stability.set_defaults(func=_command_stability)
+
+    prompt_inspect = subcommands.add_parser(
+        "prompt-inspect",
+        help="Inspect a local OX-MASTER-PROMPT-1 payload.",
+    )
+    prompt_inspect.add_argument("path")
+    prompt_inspect.set_defaults(func=_command_prompt_inspect)
 
     return parser
 
