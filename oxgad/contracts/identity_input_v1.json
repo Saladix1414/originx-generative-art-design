@@ -1,0 +1,14 @@
+{
+  "contractVersion": "OX-IDENTITY-INPUT-1",
+  "containsPII": false,
+  "requiredFields": [
+    "tokenId",
+    "serial",
+    "name",
+    "tier",
+    "generationTheme",
+    "dna",
+    "dnaHash",
+    "resonance"
+  ]
+}

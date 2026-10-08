@@ -1,0 +1,16 @@
+{
+  "contractVersion": "OX-ART-OUTPUT-1",
+  "containsPII": false,
+  "fields": [
+    "tokenId",
+    "artSpecHash",
+    "renderPlanHash",
+    "modelName",
+    "modelVersion",
+    "modelHash",
+    "seed",
+    "candidateMediaHash",
+    "canonicalMediaHash",
+    "qualityStatus"
+  ]
+}

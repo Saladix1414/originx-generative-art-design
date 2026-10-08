@@ -1,0 +1,11 @@
+{
+  "project": "OriginX Generative Art Design",
+  "projectVersion": "OX-GAD-1",
+  "engine": "OriginX Generative Art Engine",
+  "engineVersion": "OX-GAE-1",
+  "artSpecVersion": "OX-ART-SPEC-1",
+  "renderVersion": "OX-RENDER-1",
+  "executionPolicy": "LOCAL_FIRST",
+  "providerIndependent": true,
+  "canonicalArtworkRequiresQualityApproval": true
+}
