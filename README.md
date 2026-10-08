@@ -41,3 +41,29 @@ Identity Input
 - extreme visual detail
 - anatomy before decoration
 - candidate artwork is never automatically canonical
+
+## Local CLI
+
+Install the project locally in editable mode:
+
+    python -m pip install -e .
+
+Inspect local JSON evidence:
+
+    oxgad schema tests/fixtures/cli/project-readiness-summary.json
+    oxgad status tests/fixtures/cli/canonical-promotion.json
+
+Validate local fixtures and contracts:
+
+    oxgad validate-fixtures tests/fixtures/cli
+    oxgad validate-contracts
+
+Inspect the local evidence pipeline:
+
+    oxgad contracts
+    oxgad evidence-chain
+    oxgad readiness
+    oxgad version
+    oxgad stability
+
+The CLI is local-first and read-only for inspection commands. It does not execute models, call network services, publish packages, upload artifacts, mint assets, or perform uncontrolled artifact movement.

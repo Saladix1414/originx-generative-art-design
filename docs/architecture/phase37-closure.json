@@ -1,0 +1,15 @@
+{
+  "phase": "phase37",
+  "title": "README CLI Section",
+  "status": "closed",
+  "guarantees": [
+    "README documents local CLI installation",
+    "README documents inspection commands",
+    "README documents validation commands",
+    "README documents evidence pipeline commands",
+    "README preserves local-first boundary",
+    "documentation is tested",
+    "no push is executed"
+  ],
+  "next": "phase38-cli-json-output-contract"
+}
