@@ -11,8 +11,10 @@ from typing import Any
 from oxgad import ART_SPEC_VERSION
 from oxgad.design.art_rules import (
     ART_RULE_CATALOG_VERSION,
-    art_rule_hash,
-    select_art_rules,
+)
+from oxgad.design.integration import (
+    ART_DESIGN_INTEGRATION_VERSION,
+    compile_integrated_design,
 )
 from oxgad.structure.canonical import (
     art_spec_hash,
@@ -47,6 +49,7 @@ class ArtSpecAssembly:
     art_spec: dict[str, Any]
     art_spec_hash: str
     art_rule_hash: str
+    design_hash: str
     seed: int
 
 
@@ -1301,18 +1304,28 @@ def assemble_art_spec(
         structure_input
     )
 
-    rules = select_art_rules(
+    design = compile_integrated_design(
         tier=structure_input.tier,
         seed=seed,
     )
 
     if (
-        rules.get("catalogVersion")
+        design.get("integrationVersion")
+        != ART_DESIGN_INTEGRATION_VERSION
+    ):
+        raise ArtSpecAssemblyError(
+            "Unexpected Art Design Integration version."
+        )
+
+    if (
+        design.get("catalogVersion")
         != ART_RULE_CATALOG_VERSION
     ):
         raise ArtSpecAssemblyError(
             "Unexpected Art Rule Catalog version."
         )
+
+    rules = design["artRules"]
 
     schema = load_art_spec_schema()
 
@@ -1359,9 +1372,7 @@ def assemble_art_spec(
         art_spec_hash=art_spec_hash(
             art_spec
         ),
-        art_rule_hash=art_rule_hash(
-            tier=structure_input.tier,
-            seed=seed,
-        ),
+        art_rule_hash=design["artRuleHash"],
+        design_hash=design["designHash"],
         seed=seed,
     )
