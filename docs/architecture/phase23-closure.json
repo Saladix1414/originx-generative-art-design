@@ -1,0 +1,15 @@
+{
+  "phase": "phase23",
+  "title": "CLI Packaging",
+  "status": "closed",
+  "guarantees": [
+    "pyproject metadata exists",
+    "oxgad console script is declared",
+    "oxgad package discovery is configured",
+    "no publishing command is introduced",
+    "no model execution command is introduced",
+    "no network workflow is introduced",
+    "no push is executed"
+  ],
+  "next": "phase24-package-install-smoke"
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "originx-generative-art-design"
+version = "0.23.0"
+description = "Local-first generative art design evidence pipeline."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "jsonschema>=4.0"
+]
+
+[project.scripts]
+oxgad = "oxgad.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["oxgad*"]
