@@ -8,7 +8,10 @@ from jsonschema import Draft202012Validator
 from pathlib import Path
 from typing import Any
 
-from oxgad.master_prompt import master_prompt_hash
+from oxgad.master_prompt import (
+    evaluate_master_prompt_quality,
+    master_prompt_hash,
+)
 
 
 EVIDENCE_CHAIN = [
@@ -403,6 +406,47 @@ def _command_prompt_inspect(args: argparse.Namespace) -> int:
     return 0
 
 
+
+def _command_prompt_validate(args: argparse.Namespace) -> int:
+    payload = _load_json(args.path)
+    schema = _load_json("schemas/ox-master-prompt-1.schema.json")
+
+    try:
+        jsonschema.validate(payload, schema)
+    except jsonschema.ValidationError as error:
+        print(
+            json.dumps(
+                {
+                    "valid": False,
+                    "schema_valid": False,
+                    "quality_passed": False,
+                    "error": error.message,
+                },
+                sort_keys=True,
+            )
+        )
+        return 2
+
+    quality = evaluate_master_prompt_quality(payload)
+    valid = bool(quality["passed"])
+
+    print(
+        json.dumps(
+            {
+                "valid": valid,
+                "schema_valid": True,
+                "quality_passed": quality["passed"],
+                "score": quality["score"],
+                "master_prompt_hash": master_prompt_hash(payload),
+                "gates": quality["gates"],
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0 if valid else 2
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -487,6 +531,19 @@ def build_parser() -> argparse.ArgumentParser:
     )
     prompt_inspect.add_argument("path")
     prompt_inspect.set_defaults(func=_command_prompt_inspect)
+
+
+    prompt_validate = subcommands.add_parser(
+        "prompt-validate",
+        help="Validate an OX master prompt payload.",
+    )
+    prompt_validate.add_argument(
+        "path",
+        help="Path to an OX-MASTER-PROMPT-1 JSON payload.",
+    )
+    prompt_validate.set_defaults(
+        func=_command_prompt_validate
+    )
 
     return parser
 

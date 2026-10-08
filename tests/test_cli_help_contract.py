@@ -15,6 +15,7 @@ COMMANDS = {
     "version",
     "stability",
     "prompt-inspect",
+    "prompt-validate",
 }
 
 

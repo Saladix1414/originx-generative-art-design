@@ -1,0 +1,14 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_12",
+  "name": "CLI Validation",
+  "status": "closed",
+  "command": "oxgad prompt-validate",
+  "readOnly": true,
+  "validates": [
+    "OX-MASTER-PROMPT-1 schema",
+    "validation gates",
+    "quality profile",
+    "canonical prompt hash"
+  ],
+  "noPushExecuted": true
+}
