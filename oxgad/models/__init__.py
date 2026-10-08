@@ -1,3 +1,12 @@
+from oxgad.models.binding import (
+    MODEL_BINDING_SCHEMA_PATH,
+    MODEL_BINDING_VERSION,
+    ModelBindingError,
+    bind_verified_model_to_local_forge,
+    load_model_binding_schema,
+    validate_model_binding,
+    validate_model_binding_for_local_forge,
+)
 from oxgad.models.trust import (
     MODEL_TRUST_EVIDENCE_SCHEMA_PATH,
     MODEL_TRUST_EVIDENCE_VERSION,
@@ -23,6 +32,13 @@ from oxgad.models.validator import (
 )
 
 __all__ = [
+    "MODEL_BINDING_SCHEMA_PATH",
+    "MODEL_BINDING_VERSION",
+    "ModelBindingError",
+    "bind_verified_model_to_local_forge",
+    "load_model_binding_schema",
+    "validate_model_binding",
+    "validate_model_binding_for_local_forge",
     "MODEL_TRUST_EVIDENCE_SCHEMA_PATH",
     "MODEL_TRUST_EVIDENCE_VERSION",
     "ModelTrustEvidenceError",
