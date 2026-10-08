@@ -1,0 +1,15 @@
+{
+  "phase": "phase41",
+  "title": "Version Bump Plan",
+  "status": "closed",
+  "guarantees": [
+    "current version is documented",
+    "planned version is documented",
+    "version bump rationale is documented",
+    "version bump execution boundary is documented",
+    "package metadata is not changed",
+    "no package publishing is introduced",
+    "no push is executed"
+  ],
+  "next": "phase42-version-bump"
+}
