@@ -1,0 +1,15 @@
+{
+  "phase": "phase22",
+  "title": "CLI Entrypoints",
+  "status": "closed",
+  "guarantees": [
+    "local CLI module exists",
+    "CLI can inspect schema identity fields",
+    "CLI can inspect status and decision fields",
+    "CLI does not write files",
+    "CLI does not execute models",
+    "CLI does not call network services",
+    "no push is executed"
+  ],
+  "next": "phase23-cli-packaging"
+}
