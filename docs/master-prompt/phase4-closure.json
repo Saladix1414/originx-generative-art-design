@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase4",
+  "title": "Loader",
+  "status": "closed",
+  "guarantees": [
+    "master prompt catalog can be loaded",
+    "catalog is validated against schema",
+    "catalog summary exposes vocabulary counts",
+    "invalid catalog is rejected",
+    "no prompt strings are built",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase5-builder-foundation"
+}
