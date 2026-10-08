@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-master-prompt-evidence-chain-1.schema.json",
+  "title": "OriginX Master Prompt Evidence Chain",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chainVersion",
+    "project",
+    "promptId",
+    "steps",
+    "runtimeTarget",
+    "seed",
+    "compilerVersion",
+    "authority",
+    "complete"
+  ],
+  "properties": {
+    "chainVersion": {
+      "const": "OX-MASTER-PROMPT-EVIDENCE-CHAIN-1"
+    },
+    "project": {
+      "const": "originx-generative-art-design"
+    },
+    "promptId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/artSpecStep"
+        },
+        {
+          "$ref": "#/$defs/renderPlanStep"
+        },
+        {
+          "$ref": "#/$defs/masterPromptStep"
+        },
+        {
+          "$ref": "#/$defs/promptProvenanceHookStep"
+        }
+      ]
+    },
+    "runtimeTarget": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "compilerVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateIsCanonical",
+        "aiOutputIsCanonical",
+        "manualApprovalRequired"
+      ],
+      "properties": {
+        "candidateIsCanonical": {
+          "const": false
+        },
+        "aiOutputIsCanonical": {
+          "const": false
+        },
+        "manualApprovalRequired": {
+          "const": true
+        }
+      }
+    },
+    "complete": {
+      "const": true
+    }
+  },
+  "$defs": {
+    "hashStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step",
+        "hash",
+        "required"
+      ],
+      "properties": {
+        "step": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "required": {
+          "const": true
+        }
+      }
+    },
+    "artSpecStep": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/hashStep"
+        },
+        {
+          "properties": {
+            "step": {
+              "const": "art-spec"
+            }
+          }
+        }
+      ]
+    },
+    "renderPlanStep": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/hashStep"
+        },
+        {
+          "properties": {
+            "step": {
+              "const": "render-plan"
+            }
+          }
+        }
+      ]
+    },
+    "masterPromptStep": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/hashStep"
+        },
+        {
+          "properties": {
+            "step": {
+              "const": "master-prompt"
+            }
+          }
+        }
+      ]
+    },
+    "promptProvenanceHookStep": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/hashStep"
+        },
+        {
+          "properties": {
+            "step": {
+              "const": "prompt-provenance-hook"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

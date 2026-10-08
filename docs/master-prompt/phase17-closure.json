@@ -1,0 +1,10 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_17",
+  "name": "Prompt Chain Contract Schema",
+  "status": "closed",
+  "schema": "schemas/ox-master-prompt-evidence-chain-1.schema.json",
+  "readOnly": true,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noPushExecuted": true
+}

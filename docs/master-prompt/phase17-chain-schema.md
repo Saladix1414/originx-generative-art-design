@@ -1,0 +1,1 @@
+# Master Prompt Phase 17 - Prompt Chain Contract Schema\n\nAdds `ox-master-prompt-evidence-chain-1.schema.json`.\n\nThe schema validates the prompt evidence chain order, SHA-256 digests, runtime binding, seed, compiler version, and non-authority boundaries.\n\nThis phase is read-only and does not execute models, generate media, call networks, or approve canonical artwork.\n
