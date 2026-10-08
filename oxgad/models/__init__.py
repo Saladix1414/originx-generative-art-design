@@ -1,3 +1,13 @@
+from oxgad.models.receipt import (
+    MODEL_ACQUISITION_RECEIPT_SCHEMA_PATH,
+    MODEL_ACQUISITION_RECEIPT_VERSION,
+    ModelAcquisitionReceiptError,
+    assert_external_model_storage_path,
+    first_local_model_external_path,
+    load_model_acquisition_receipt_schema,
+    validate_model_acquisition_receipt,
+    verify_acquired_model_file,
+)
 from oxgad.models.acquisition import (
     MODEL_ACQUISITION_PLAN_VERSION,
     MODEL_ACQUISITION_SCHEMA_PATH,
@@ -41,6 +51,14 @@ from oxgad.models.validator import (
 )
 
 __all__ = [
+    "MODEL_ACQUISITION_RECEIPT_SCHEMA_PATH",
+    "MODEL_ACQUISITION_RECEIPT_VERSION",
+    "ModelAcquisitionReceiptError",
+    "assert_external_model_storage_path",
+    "first_local_model_external_path",
+    "load_model_acquisition_receipt_schema",
+    "validate_model_acquisition_receipt",
+    "verify_acquired_model_file",
     "MODEL_ACQUISITION_PLAN_VERSION",
     "MODEL_ACQUISITION_SCHEMA_PATH",
     "ModelAcquisitionPlanError",
