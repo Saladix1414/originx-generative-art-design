@@ -1,0 +1,59 @@
+{
+  "controlled_vocabulary": {
+    "composition_profile": "centered_icon",
+    "rarity_band": "rare",
+    "render_intent": "high_detail",
+    "trait_families": [
+      "palette",
+      "geometry",
+      "material",
+      "lighting"
+    ]
+  },
+  "detail_priorities": {
+    "macro": [
+      "anatomy correctness",
+      "silhouette clarity",
+      "composition hierarchy"
+    ],
+    "meso": [
+      "scale plates",
+      "armor structure",
+      "secondary architecture"
+    ],
+    "micro": [
+      "erosion",
+      "fractures",
+      "surface variation"
+    ]
+  },
+  "project": "originx-generative-art-design",
+  "prompt": {
+    "negative": "generic fantasy, generic cyberpunk, cartoon styling, recognizable franchise design, excessive neon, flat lighting, random ornament, watermark, watermark, text artifacts, logo, extra limbs, broken anatomy",
+    "positive": "dark monumental ancient technological presence, physically heavy cinematic form, composition profile centered_icon, rarity band rare, render intent high_detail"
+  },
+  "prompt_id": "master-prompt-token-0001-high_detail",
+  "provenance_hooks": {
+    "catalog_schema_version": "ox-art-spec-expansion-1",
+    "hash_required": true,
+    "prompt_compiler_version": "OX-MASTER-PROMPT-COMPILER-1"
+  },
+  "render_binding": {
+    "model_requirement": "local diffusion model",
+    "runtime_target": "LOCAL_CPP",
+    "seed": 7604078333905694560
+  },
+  "safety_boundaries": {
+    "local_first": true,
+    "no_external_provider_dependency": true,
+    "no_franchise_style": true,
+    "no_network": true,
+    "no_uncontrolled_text": true
+  },
+  "schema_version": "ox-master-prompt-1",
+  "source": {
+    "art_spec_hash": "44e18f1e2fcc7bd107c7415aa9858cf98338475b9e7b9e94ab8c9ec2a250b10d",
+    "identity_input_id": "identity-token-0001",
+    "render_plan_hash": "3438cbd34a5eef3592d5a7a9be7be9170b28263afb54f7fb5dc67f8e2bcc13dc"
+  }
+}

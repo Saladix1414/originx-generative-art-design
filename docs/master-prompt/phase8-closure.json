@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase8",
+  "title": "Fixtures",
+  "status": "closed",
+  "guarantees": [
+    "preview master prompt fixture exists",
+    "candidate master prompt fixture exists",
+    "canonical master prompt fixture exists",
+    "high detail master prompt fixture exists",
+    "fixtures validate against OX-MASTER-PROMPT-1",
+    "fixtures are hashable",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase9-validation-gates"
+}
