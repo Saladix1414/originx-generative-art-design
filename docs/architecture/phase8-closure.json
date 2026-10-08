@@ -1,0 +1,14 @@
+{
+  "phase": "phase8",
+  "title": "Provenance Foundation",
+  "status": "closed",
+  "guarantees": [
+    "provenance manifest schema exists",
+    "provenance builder validates required identifiers",
+    "output artifacts are bound by sha256",
+    "manifest tampering is detectable",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase9-quality-gates"
+}
