@@ -6,6 +6,7 @@ import json
 import jsonschema
 from jsonschema import Draft202012Validator
 from pathlib import Path
+from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_prompt_evidence_chain
 from typing import Any
 
 from oxgad.master_prompt import (
@@ -447,6 +448,37 @@ def _command_prompt_validate(args: argparse.Namespace) -> int:
     return 0 if valid else 2
 
 
+
+def _command_prompt_chain(args: argparse.Namespace) -> int:
+    payload = _load_json(args.path)
+
+    try:
+        chain = build_prompt_evidence_chain(payload)
+        valid = verify_prompt_evidence_chain(chain)
+    except (KeyError, TypeError, ValueError) as error:
+        print(
+            json.dumps(
+                {
+                    "valid": False,
+                    "error": str(error),
+                },
+                sort_keys=True,
+            )
+        )
+        return 2
+
+    chain["valid"] = valid
+
+    print(
+        json.dumps(
+            chain,
+            sort_keys=True,
+        )
+    )
+
+    return 0 if valid else 2
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -543,6 +575,19 @@ def build_parser() -> argparse.ArgumentParser:
     )
     prompt_validate.set_defaults(
         func=_command_prompt_validate
+    )
+
+
+    prompt_chain = subcommands.add_parser(
+        "prompt-chain",
+        help="Print the OX master prompt evidence chain.",
+    )
+    prompt_chain.add_argument(
+        "path",
+        help="Path to an OX-MASTER-PROMPT-1 JSON payload.",
+    )
+    prompt_chain.set_defaults(
+        func=_command_prompt_chain
     )
 
     return parser

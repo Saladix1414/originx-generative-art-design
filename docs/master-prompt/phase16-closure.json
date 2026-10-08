@@ -1,0 +1,10 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_16",
+  "name": "CLI Evidence Chain Exposure",
+  "status": "closed",
+  "command": "oxgad prompt-chain",
+  "readOnly": true,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noPushExecuted": true
+}
