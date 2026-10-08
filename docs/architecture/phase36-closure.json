@@ -1,0 +1,15 @@
+{
+  "phase": "phase36",
+  "title": "Release Notes Draft",
+  "status": "closed",
+  "guarantees": [
+    "release notes draft exists",
+    "release notes cover the evidence pipeline",
+    "release notes cover the CLI surface",
+    "release notes preserve local-first boundaries",
+    "release notes are tested",
+    "no runtime behavior is introduced",
+    "no push is executed"
+  ],
+  "next": "phase37-readme-cli-section"
+}
