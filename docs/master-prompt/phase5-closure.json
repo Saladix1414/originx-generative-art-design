@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase5",
+  "title": "Builder Foundation",
+  "status": "closed",
+  "guarantees": [
+    "master prompt builder outputs schema-valid payloads",
+    "builder is deterministic for identical inputs",
+    "builder uses controlled catalog language",
+    "builder sets local-first safety boundaries",
+    "builder preserves macro meso micro hierarchy",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase6-art-spec-binding"
+}
