@@ -1,4 +1,5 @@
 from oxgad.quality.gates import evaluate_quality_gates
+from oxgad.quality.export_plan import build_local_export_plan
 from oxgad.quality.release_ledger import append_release_readiness, empty_release_ledger, ready_release_ids
 from oxgad.quality.release import evaluate_release_readiness
 from oxgad.quality.review_pack import build_review_pack
@@ -8,6 +9,7 @@ from oxgad.quality.promotion import decide_canonical_promotion
 
 __all__ = [
     "evaluate_quality_gates",
+    "build_local_export_plan",
     "append_release_readiness",
     "empty_release_ledger",
     "ready_release_ids",

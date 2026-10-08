@@ -1,0 +1,15 @@
+{
+  "phase": "phase16",
+  "title": "Local Export Plan",
+  "status": "closed",
+  "guarantees": [
+    "local export plan schema exists",
+    "planned paths are restricted to output/canonical",
+    "unsafe path segments are rejected",
+    "blocked releases produce blocked export plans",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase17-local-export-dry-run"
+}
