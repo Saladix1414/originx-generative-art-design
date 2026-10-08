@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase3",
+  "title": "Catalog",
+  "status": "closed",
+  "guarantees": [
+    "master prompt catalog schema exists",
+    "master prompt catalog exists",
+    "catalog captures OriginX art direction",
+    "catalog captures negative controls",
+    "catalog preserves macro meso micro hierarchy",
+    "catalog is local-only",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase4-loader"
+}

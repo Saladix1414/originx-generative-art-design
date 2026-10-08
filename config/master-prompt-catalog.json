@@ -1,0 +1,79 @@
+{
+  "schema_version": "ox-master-prompt-catalog-1",
+  "project": "originx-generative-art-design",
+  "positive_language": [
+    "dark monumental ancient technological presence",
+    "physically heavy cinematic form",
+    "precise original OriginX visual language",
+    "structured dragon anatomy",
+    "gothic megalithic environment",
+    "weathered basalt architecture",
+    "controlled resonance glyph influence",
+    "high detail without visual noise"
+  ],
+  "negative_language": [
+    "generic fantasy",
+    "generic cyberpunk",
+    "cartoon styling",
+    "recognizable franchise design",
+    "excessive neon",
+    "flat lighting",
+    "random ornament",
+    "watermark"
+  ],
+  "camera_language": [
+    "low heroic camera",
+    "controlled perspective",
+    "clear silhouette framing",
+    "subject dominant composition",
+    "foreground midground background separation"
+  ],
+  "lighting_language": [
+    "cinematic directional lighting",
+    "ancient energy rim light",
+    "volumetric atmospheric depth",
+    "controlled contrast",
+    "material readable highlights"
+  ],
+  "material_language": [
+    "obsidian",
+    "basalt",
+    "oxidized steel",
+    "dark alloy",
+    "mineral deposits",
+    "weathered stone"
+  ],
+  "detail_language": {
+    "macro": [
+      "anatomy correctness",
+      "silhouette clarity",
+      "composition hierarchy"
+    ],
+    "meso": [
+      "scale plates",
+      "armor structure",
+      "secondary architecture"
+    ],
+    "micro": [
+      "erosion",
+      "fractures",
+      "surface variation"
+    ]
+  },
+  "safety_language": {
+    "forbidden_terms": [
+      "http://",
+      "https://",
+      "celebrity",
+      "trademark",
+      "franchise"
+    ],
+    "required_negative_terms": [
+      "watermark",
+      "text artifacts",
+      "logo",
+      "extra limbs",
+      "broken anatomy"
+    ]
+  }
+}
