@@ -1,0 +1,15 @@
+{
+  "phase": "phase38",
+  "title": "CLI JSON Output Contract",
+  "status": "closed",
+  "guarantees": [
+    "primary CLI commands emit JSON objects",
+    "schema command output keys are tested",
+    "status command output keys are tested",
+    "validation command output keys are tested",
+    "readiness and stability output keys are tested",
+    "no runtime behavior is introduced",
+    "no push is executed"
+  ],
+  "next": "phase39-cli-error-output-contract"
+}
