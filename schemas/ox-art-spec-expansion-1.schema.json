@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-art-spec-expansion-1.schema.json",
+  "title": "OriginX Art Spec Expansion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "trait_families",
+    "rarity_bands",
+    "composition_profiles",
+    "render_intents"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ox-art-spec-expansion-1"
+    },
+    "project": {
+      "const": "originx-generative-art-design"
+    },
+    "trait_families": {
+      "type": "array",
+      "minItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "palette",
+          "geometry",
+          "material",
+          "lighting",
+          "depth",
+          "motion",
+          "symbolic_motif",
+          "environment",
+          "distortion",
+          "finish"
+        ]
+      }
+    },
+    "rarity_bands": {
+      "type": "array",
+      "minItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "common",
+          "uncommon",
+          "rare",
+          "epic",
+          "legendary"
+        ]
+      }
+    },
+    "composition_profiles": {
+      "type": "array",
+      "minItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "centered_icon",
+          "radial_field",
+          "layered_landscape",
+          "architectural_stack",
+          "orbital_system",
+          "fragmented_relic",
+          "signal_map",
+          "synthetic_organism"
+        ]
+      }
+    },
+    "render_intents": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "preview",
+          "candidate",
+          "canonical",
+          "high_detail"
+        ]
+      }
+    }
+  }
+}

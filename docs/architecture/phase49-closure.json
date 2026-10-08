@@ -1,0 +1,15 @@
+{
+  "phase": "phase49",
+  "title": "Art Spec Expansion Schema",
+  "status": "closed",
+  "guarantees": [
+    "art spec expansion schema exists",
+    "trait family catalog is constrained",
+    "rarity band catalog is constrained",
+    "composition profile catalog is constrained",
+    "render intent catalog is constrained",
+    "no image generation is introduced",
+    "no push is executed"
+  ],
+  "next": "phase50-art-spec-expansion-catalog"
+}
