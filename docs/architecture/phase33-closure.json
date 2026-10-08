@@ -1,0 +1,15 @@
+{
+  "phase": "phase33",
+  "title": "CLI Help Contract",
+  "status": "closed",
+  "guarantees": [
+    "CLI command surface is tested",
+    "each CLI command exposes help",
+    "phase adds no runtime behavior",
+    "phase prevents silent CLI command removal",
+    "no model execution is introduced",
+    "no network workflow is introduced",
+    "no push is executed"
+  ],
+  "next": "phase34-cli-version-command"
+}
