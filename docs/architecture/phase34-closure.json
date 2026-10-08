@@ -1,0 +1,15 @@
+{
+  "phase": "phase34",
+  "title": "CLI Version Command",
+  "status": "closed",
+  "guarantees": [
+    "CLI can report installed package version",
+    "version command returns JSON",
+    "CLI help contract includes version command",
+    "version command is read-only",
+    "version command does not call network services",
+    "version command does not execute models",
+    "no push is executed"
+  ],
+  "next": "phase35-cli-stability-summary"
+}

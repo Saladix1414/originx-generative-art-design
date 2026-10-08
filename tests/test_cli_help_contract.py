@@ -12,6 +12,7 @@ COMMANDS = {
     "validate-contracts",
     "evidence-chain",
     "readiness",
+    "version",
 }
 
 

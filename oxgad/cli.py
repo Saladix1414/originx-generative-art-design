@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib.metadata
 import json
 import jsonschema
 from jsonschema import Draft202012Validator
@@ -329,6 +330,22 @@ def _command_readiness(args: argparse.Namespace) -> int:
     return 0 if ready else 2
 
 
+def _command_version(args: argparse.Namespace) -> int:
+    print(
+        json.dumps(
+            {
+                "project": "originx-generative-art-design",
+                "version": importlib.metadata.version(
+                    "originx-generative-art-design"
+                ),
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -394,6 +411,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Local fixture directory to validate.",
     )
     readiness.set_defaults(func=_command_readiness)
+
+    version = subcommands.add_parser(
+        "version",
+        help="Print installed package version.",
+    )
+    version.set_defaults(func=_command_version)
 
     return parser
 
