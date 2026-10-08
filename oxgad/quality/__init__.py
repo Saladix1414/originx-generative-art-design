@@ -1,4 +1,5 @@
 from oxgad.quality.gates import evaluate_quality_gates
+from oxgad.quality.project_readiness import summarize_project_readiness
 from oxgad.quality.export_audit import append_export_result, empty_export_audit_ledger, exported_ids
 from oxgad.quality.export_executor import execute_local_export
 from oxgad.quality.export_dry_run import evaluate_local_export_dry_run
@@ -12,6 +13,7 @@ from oxgad.quality.promotion import decide_canonical_promotion
 
 __all__ = [
     "evaluate_quality_gates",
+    "summarize_project_readiness",
     "append_export_result",
     "empty_export_audit_ledger",
     "exported_ids",

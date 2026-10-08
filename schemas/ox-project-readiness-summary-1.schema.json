@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-project-readiness-summary-1.schema.json",
+  "title": "OriginX Generative Art Design Project Readiness Summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "status",
+    "checks"
+  ],
+  "properties": {
+    "schema_version": { "const": "ox-project-readiness-summary-1" },
+    "project": { "const": "originx-generative-art-design" },
+    "phase": { "const": "phase20" },
+    "status": { "enum": ["ready", "blocked"] },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "review_ready",
+        "release_ready",
+        "release_recorded",
+        "export_recorded"
+      ],
+      "properties": {
+        "review_ready": { "type": "boolean" },
+        "release_ready": { "type": "boolean" },
+        "release_recorded": { "type": "boolean" },
+        "export_recorded": { "type": "boolean" }
+      }
+    }
+  }
+}
