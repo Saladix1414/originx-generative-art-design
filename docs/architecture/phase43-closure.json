@@ -1,0 +1,15 @@
+{
+  "phase": "phase43",
+  "title": "Release Readiness Recheck",
+  "status": "closed",
+  "guarantees": [
+    "CLI version reports 0.41.0",
+    "CLI stability reports 0.41.0",
+    "contracts validate after version bump",
+    "fixtures validate after version bump",
+    "readiness remains true after version bump",
+    "evidence chain matches registered contracts",
+    "no push is executed"
+  ],
+  "next": "phase44-release-tag-plan"
+}
