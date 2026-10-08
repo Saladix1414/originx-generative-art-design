@@ -1,0 +1,15 @@
+{
+  "phase": "phase27",
+  "title": "CLI Validation Errors",
+  "status": "closed",
+  "guarantees": [
+    "invalid fixture validation returns exit code 2",
+    "invalid fixture validation prints JSON",
+    "valid fixture validation still returns exit code 0",
+    "validation errors remain local and read-only",
+    "no model execution is introduced",
+    "no network workflow is introduced",
+    "no push is executed"
+  ],
+  "next": "phase28-cli-directory-validation"
+}

@@ -54,7 +54,22 @@ def _command_validate_fixture(args: argparse.Namespace) -> int:
     payload = _load_json(args.path)
     schema = _load_json(args.schema)
 
-    jsonschema.validate(payload, schema)
+    try:
+        jsonschema.validate(payload, schema)
+    except jsonschema.ValidationError as error:
+        print(
+            json.dumps(
+                {
+                    "valid": False,
+                    "schema_version": payload.get("schema_version"),
+                    "schema_id": schema.get("$id"),
+                    "error": error.message,
+                },
+                sort_keys=True,
+            )
+        )
+
+        return 2
 
     print(
         json.dumps(
