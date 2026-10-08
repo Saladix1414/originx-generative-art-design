@@ -1,0 +1,11 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_18",
+  "name": "CLI Chain Schema Validation",
+  "status": "closed",
+  "command": "oxgad prompt-chain",
+  "schema": "schemas/ox-master-prompt-evidence-chain-1.schema.json",
+  "readOnly": true,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noPushExecuted": true
+}

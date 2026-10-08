@@ -455,6 +455,13 @@ def _command_prompt_chain(args: argparse.Namespace) -> int:
     try:
         chain = build_prompt_evidence_chain(payload)
         valid = verify_prompt_evidence_chain(chain)
+        chain_schema = _load_json(
+            "schemas/ox-master-prompt-evidence-chain-1.schema.json"
+        )
+        jsonschema.validate(
+            chain,
+            chain_schema,
+        )
     except (KeyError, TypeError, ValueError) as error:
         print(
             json.dumps(
@@ -468,6 +475,7 @@ def _command_prompt_chain(args: argparse.Namespace) -> int:
         return 2
 
     chain["valid"] = valid
+    chain["schema_valid"] = True
 
     print(
         json.dumps(
