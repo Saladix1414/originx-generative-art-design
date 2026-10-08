@@ -346,6 +346,37 @@ def _command_version(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_stability(args: argparse.Namespace) -> int:
+    parser = build_parser()
+    command_names = []
+
+    for action in parser._actions:
+        choices = getattr(action, "choices", None)
+        if choices:
+            command_names = sorted(choices)
+            break
+
+    print(
+        json.dumps(
+            {
+                "project": "originx-generative-art-design",
+                "version": importlib.metadata.version(
+                    "originx-generative-art-design"
+                ),
+                "commands": command_names,
+                "command_count": len(command_names),
+                "contract_count": len(CONTRACT_SCHEMAS),
+                "fixture_count": len(FIXTURE_SCHEMA_MAP),
+                "evidence_chain_count": len(EVIDENCE_CHAIN),
+                "read_only": True,
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -417,6 +448,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Print installed package version.",
     )
     version.set_defaults(func=_command_version)
+
+    stability = subcommands.add_parser(
+        "stability",
+        help="Print local CLI stability summary.",
+    )
+    stability.set_defaults(func=_command_stability)
 
     return parser
 

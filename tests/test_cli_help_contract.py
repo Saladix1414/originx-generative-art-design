@@ -13,6 +13,7 @@ COMMANDS = {
     "evidence-chain",
     "readiness",
     "version",
+    "stability",
 }
 
 

@@ -1,0 +1,15 @@
+{
+  "phase": "phase35",
+  "title": "CLI Stability Summary",
+  "status": "closed",
+  "guarantees": [
+    "CLI can report stability summary",
+    "stability summary includes command surface",
+    "stability summary includes contract count",
+    "stability summary includes fixture count",
+    "stability summary includes evidence chain count",
+    "stability summary is read-only",
+    "no push is executed"
+  ],
+  "next": "phase36-release-notes-draft"
+}
