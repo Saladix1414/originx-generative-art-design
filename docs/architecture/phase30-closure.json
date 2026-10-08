@@ -1,0 +1,15 @@
+{
+  "phase": "phase30",
+  "title": "CLI Contract Validation",
+  "status": "closed",
+  "guarantees": [
+    "CLI can validate all registered local contract schemas",
+    "contract validation uses Draft 2020-12 schema checking",
+    "contract validation returns JSON summary",
+    "contract validation is read-only",
+    "contract validation does not call network services",
+    "contract validation does not execute models",
+    "no push is executed"
+  ],
+  "next": "phase31-cli-evidence-chain-report"
+}

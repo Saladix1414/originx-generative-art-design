@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import jsonschema
+from jsonschema import Draft202012Validator
 from pathlib import Path
 from typing import Any
 
@@ -176,6 +177,51 @@ def _command_contracts(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_validate_contracts(args: argparse.Namespace) -> int:
+    results = []
+
+    for name, schema_path in sorted(CONTRACT_SCHEMAS.items()):
+        schema = _load_json(schema_path)
+
+        try:
+            Draft202012Validator.check_schema(schema)
+        except jsonschema.SchemaError as error:
+            results.append(
+                {
+                    "name": name,
+                    "path": schema_path,
+                    "schema_id": schema.get("$id"),
+                    "valid": False,
+                    "error": error.message,
+                }
+            )
+            continue
+
+        results.append(
+            {
+                "name": name,
+                "path": schema_path,
+                "schema_id": schema.get("$id"),
+                "valid": True,
+            }
+        )
+
+    valid = all(result["valid"] for result in results)
+
+    print(
+        json.dumps(
+            {
+                "valid": valid,
+                "count": len(results),
+                "results": results,
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0 if valid else 2
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -218,6 +264,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="List local contract schemas known to the CLI.",
     )
     contracts.set_defaults(func=_command_contracts)
+
+    validate_contracts = subcommands.add_parser(
+        "validate-contracts",
+        help="Validate all local contract schemas known to the CLI.",
+    )
+    validate_contracts.set_defaults(func=_command_validate_contracts)
 
     return parser
 
