@@ -1,0 +1,15 @@
+{
+  "phase": "phase26",
+  "title": "CLI Fixture Validation",
+  "status": "closed",
+  "guarantees": [
+    "CLI can validate local fixtures against local schemas",
+    "project readiness fixture validates",
+    "canonical promotion fixture validates",
+    "validation command is read-only",
+    "validation command does not call network services",
+    "validation command does not execute models",
+    "no push is executed"
+  ],
+  "next": "phase27-cli-validation-errors"
+}

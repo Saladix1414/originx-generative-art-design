@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import jsonschema
 from pathlib import Path
 from typing import Any
 
@@ -49,6 +50,26 @@ def _command_status(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_validate_fixture(args: argparse.Namespace) -> int:
+    payload = _load_json(args.path)
+    schema = _load_json(args.schema)
+
+    jsonschema.validate(payload, schema)
+
+    print(
+        json.dumps(
+            {
+                "valid": True,
+                "schema_version": payload.get("schema_version"),
+                "schema_id": schema.get("$id"),
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -70,6 +91,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     status.add_argument("path")
     status.set_defaults(func=_command_status)
+
+    validate_fixture = subcommands.add_parser(
+        "validate-fixture",
+        help="Validate a local JSON fixture against a local JSON schema.",
+    )
+    validate_fixture.add_argument("path")
+    validate_fixture.add_argument("--schema", required=True)
+    validate_fixture.set_defaults(func=_command_validate_fixture)
 
     return parser
 
