@@ -1,0 +1,15 @@
+{
+  "phase": "phase24",
+  "title": "Package Install Smoke",
+  "status": "closed",
+  "guarantees": [
+    "package can be installed locally in editable mode",
+    "package metadata is discoverable",
+    "oxgad console command works locally",
+    "CLI inspection remains read-only",
+    "no package publishing is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase25-cli-fixtures"
+}
