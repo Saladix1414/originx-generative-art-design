@@ -1,0 +1,15 @@
+{
+  "phase": "phase13",
+  "title": "Review Pack",
+  "status": "closed",
+  "guarantees": [
+    "review pack schema exists",
+    "review readiness binds quality and promotion evidence",
+    "review pack requires a matching ledger entry",
+    "review pack records schema versions for all prior evidence",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase14-release-readiness"
+}

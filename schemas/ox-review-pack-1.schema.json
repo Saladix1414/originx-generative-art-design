@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-review-pack-1.schema.json",
+  "title": "OriginX Generative Art Design Review Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "review_id",
+    "canonical_id",
+    "candidate_id",
+    "documents",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": { "const": "ox-review-pack-1" },
+    "project": { "const": "originx-generative-art-design" },
+    "phase": { "const": "phase13" },
+    "review_id": { "type": "string", "minLength": 1 },
+    "canonical_id": { "type": "string", "minLength": 1 },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "documents": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provenance_schema_version",
+        "quality_schema_version",
+        "promotion_schema_version",
+        "ledger_schema_version",
+        "output_manifest_schema_version"
+      ],
+      "properties": {
+        "provenance_schema_version": { "const": "ox-provenance-manifest-1" },
+        "quality_schema_version": { "const": "ox-quality-gate-report-1" },
+        "promotion_schema_version": { "const": "ox-canonical-promotion-1" },
+        "ledger_schema_version": { "const": "ox-canonical-ledger-1" },
+        "output_manifest_schema_version": { "const": "ox-canonical-output-manifest-1" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ready_for_review",
+        "promotion_decision",
+        "quality_required_passed",
+        "ledger_index"
+      ],
+      "properties": {
+        "ready_for_review": { "type": "boolean" },
+        "promotion_decision": { "enum": ["promoted", "blocked"] },
+        "quality_required_passed": { "type": "boolean" },
+        "ledger_index": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
