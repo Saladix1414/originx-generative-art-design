@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase2",
+  "title": "Contract",
+  "status": "closed",
+  "guarantees": [
+    "OX-MASTER-PROMPT-1 schema exists",
+    "schema binds art spec and render plan hashes",
+    "schema constrains controlled vocabulary",
+    "schema requires positive and negative prompt text",
+    "schema requires macro meso micro detail priorities",
+    "schema requires local-first safety boundaries",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase3-catalog"
+}

@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-master-prompt-1.schema.json",
+  "title": "OriginX Master Prompt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "prompt_id",
+    "source",
+    "controlled_vocabulary",
+    "render_binding",
+    "prompt",
+    "detail_priorities",
+    "safety_boundaries",
+    "provenance_hooks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ox-master-prompt-1"
+    },
+    "project": {
+      "const": "originx-generative-art-design"
+    },
+    "prompt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity_input_id",
+        "art_spec_hash",
+        "render_plan_hash"
+      ],
+      "properties": {
+        "identity_input_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "art_spec_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "render_plan_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "controlled_vocabulary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trait_families",
+        "rarity_band",
+        "composition_profile",
+        "render_intent"
+      ],
+      "properties": {
+        "trait_families": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "palette",
+              "geometry",
+              "material",
+              "lighting",
+              "depth",
+              "motion",
+              "symbolic_motif",
+              "environment",
+              "distortion",
+              "finish"
+            ]
+          }
+        },
+        "rarity_band": {
+          "enum": [
+            "common",
+            "uncommon",
+            "rare",
+            "epic",
+            "legendary"
+          ]
+        },
+        "composition_profile": {
+          "enum": [
+            "centered_icon",
+            "radial_field",
+            "layered_landscape",
+            "architectural_stack",
+            "orbital_system",
+            "fragmented_relic",
+            "signal_map",
+            "synthetic_organism"
+          ]
+        },
+        "render_intent": {
+          "enum": [
+            "preview",
+            "candidate",
+            "canonical",
+            "high_detail"
+          ]
+        }
+      }
+    },
+    "render_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_target",
+        "model_requirement",
+        "seed"
+      ],
+      "properties": {
+        "runtime_target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_requirement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "positive",
+        "negative"
+      ],
+      "properties": {
+        "positive": {
+          "type": "string",
+          "minLength": 1
+        },
+        "negative": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "detail_priorities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "properties": {
+        "macro": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "meso": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "micro": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "safety_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "local_first",
+        "no_network",
+        "no_external_provider_dependency",
+        "no_uncontrolled_text",
+        "no_franchise_style"
+      ],
+      "properties": {
+        "local_first": {
+          "const": true
+        },
+        "no_network": {
+          "const": true
+        },
+        "no_external_provider_dependency": {
+          "const": true
+        },
+        "no_uncontrolled_text": {
+          "const": true
+        },
+        "no_franchise_style": {
+          "const": true
+        }
+      }
+    },
+    "provenance_hooks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "catalog_schema_version",
+        "prompt_compiler_version",
+        "hash_required"
+      ],
+      "properties": {
+        "catalog_schema_version": {
+          "const": "ox-art-spec-expansion-1"
+        },
+        "prompt_compiler_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hash_required": {
+          "const": true
+        }
+      }
+    }
+  }
+}
