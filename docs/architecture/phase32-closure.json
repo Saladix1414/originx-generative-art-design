@@ -1,0 +1,15 @@
+{
+  "phase": "phase32",
+  "title": "CLI Readiness Report",
+  "status": "closed",
+  "guarantees": [
+    "CLI can report local readiness",
+    "readiness includes contract validation",
+    "readiness includes fixture validation",
+    "readiness includes evidence chain completeness",
+    "readiness report is read-only",
+    "readiness report does not call network services",
+    "no push is executed"
+  ],
+  "next": "phase33-cli-help-contract"
+}

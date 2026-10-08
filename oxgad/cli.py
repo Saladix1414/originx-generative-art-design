@@ -170,8 +170,7 @@ def _command_validate_fixture(args: argparse.Namespace) -> int:
     return 0 if result["valid"] else 2
 
 
-def _command_validate_fixtures(args: argparse.Namespace) -> int:
-    directory = Path(args.directory)
+def _fixture_directory_results(directory: Path) -> list[dict[str, Any]]:
     results = []
 
     for path in sorted(directory.glob("*.json")):
@@ -191,6 +190,11 @@ def _command_validate_fixtures(args: argparse.Namespace) -> int:
 
         results.append(_validate_payload(str(path), schema_path))
 
+    return results
+
+
+def _command_validate_fixtures(args: argparse.Namespace) -> int:
+    results = _fixture_directory_results(Path(args.directory))
     valid = all(result["valid"] for result in results)
 
     print(
@@ -233,7 +237,7 @@ def _command_contracts(args: argparse.Namespace) -> int:
     return 0
 
 
-def _command_validate_contracts(args: argparse.Namespace) -> int:
+def _contract_validation_results() -> list[dict[str, Any]]:
     results = []
 
     for name, schema_path in sorted(CONTRACT_SCHEMAS.items()):
@@ -262,6 +266,11 @@ def _command_validate_contracts(args: argparse.Namespace) -> int:
             }
         )
 
+    return results
+
+
+def _command_validate_contracts(args: argparse.Namespace) -> int:
+    results = _contract_validation_results()
     valid = all(result["valid"] for result in results)
 
     print(
@@ -290,6 +299,34 @@ def _command_evidence_chain(args: argparse.Namespace) -> int:
     )
 
     return 0
+
+
+def _command_readiness(args: argparse.Namespace) -> int:
+    contract_results = _contract_validation_results()
+    fixture_results = _fixture_directory_results(Path(args.fixtures))
+
+    contracts_valid = all(result["valid"] for result in contract_results)
+    fixtures_valid = all(result["valid"] for result in fixture_results)
+    evidence_chain_complete = len(EVIDENCE_CHAIN) == len(CONTRACT_SCHEMAS)
+
+    ready = contracts_valid and fixtures_valid and evidence_chain_complete
+
+    print(
+        json.dumps(
+            {
+                "ready": ready,
+                "contracts_valid": contracts_valid,
+                "contract_count": len(contract_results),
+                "fixtures_valid": fixtures_valid,
+                "fixture_count": len(fixture_results),
+                "evidence_chain_complete": evidence_chain_complete,
+                "evidence_chain_count": len(EVIDENCE_CHAIN),
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0 if ready else 2
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -346,6 +383,17 @@ def build_parser() -> argparse.ArgumentParser:
         help="Print the expected local evidence chain.",
     )
     evidence_chain.set_defaults(func=_command_evidence_chain)
+
+    readiness = subcommands.add_parser(
+        "readiness",
+        help="Print local CLI readiness summary.",
+    )
+    readiness.add_argument(
+        "--fixtures",
+        default="tests/fixtures/cli",
+        help="Local fixture directory to validate.",
+    )
+    readiness.set_defaults(func=_command_readiness)
 
     return parser
 
