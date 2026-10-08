@@ -1,0 +1,16 @@
+{
+  "phase": "phase10",
+  "title": "Canonical Promotion Boundary",
+  "status": "closed",
+  "guarantees": [
+    "canonical promotion schema exists",
+    "promotion requires passed quality gates",
+    "promotion requires provenance digest evidence",
+    "promotion requires candidate and canonical identifiers",
+    "blocked decisions preserve failure evidence",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase11-canonical-ledger"
+}

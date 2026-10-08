@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-canonical-promotion-1.schema.json",
+  "title": "OriginX Generative Art Design Canonical Promotion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "candidate_id",
+    "canonical_id",
+    "decision",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ox-canonical-promotion-1"
+    },
+    "project": {
+      "const": "originx-generative-art-design"
+    },
+    "phase": {
+      "const": "phase10"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": ["promoted", "blocked"]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provenance_manifest_sha256",
+        "quality_required_passed",
+        "failed_required"
+      ],
+      "properties": {
+        "provenance_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "quality_required_passed": {
+          "type": "boolean"
+        },
+        "failed_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
