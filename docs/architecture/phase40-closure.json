@@ -1,0 +1,15 @@
+{
+  "phase": "phase40",
+  "title": "Local Pipeline Maturity",
+  "status": "closed",
+  "guarantees": [
+    "phase 8 through phase 39 maturity is documented",
+    "evidence pipeline scope is documented",
+    "CLI surface is documented",
+    "contract coverage is documented",
+    "local-first boundary is documented",
+    "maturity documentation is tested",
+    "no push is executed"
+  ],
+  "next": "phase41-version-bump-plan"
+}
