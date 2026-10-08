@@ -1,0 +1,16 @@
+{
+  "phase": "phase14",
+  "title": "Release Readiness",
+  "status": "closed",
+  "guarantees": [
+    "release readiness schema exists",
+    "readiness requires review pack readiness",
+    "readiness requires complete schema chain",
+    "readiness requires explicit release authority",
+    "blocked releases preserve check state",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase15-release-ledger"
+}

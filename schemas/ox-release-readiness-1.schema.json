@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-release-readiness-1.schema.json",
+  "title": "OriginX Generative Art Design Release Readiness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "release_id",
+    "review_id",
+    "canonical_id",
+    "status",
+    "checks"
+  ],
+  "properties": {
+    "schema_version": { "const": "ox-release-readiness-1" },
+    "project": { "const": "originx-generative-art-design" },
+    "phase": { "const": "phase14" },
+    "release_id": { "type": "string", "minLength": 1 },
+    "review_id": { "type": "string", "minLength": 1 },
+    "canonical_id": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["ready", "blocked"] },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "review_ready",
+        "schema_chain_complete",
+        "release_authority_granted"
+      ],
+      "properties": {
+        "review_ready": { "type": "boolean" },
+        "schema_chain_complete": { "type": "boolean" },
+        "release_authority_granted": { "type": "boolean" }
+      }
+    }
+  }
+}
