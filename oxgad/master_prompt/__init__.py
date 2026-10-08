@@ -10,6 +10,11 @@ from oxgad.master_prompt.catalog import (
     load_master_prompt_catalog,
     master_prompt_catalog_summary,
 )
+from oxgad.master_prompt.evidence import (
+    PROMPT_EVIDENCE_CHAIN_VERSION,
+    build_prompt_evidence_chain,
+    verify_prompt_evidence_chain,
+)
 from oxgad.master_prompt.gates import evaluate_master_prompt_gates
 from oxgad.master_prompt.provenance import (
     PROMPT_PROVENANCE_HOOK_VERSION,
@@ -23,9 +28,11 @@ from oxgad.master_prompt.render_binding import (
 )
 
 __all__ = [
+    "PROMPT_EVIDENCE_CHAIN_VERSION",
     "PROMPT_PROVENANCE_HOOK_VERSION",
     "build_master_prompt_from_art_spec",
     "build_master_prompt_payload",
+    "build_prompt_evidence_chain",
     "build_prompt_provenance_hook",
     "build_render_bound_master_prompt",
     "canonical_master_prompt_json",
@@ -36,4 +43,5 @@ __all__ = [
     "master_prompt_hash",
     "render_plan_hash",
     "stable_prompt_hash",
+    "verify_prompt_evidence_chain",
 ]

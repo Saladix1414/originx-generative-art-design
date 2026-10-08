@@ -1,0 +1,15 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_15",
+  "name": "Prompt Evidence Chain",
+  "status": "closed",
+  "readOnly": true,
+  "steps": [
+    "art-spec",
+    "render-plan",
+    "master-prompt",
+    "prompt-provenance-hook"
+  ],
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noPushExecuted": true
+}
