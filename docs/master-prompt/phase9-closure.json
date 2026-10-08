@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase9",
+  "title": "Validation Gates",
+  "status": "closed",
+  "guarantees": [
+    "master prompt validation gates exist",
+    "gates detect blocked terms",
+    "gates detect missing negative controls",
+    "gates detect incomplete detail hierarchy",
+    "gates detect safety boundary violations",
+    "gates are local-only",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase10-quality-profile"
+}
