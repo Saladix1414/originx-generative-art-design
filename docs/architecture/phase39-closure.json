@@ -1,0 +1,15 @@
+{
+  "phase": "phase39",
+  "title": "CLI Error Output Contract",
+  "status": "closed",
+  "guarantees": [
+    "validate-fixture errors return JSON",
+    "validate-fixtures errors return JSON",
+    "readiness errors return JSON",
+    "expected validation failures return exit code 2",
+    "expected validation failures do not emit stderr",
+    "no runtime behavior is introduced",
+    "no push is executed"
+  ],
+  "next": "phase40-local-pipeline-maturity"
+}
