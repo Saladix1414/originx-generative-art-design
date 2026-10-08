@@ -1,0 +1,15 @@
+{
+  "phase": "phase48",
+  "title": "Art Spec Expansion Plan",
+  "status": "closed",
+  "guarantees": [
+    "generative art roadmap is recentered",
+    "trait family expansion is planned",
+    "rarity bands are planned",
+    "composition profiles are planned",
+    "render intent profiles are planned",
+    "no image generation is introduced",
+    "no push is executed"
+  ],
+  "next": "phase49-art-spec-expansion-schema"
+}

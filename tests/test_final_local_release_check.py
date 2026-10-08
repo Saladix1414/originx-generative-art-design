@@ -41,13 +41,24 @@ def test_final_local_release_docs_exist():
         assert Path(path).is_file()
 
 
-def test_final_local_release_tag_not_created():
+def test_final_local_release_tag_exists_and_points_to_head():
     tag = subprocess.check_output(
         ["git", "tag", "--list", "v0.41.0"],
         text=True,
     ).strip()
 
-    assert tag == ""
+    head = subprocess.check_output(
+        ["git", "rev-parse", "HEAD"],
+        text=True,
+    ).strip()
+
+    tag_commit = subprocess.check_output(
+        ["git", "rev-list", "-n", "1", "v0.41.0"],
+        text=True,
+    ).strip()
+
+    assert tag == "v0.41.0"
+    assert tag_commit == head
 
 
 def test_final_local_release_worktree_has_no_staged_files():

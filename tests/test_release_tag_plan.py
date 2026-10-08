@@ -25,13 +25,13 @@ def test_release_tag_plan_documents_preconditions():
         assert item in text
 
 
-def test_release_tag_plan_does_not_create_tag():
+def test_release_tag_plan_tag_exists_after_user_approved_release():
     tags = subprocess.check_output(
         ["git", "tag", "--list", "v0.41.0"],
         text=True,
     ).strip()
 
-    assert tags == ""
+    assert tags == "v0.41.0"
 
 
 def test_release_tag_plan_documents_boundary():
