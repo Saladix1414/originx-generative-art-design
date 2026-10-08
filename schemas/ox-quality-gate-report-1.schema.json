@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-quality-gate-report-1.schema.json",
+  "title": "OriginX Generative Art Design Quality Gate Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "candidate_id",
+    "provenance_manifest_sha256",
+    "gates",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ox-quality-gate-report-1"
+    },
+    "project": {
+      "const": "originx-generative-art-design"
+    },
+    "phase": {
+      "const": "phase9"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "severity", "message"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": ["pass", "fail"]
+          },
+          "severity": {
+            "enum": ["required", "advisory"]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "required_passed", "failed_required", "failed_advisory"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "required_passed": { "type": "boolean" },
+        "failed_required": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "failed_advisory": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

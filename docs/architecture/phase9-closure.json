@@ -1,0 +1,15 @@
+{
+  "phase": "phase9",
+  "title": "Quality Gates",
+  "status": "closed",
+  "guarantees": [
+    "quality gate report schema exists",
+    "candidate provenance evidence is required",
+    "output sha256 evidence is required",
+    "model registry and binding evidence are required",
+    "advisory failures do not block required provenance acceptance",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase10-canonical-promotion-boundary"
+}
