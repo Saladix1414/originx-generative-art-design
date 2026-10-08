@@ -1,0 +1,15 @@
+{
+  "phase": "phase42",
+  "title": "Version Bump",
+  "status": "closed",
+  "guarantees": [
+    "package version is updated to 0.41.0",
+    "CLI version test expects 0.41.0",
+    "version bump plan test reflects updated metadata",
+    "no package publishing is introduced",
+    "no network workflow is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase43-release-readiness-recheck"
+}

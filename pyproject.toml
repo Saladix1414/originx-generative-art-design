@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "originx-generative-art-design"
-version = "0.23.0"
+version = "0.41.0"
 description = "Local-first generative art design evidence pipeline."
 readme = "README.md"
 requires-python = ">=3.11"

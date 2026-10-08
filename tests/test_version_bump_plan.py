@@ -23,8 +23,8 @@ def test_version_bump_plan_is_planning_only():
     assert "execute models" in text
 
 
-def test_phase41_does_not_change_pyproject_version_yet():
+def test_phase42_updates_pyproject_version():
     text = PYPROJECT.read_text()
 
-    assert 'version = "0.23.0"' in text
-    assert 'version = "0.41.0"' not in text
+    assert 'version = "0.41.0"' in text
+    assert 'version = "0.23.0"' not in text

@@ -10,5 +10,5 @@ def test_cli_version_reports_installed_package_version(capsys):
 
     assert output == {
         "project": "originx-generative-art-design",
-        "version": "0.23.0",
+        "version": "0.41.0",
     }
