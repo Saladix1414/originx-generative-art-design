@@ -1,0 +1,17 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_14",
+  "name": "Prompt Provenance Hook",
+  "status": "closed",
+  "readOnly": true,
+  "records": [
+    "masterPromptHash",
+    "artSpecHash",
+    "renderPlanHash",
+    "runtimeTarget",
+    "seed",
+    "compilerVersion"
+  ],
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noPushExecuted": true
+}
