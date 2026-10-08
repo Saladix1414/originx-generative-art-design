@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-export-audit-ledger-1.schema.json",
+  "title": "OriginX Generative Art Design Export Audit Ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": { "const": "ox-export-audit-ledger-1" },
+    "project": { "const": "originx-generative-art-design" },
+    "phase": { "const": "phase19" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "export_id",
+          "status",
+          "manifest_path",
+          "artifact_path",
+          "export_result_schema_version"
+        ],
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "export_id": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["exported", "blocked"] },
+          "manifest_path": { "type": "string" },
+          "artifact_path": { "type": "string" },
+          "export_result_schema_version": { "const": "ox-local-export-result-1" }
+        }
+      }
+    }
+  }
+}
