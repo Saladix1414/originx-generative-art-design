@@ -1,3 +1,12 @@
+from oxgad.models.promotion import (
+    MODEL_ACQUISITION_REGISTRATION_SCHEMA_PATH,
+    MODEL_ACQUISITION_REGISTRATION_VERSION,
+    ModelAcquisitionRegistrationError,
+    load_model_acquisition_registration_schema,
+    promote_verified_acquisition,
+    validate_model_acquisition_registration,
+    validate_model_acquisition_registration_context,
+)
 from oxgad.models.receipt import (
     MODEL_ACQUISITION_RECEIPT_SCHEMA_PATH,
     MODEL_ACQUISITION_RECEIPT_VERSION,
@@ -51,6 +60,13 @@ from oxgad.models.validator import (
 )
 
 __all__ = [
+    "MODEL_ACQUISITION_REGISTRATION_SCHEMA_PATH",
+    "MODEL_ACQUISITION_REGISTRATION_VERSION",
+    "ModelAcquisitionRegistrationError",
+    "load_model_acquisition_registration_schema",
+    "promote_verified_acquisition",
+    "validate_model_acquisition_registration",
+    "validate_model_acquisition_registration_context",
     "MODEL_ACQUISITION_RECEIPT_SCHEMA_PATH",
     "MODEL_ACQUISITION_RECEIPT_VERSION",
     "ModelAcquisitionReceiptError",
