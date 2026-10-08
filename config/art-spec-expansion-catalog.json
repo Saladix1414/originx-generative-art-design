@@ -1,0 +1,39 @@
+{
+  "schema_version": "ox-art-spec-expansion-1",
+  "project": "originx-generative-art-design",
+  "trait_families": [
+    "palette",
+    "geometry",
+    "material",
+    "lighting",
+    "depth",
+    "motion",
+    "symbolic_motif",
+    "environment",
+    "distortion",
+    "finish"
+  ],
+  "rarity_bands": [
+    "common",
+    "uncommon",
+    "rare",
+    "epic",
+    "legendary"
+  ],
+  "composition_profiles": [
+    "centered_icon",
+    "radial_field",
+    "layered_landscape",
+    "architectural_stack",
+    "orbital_system",
+    "fragmented_relic",
+    "signal_map",
+    "synthetic_organism"
+  ],
+  "render_intents": [
+    "preview",
+    "candidate",
+    "canonical",
+    "high_detail"
+  ]
+}

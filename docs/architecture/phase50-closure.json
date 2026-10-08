@@ -1,0 +1,15 @@
+{
+  "phase": "phase50",
+  "title": "Art Spec Expansion Catalog",
+  "status": "closed",
+  "guarantees": [
+    "art spec expansion catalog exists",
+    "catalog validates against the expansion schema",
+    "catalog values are unique",
+    "catalog has expected family counts",
+    "catalog is local-only",
+    "no image generation is introduced",
+    "no push is executed"
+  ],
+  "next": "phase51-art-spec-expansion-loader"
+}
