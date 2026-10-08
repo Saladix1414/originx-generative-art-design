@@ -18,3 +18,7 @@ output/candidates/*
 
 output/canonical/*
 !output/canonical/.gitkeep
+.phase-backups/
+.phase-reports/
+.venv-phase*/
+*.egg-info/

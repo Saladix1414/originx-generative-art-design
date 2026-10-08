@@ -1,0 +1,15 @@
+{
+  "phase": "phase31",
+  "title": "CLI Evidence Chain Report",
+  "status": "closed",
+  "guarantees": [
+    "CLI can report the expected evidence chain",
+    "evidence chain schemas are registered contracts",
+    "evidence chain report is read-only",
+    "local generated phase artifacts are ignored",
+    "evidence chain report does not call network services",
+    "evidence chain report does not execute models",
+    "no push is executed"
+  ],
+  "next": "phase32-cli-readiness-report"
+}

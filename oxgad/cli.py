@@ -8,6 +8,62 @@ from pathlib import Path
 from typing import Any
 
 
+EVIDENCE_CHAIN = [
+    {
+        "step": "provenance",
+        "schema": "ox-provenance-manifest-1.schema.json",
+    },
+    {
+        "step": "quality",
+        "schema": "ox-quality-gate-report-1.schema.json",
+    },
+    {
+        "step": "promotion",
+        "schema": "ox-canonical-promotion-1.schema.json",
+    },
+    {
+        "step": "canonical-ledger",
+        "schema": "ox-canonical-ledger-1.schema.json",
+    },
+    {
+        "step": "canonical-output",
+        "schema": "ox-canonical-output-manifest-1.schema.json",
+    },
+    {
+        "step": "review",
+        "schema": "ox-review-pack-1.schema.json",
+    },
+    {
+        "step": "release-readiness",
+        "schema": "ox-release-readiness-1.schema.json",
+    },
+    {
+        "step": "release-ledger",
+        "schema": "ox-release-ledger-1.schema.json",
+    },
+    {
+        "step": "export-plan",
+        "schema": "ox-local-export-plan-1.schema.json",
+    },
+    {
+        "step": "export-dry-run",
+        "schema": "ox-local-export-dry-run-1.schema.json",
+    },
+    {
+        "step": "export-result",
+        "schema": "ox-local-export-result-1.schema.json",
+    },
+    {
+        "step": "export-audit",
+        "schema": "ox-export-audit-ledger-1.schema.json",
+    },
+    {
+        "step": "project-readiness",
+        "schema": "ox-project-readiness-summary-1.schema.json",
+    },
+]
+
+
 CONTRACT_SCHEMAS = {
     "provenance": "schemas/ox-provenance-manifest-1.schema.json",
     "quality": "schemas/ox-quality-gate-report-1.schema.json",
@@ -222,6 +278,20 @@ def _command_validate_contracts(args: argparse.Namespace) -> int:
     return 0 if valid else 2
 
 
+def _command_evidence_chain(args: argparse.Namespace) -> int:
+    print(
+        json.dumps(
+            {
+                "count": len(EVIDENCE_CHAIN),
+                "chain": EVIDENCE_CHAIN,
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -270,6 +340,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Validate all local contract schemas known to the CLI.",
     )
     validate_contracts.set_defaults(func=_command_validate_contracts)
+
+    evidence_chain = subcommands.add_parser(
+        "evidence-chain",
+        help="Print the expected local evidence chain.",
+    )
+    evidence_chain.set_defaults(func=_command_evidence_chain)
 
     return parser
 
