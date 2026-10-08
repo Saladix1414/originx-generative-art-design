@@ -1,3 +1,12 @@
+from oxgad.models.acquisition import (
+    MODEL_ACQUISITION_PLAN_VERSION,
+    MODEL_ACQUISITION_SCHEMA_PATH,
+    ModelAcquisitionPlanError,
+    build_first_local_model_plan,
+    load_model_acquisition_schema,
+    model_acquisition_plan_hash,
+    validate_model_acquisition_plan,
+)
 from oxgad.models.binding import (
     MODEL_BINDING_SCHEMA_PATH,
     MODEL_BINDING_VERSION,
@@ -32,6 +41,13 @@ from oxgad.models.validator import (
 )
 
 __all__ = [
+    "MODEL_ACQUISITION_PLAN_VERSION",
+    "MODEL_ACQUISITION_SCHEMA_PATH",
+    "ModelAcquisitionPlanError",
+    "build_first_local_model_plan",
+    "load_model_acquisition_schema",
+    "model_acquisition_plan_hash",
+    "validate_model_acquisition_plan",
     "MODEL_BINDING_SCHEMA_PATH",
     "MODEL_BINDING_VERSION",
     "ModelBindingError",
