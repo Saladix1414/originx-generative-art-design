@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-canonical-ledger-1.schema.json",
+  "title": "OriginX Generative Art Design Canonical Ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ox-canonical-ledger-1"
+    },
+    "project": {
+      "const": "originx-generative-art-design"
+    },
+    "phase": {
+      "const": "phase11"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "canonical_id",
+          "candidate_id",
+          "decision",
+          "promotion_schema_version",
+          "provenance_manifest_sha256"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "canonical_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidate_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision": {
+            "enum": ["promoted", "blocked"]
+          },
+          "promotion_schema_version": {
+            "const": "ox-canonical-promotion-1"
+          },
+          "provenance_manifest_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

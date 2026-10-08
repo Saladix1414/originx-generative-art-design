@@ -1,0 +1,16 @@
+{
+  "phase": "phase11",
+  "title": "Canonical Ledger",
+  "status": "closed",
+  "guarantees": [
+    "canonical ledger schema exists",
+    "promotion decisions can be appended deterministically",
+    "ledger append returns a new ledger",
+    "canonical id listing includes promoted entries only",
+    "invalid provenance evidence is rejected",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase12-canonical-output-manifest"
+}
