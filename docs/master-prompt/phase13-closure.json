@@ -1,0 +1,12 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_13",
+  "name": "Render Compiler Prompt Binding",
+  "status": "closed",
+  "readOnly": true,
+  "binds": [
+    "OX-RENDER-1",
+    "OX-MASTER-PROMPT-1"
+  ],
+  "noModelExecution": true,
+  "noPushExecuted": true
+}
