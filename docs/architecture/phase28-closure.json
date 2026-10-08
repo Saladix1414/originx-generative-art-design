@@ -1,0 +1,15 @@
+{
+  "phase": "phase28",
+  "title": "CLI Directory Validation",
+  "status": "closed",
+  "guarantees": [
+    "CLI can validate a directory of mapped fixtures",
+    "fixture validation remains local-only",
+    "unknown JSON fixtures fail validation",
+    "directory validation returns JSON summary",
+    "directory validation does not write files",
+    "directory validation does not call network services",
+    "no push is executed"
+  ],
+  "next": "phase29-cli-contract-report"
+}

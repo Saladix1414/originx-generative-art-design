@@ -7,6 +7,12 @@ from pathlib import Path
 from typing import Any
 
 
+FIXTURE_SCHEMA_MAP = {
+    "canonical-promotion.json": "schemas/ox-canonical-promotion-1.schema.json",
+    "project-readiness-summary.json": "schemas/ox-project-readiness-summary-1.schema.json",
+}
+
+
 def _load_json(path: str) -> dict[str, Any]:
     payload = json.loads(Path(path).read_text(encoding="utf-8"))
 
@@ -50,39 +56,81 @@ def _command_status(args: argparse.Namespace) -> int:
     return 0
 
 
-def _command_validate_fixture(args: argparse.Namespace) -> int:
-    payload = _load_json(args.path)
-    schema = _load_json(args.schema)
+def _validate_payload(path: str, schema_path: str) -> dict[str, Any]:
+    payload = _load_json(path)
+    schema = _load_json(schema_path)
 
     try:
         jsonschema.validate(payload, schema)
     except jsonschema.ValidationError as error:
-        print(
-            json.dumps(
-                {
-                    "valid": False,
-                    "schema_version": payload.get("schema_version"),
-                    "schema_id": schema.get("$id"),
-                    "error": error.message,
-                },
-                sort_keys=True,
-            )
-        )
+        return {
+            "path": path,
+            "valid": False,
+            "schema_version": payload.get("schema_version"),
+            "schema_id": schema.get("$id"),
+            "error": error.message,
+        }
 
-        return 2
+    return {
+        "path": path,
+        "valid": True,
+        "schema_version": payload.get("schema_version"),
+        "schema_id": schema.get("$id"),
+    }
+
+
+def _command_validate_fixture(args: argparse.Namespace) -> int:
+    result = _validate_payload(args.path, args.schema)
 
     print(
         json.dumps(
             {
-                "valid": True,
-                "schema_version": payload.get("schema_version"),
-                "schema_id": schema.get("$id"),
+                key: value
+                for key, value in result.items()
+                if key != "path"
             },
             sort_keys=True,
         )
     )
 
-    return 0
+    return 0 if result["valid"] else 2
+
+
+def _command_validate_fixtures(args: argparse.Namespace) -> int:
+    directory = Path(args.directory)
+    results = []
+
+    for path in sorted(directory.glob("*.json")):
+        schema_path = FIXTURE_SCHEMA_MAP.get(path.name)
+
+        if schema_path is None:
+            results.append(
+                {
+                    "path": str(path),
+                    "valid": False,
+                    "schema_version": None,
+                    "schema_id": None,
+                    "error": "no schema mapping",
+                }
+            )
+            continue
+
+        results.append(_validate_payload(str(path), schema_path))
+
+    valid = all(result["valid"] for result in results)
+
+    print(
+        json.dumps(
+            {
+                "valid": valid,
+                "count": len(results),
+                "results": results,
+            },
+            sort_keys=True,
+        )
+    )
+
+    return 0 if valid else 2
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -114,6 +162,13 @@ def build_parser() -> argparse.ArgumentParser:
     validate_fixture.add_argument("path")
     validate_fixture.add_argument("--schema", required=True)
     validate_fixture.set_defaults(func=_command_validate_fixture)
+
+    validate_fixtures = subcommands.add_parser(
+        "validate-fixtures",
+        help="Validate all mapped JSON fixtures in a local directory.",
+    )
+    validate_fixtures.add_argument("directory")
+    validate_fixtures.set_defaults(func=_command_validate_fixtures)
 
     return parser
 
