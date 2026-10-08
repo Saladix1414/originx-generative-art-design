@@ -68,6 +68,10 @@ EVIDENCE_CHAIN = [
         "step": "project-readiness",
         "schema": "ox-project-readiness-summary-1.schema.json",
     },
+    {
+        "step": "master-prompt-chain",
+        "schema": "ox-master-prompt-evidence-chain-1.schema.json",
+    },
 ]
 
 
@@ -85,6 +89,7 @@ CONTRACT_SCHEMAS = {
     "export-result": "schemas/ox-local-export-result-1.schema.json",
     "export-audit": "schemas/ox-export-audit-ledger-1.schema.json",
     "project-readiness": "schemas/ox-project-readiness-summary-1.schema.json",
+    "master-prompt-chain": "schemas/ox-master-prompt-evidence-chain-1.schema.json",
 }
 
 
