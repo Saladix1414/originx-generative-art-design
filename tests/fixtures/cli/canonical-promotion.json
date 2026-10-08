@@ -1,0 +1,13 @@
+{
+  "schema_version": "ox-canonical-promotion-1",
+  "project": "originx-generative-art-design",
+  "phase": "phase10",
+  "candidate_id": "candidate-0001",
+  "canonical_id": "canonical-0001",
+  "decision": "promoted",
+  "evidence": {
+    "provenance_manifest_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "quality_required_passed": true,
+    "failed_required": []
+  }
+}

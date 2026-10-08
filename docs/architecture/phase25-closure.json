@@ -1,0 +1,15 @@
+{
+  "phase": "phase25",
+  "title": "CLI Fixtures",
+  "status": "closed",
+  "guarantees": [
+    "CLI fixtures exist",
+    "project readiness fixture is inspectable",
+    "canonical promotion fixture is inspectable",
+    "fixtures remain small local JSON documents",
+    "fixtures contain no network URLs",
+    "fixtures contain no binary artifacts",
+    "no push is executed"
+  ],
+  "next": "phase26-cli-fixture-validation"
+}
