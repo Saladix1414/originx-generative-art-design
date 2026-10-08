@@ -1,0 +1,16 @@
+{
+  "phase": "phase17",
+  "title": "Local Export Dry Run",
+  "status": "closed",
+  "guarantees": [
+    "local export dry run schema exists",
+    "dry run requires planned export status",
+    "dry run requires artifact source evidence",
+    "dry run requires canonical output paths",
+    "no directories are created",
+    "no files are copied or moved",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase18-local-export-executor"
+}

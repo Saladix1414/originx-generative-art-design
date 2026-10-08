@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-local-export-dry-run-1.schema.json",
+  "title": "OriginX Generative Art Design Local Export Dry Run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "phase",
+    "export_id",
+    "status",
+    "checks"
+  ],
+  "properties": {
+    "schema_version": { "const": "ox-local-export-dry-run-1" },
+    "project": { "const": "originx-generative-art-design" },
+    "phase": { "const": "phase17" },
+    "export_id": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["ready", "blocked"] },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan_is_planned",
+        "artifact_source_present",
+        "paths_are_canonical"
+      ],
+      "properties": {
+        "plan_is_planned": { "type": "boolean" },
+        "artifact_source_present": { "type": "boolean" },
+        "paths_are_canonical": { "type": "boolean" }
+      }
+    }
+  }
+}
