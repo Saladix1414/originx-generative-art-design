@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase1",
+  "title": "Audit / Baseline",
+  "status": "closed",
+  "guarantees": [
+    "master prompt roadmap starts from phase 1",
+    "current OX-GAD foundations are audited",
+    "master prompt position is defined as derived artifact",
+    "controlled vocabulary baseline is documented",
+    "future master prompt payload goals are documented",
+    "audit-only boundary is documented",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase2-contract"
+}
