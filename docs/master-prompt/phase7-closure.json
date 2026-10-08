@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase7",
+  "title": "Prompt Hashing",
+  "status": "closed",
+  "guarantees": [
+    "master prompt canonical serialization exists",
+    "master prompt hash exists",
+    "hash is deterministic",
+    "hash changes when prompt content changes",
+    "hash is lowercase sha256 hex",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase8-fixtures"
+}
