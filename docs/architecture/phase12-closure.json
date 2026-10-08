@@ -1,0 +1,16 @@
+{
+  "phase": "phase12",
+  "title": "Canonical Output Manifest",
+  "status": "closed",
+  "guarantees": [
+    "canonical output manifest schema exists",
+    "manifest requires promoted decision evidence",
+    "manifest requires matching canonical ledger entry",
+    "manifest binds output artifact sha256",
+    "manifest binds provenance digest",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase13-review-pack"
+}
