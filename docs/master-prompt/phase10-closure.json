@@ -1,0 +1,16 @@
+{
+  "roadmap": "master-prompt",
+  "phase": "phase10",
+  "title": "Quality Profile",
+  "status": "closed",
+  "guarantees": [
+    "master prompt quality profile exists",
+    "quality profile scores positive prompt completeness",
+    "quality profile scores negative prompt completeness",
+    "quality profile scores macro meso micro coverage",
+    "quality profile includes validation gate result",
+    "quality profile is local-only",
+    "no push is executed"
+  ],
+  "next": "master-prompt-phase11-cli-inspection"
+}
