@@ -1,0 +1,16 @@
+{
+  "phase": "phase15",
+  "title": "Release Ledger",
+  "status": "closed",
+  "guarantees": [
+    "release ledger schema exists",
+    "release readiness decisions can be appended deterministically",
+    "ledger append returns a new ledger",
+    "ready release listing includes ready entries only",
+    "invalid release readiness schema is rejected",
+    "no binary artifact movement is introduced",
+    "no model execution is introduced",
+    "no push is executed"
+  ],
+  "next": "phase16-local-export-plan"
+}
