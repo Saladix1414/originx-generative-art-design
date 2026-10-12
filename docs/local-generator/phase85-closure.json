@@ -1,0 +1,12 @@
+{
+  "phase": 85,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "executor": "RESUMABLE_SEQUENTIAL",
+  "batchSize": 1,
+  "stopOnFailure": true,
+  "automaticRetry": false,
+  "canonicalizationAllowed": false,
+  "nextBatchAllowed": false,
+  "nextPhase": "GENESIS_BATCH_RUNTIME_EXECUTION"
+}
