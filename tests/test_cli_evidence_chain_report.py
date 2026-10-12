@@ -32,6 +32,7 @@ EXPECTED_STEPS = [
     "explicit-model-acquisition-approval",
     "model-artifact-placement",
     "model-artifact-placement-verification",
+    "runtime-tool-availability",
 ]
 
 
@@ -87,7 +88,7 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-14:] == [
+    assert steps[-15:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
@@ -102,4 +103,5 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
         "explicit-model-acquisition-approval",
         "model-artifact-placement",
         "model-artifact-placement-verification",
+        "runtime-tool-availability",
     ]
