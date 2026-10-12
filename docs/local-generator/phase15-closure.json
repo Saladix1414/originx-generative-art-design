@@ -1,0 +1,15 @@
+{
+  "phase": 15,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE15-CLOSURE-1",
+  "command": "oxgad runtime-command-plan",
+  "contract": "OX-RUNTIME-COMMAND-PLAN-1",
+  "state": "DECLARED_NOT_EXECUTABLE",
+  "commandConstructionAllowed": false,
+  "backendInvocationAllowed": false,
+  "shellExecutionAllowed": false,
+  "networkAccessAllowed": false,
+  "modelExecutionAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 16 - Runtime Preflight Bundle"
+}

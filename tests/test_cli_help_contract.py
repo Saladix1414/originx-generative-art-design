@@ -19,6 +19,7 @@ COMMANDS = {
     "prompt-validate",
     "candidate-dry-run",
     "runtime-adapter",
+    "runtime-command-plan",
 }
 
 

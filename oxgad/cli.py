@@ -7,6 +7,10 @@ import jsonschema
 from jsonschema import Draft202012Validator
 from pathlib import Path
 from oxgad.forge.runtime_adapter import build_declared_runtime_adapter, runtime_adapter_hash
+from oxgad.forge.runtime_command_plan import (
+    build_declared_runtime_command_plan,
+    runtime_command_plan_hash,
+)
 from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry_run_hash
 from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_prompt_evidence_chain
 from typing import Any
@@ -569,6 +573,20 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
     }
 
 
+def _command_runtime_command_plan(args: argparse.Namespace) -> int:
+    adapter = build_declared_runtime_adapter(
+        adapter_id=args.adapter_id,
+        target=args.target,
+        runtime_family=args.runtime_family,
+        executable_path=args.executable_path,
+        runtime_version=args.runtime_version,
+    )
+    plan = build_declared_runtime_command_plan(adapter)
+    plan["runtimeCommandPlanHash"] = runtime_command_plan_hash(plan)
+
+    print(json.dumps(plan, sort_keys=True))
+    return 0
+
 def _command_candidate_dry_run(args: argparse.Namespace) -> int:
     dry_run = build_candidate_dry_run(
         candidate_id=args.candidate_id,
@@ -783,6 +801,36 @@ def build_parser() -> argparse.ArgumentParser:
     )
     runtime_adapter.set_defaults(
         func=_command_runtime_adapter
+    )
+
+
+    runtime_command_plan_parser = subcommands.add_parser(
+        "runtime-command-plan",
+        help="Emit declared local runtime command plan.",
+    )
+    runtime_command_plan_parser.add_argument(
+        "--adapter-id",
+        default="originx.local.declared-runtime",
+    )
+    runtime_command_plan_parser.add_argument(
+        "--target",
+        default="LOCAL_CPP",
+        choices=["LOCAL_CPP", "LOCAL_GPU"],
+    )
+    runtime_command_plan_parser.add_argument(
+        "--runtime-family",
+        default="stable-diffusion.cpp",
+    )
+    runtime_command_plan_parser.add_argument(
+        "--executable-path",
+        default=None,
+    )
+    runtime_command_plan_parser.add_argument(
+        "--runtime-version",
+        default=None,
+    )
+    runtime_command_plan_parser.set_defaults(
+        func=_command_runtime_command_plan
     )
 
     return parser
