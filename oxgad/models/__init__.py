@@ -127,3 +127,10 @@ from oxgad.models.artifact_decision import (
     model_artifact_acquisition_decision_hash,
     validate_model_artifact_acquisition_decision,
 )
+
+from oxgad.models.artifact_authorization import (
+    MODEL_ARTIFACT_ACQUISITION_AUTHORIZATION_VERSION,
+    build_blocked_model_artifact_acquisition_authorization,
+    model_artifact_acquisition_authorization_hash,
+    validate_model_artifact_acquisition_authorization,
+)

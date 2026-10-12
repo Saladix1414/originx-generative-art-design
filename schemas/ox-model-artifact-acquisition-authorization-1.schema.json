@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-artifact-acquisition-authorization-1.schema.json",
+  "title": "OriginX Model Artifact Acquisition Authorization",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authorizationVersion",
+    "state",
+    "source",
+    "authorization",
+    "governance",
+    "modelArtifactAcquisitionAuthorizationHash"
+  ],
+  "properties": {
+    "authorizationVersion": {
+      "const": "OX-MODEL-ARTIFACT-ACQUISITION-AUTHORIZATION-1"
+    },
+    "state": {
+      "const": "BLOCKED_PENDING_MANUAL_APPROVAL"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "decisionHash"
+      ],
+      "properties": {
+        "decision": { "const": "BLOCKED_NO_ARTIFACT" },
+        "decisionHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manualApprovalRequired",
+        "manualApprovalPresent",
+        "approvedBy",
+        "approvalTimestamp"
+      ],
+      "properties": {
+        "manualApprovalRequired": { "const": true },
+        "manualApprovalPresent": { "const": false },
+        "approvedBy": { "const": null },
+        "approvalTimestamp": { "const": null }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "trustGranted",
+        "executionAllowed",
+        "mediaGenerationAllowed",
+        "authorizationGrantsAcquisitionAuthority",
+        "authorizationGrantsExecutionAuthority"
+      ],
+      "properties": {
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "trustGranted": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false },
+        "authorizationGrantsAcquisitionAuthority": { "const": false },
+        "authorizationGrantsExecutionAuthority": { "const": false }
+      }
+    },
+    "modelArtifactAcquisitionAuthorizationHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
