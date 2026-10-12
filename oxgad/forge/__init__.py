@@ -1,3 +1,4 @@
+from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry_run_hash
 from oxgad.forge.candidate_provenance import build_candidate_provenance_hook, candidate_provenance_hook_hash, validate_candidate_provenance_hook
 from oxgad.forge.candidate_manifest import build_candidate_manifest, candidate_manifest_hash, validate_candidate_manifest
 from oxgad.forge.candidate_output import build_unapproved_candidate_output, candidate_output_hash, validate_candidate_output
@@ -38,6 +39,8 @@ from oxgad.forge.validator import (
 )
 
 __all__ = [
+    "candidate_dry_run_hash",
+    "build_candidate_dry_run",
     "validate_candidate_provenance_hook",
     "candidate_provenance_hook_hash",
     "build_candidate_provenance_hook",

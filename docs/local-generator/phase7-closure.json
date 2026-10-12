@@ -1,0 +1,14 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_7",
+  "name": "Candidate Dry Run Builder",
+  "status": "closed",
+  "dryRunVersion": "OX-CANDIDATE-DRY-RUN-1",
+  "state": "PREPARE_ONLY",
+  "mediaGenerated": false,
+  "backendInvocationAllowed": false,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}
