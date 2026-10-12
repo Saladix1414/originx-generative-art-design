@@ -61,3 +61,27 @@ def test_planning_is_deterministic():
     assert build_genesis_batch_plans() == (
         build_genesis_batch_plans()
     )
+
+
+def test_runtime_seeds_are_signed_64_bit_safe():
+    values = build_genesis_batch_plans()
+
+    for value in values:
+        sampling = value["binding"]["sampling"]
+        assert 0 <= sampling["seed"] <= 9223372036854775807
+        assert sampling["seed"] == (
+            sampling["identitySeed"]
+            & 0x7FFFFFFFFFFFFFFF
+        )
+        assert sampling["runtimeSeedDerivation"] == (
+            "identitySeed & 0x7fffffffffffffff"
+        )
+
+
+def test_identity_seed_is_not_replaced():
+    value = build_genesis_batch_plans()[0]
+    sampling = value["binding"]["sampling"]
+
+    assert sampling["identitySeed"] == (
+        value["artSpec"]["seed"]
+    )

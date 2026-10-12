@@ -277,7 +277,14 @@ def build_genesis_render_binding(
             "scheduler": "discrete",
             "steps": 12,
             "cfg": 7.0,
-            "seed": identity["seed"],
+            "identitySeed": identity["seed"],
+            "seed": (
+                identity["seed"]
+                & 0x7FFFFFFFFFFFFFFF
+            ),
+            "runtimeSeedDerivation": (
+                "identitySeed & 0x7fffffffffffffff"
+            ),
             "batchSize": 1,
         },
         "resolution": {

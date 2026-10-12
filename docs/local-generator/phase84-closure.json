@@ -1,0 +1,17 @@
+{
+  "phase": 84,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "issue": "UNSIGNED_IDENTITY_SEEDS_EXCEED_RUNTIME_RANGE",
+  "affectedTokens": [
+    "#0001",
+    "#0006",
+    "#0008"
+  ],
+  "identitySeedsModified": false,
+  "runtimeSeedDerivation": "identitySeed & 0x7fffffffffffffff",
+  "runtimeSeedsSigned64Safe": true,
+  "artworkGenerated": 0,
+  "modelExecuted": false,
+  "nextPhase": "GENESIS_BATCH_EXECUTION"
+}
