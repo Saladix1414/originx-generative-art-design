@@ -1,0 +1,37 @@
+{
+  "receiptVersion": "OX-SD15-ACQUISITION-RECEIPT-1",
+  "modelId": "OX-MODEL-002",
+  "modelName": "Stable Diffusion 1.5",
+  "quantization": "Q4_0",
+  "state": "ACQUIRED_HASH_VERIFIED",
+  "approval": {
+    "requiredPhrase": "I APPROVE OX-MODEL-002 SD15 Q4_0 ARTIFACT DOWNLOAD",
+    "approvalAccepted": true
+  },
+  "source": {
+    "repository": "second-state/stable-diffusion-v1-5-GGUF",
+    "revision": "031b5f5df991f511b3f5fa8fed6d99048ababb69",
+    "license": "CreativeML OpenRAIL-M"
+  },
+  "artifact": {
+    "filename": "stable-diffusion-v1-5-pruned-emaonly-Q4_0.gguf",
+    "path": "models/sd15/stable-diffusion-v1-5-pruned-emaonly-Q4_0.gguf",
+    "format": "GGUF",
+    "expectedSizeBytes": 1566768416,
+    "observedSizeBytes": 1566768416,
+    "expectedSha256": "sha256:b8944e9fe0b69b36ae1b5bb0185b3a7b8ef14347fe0fa9af6c64c4829022261f",
+    "observedSha256": "sha256:b8944e9fe0b69b36ae1b5bb0185b3a7b8ef14347fe0fa9af6c64c4829022261f",
+    "sizeVerified": true,
+    "hashVerified": true
+  },
+  "acquiredAt": "2026-10-12T18:12:01Z",
+  "governance": {
+    "downloadCompleted": true,
+    "executionAllowed": false,
+    "singleRuntimePreflightRequired": true,
+    "benchmarkAllowed": false,
+    "batchGenerationAllowed": false,
+    "canonicalizationAllowed": false,
+    "finalProductionStatusGranted": false
+  }
+}
