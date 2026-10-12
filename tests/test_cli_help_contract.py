@@ -17,6 +17,7 @@ COMMANDS = {
     "prompt-inspect",
     "prompt-chain",
     "prompt-validate",
+    "candidate-dry-run",
 }
 
 

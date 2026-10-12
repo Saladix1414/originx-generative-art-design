@@ -6,6 +6,7 @@ import json
 import jsonschema
 from jsonschema import Draft202012Validator
 from pathlib import Path
+from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry_run_hash
 from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_prompt_evidence_chain
 from typing import Any
 
@@ -528,6 +529,57 @@ def _command_prompt_chain(args: argparse.Namespace) -> int:
     return 0 if valid else 2
 
 
+
+def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
+    return {
+        "forgeVersion": "OX-LOCAL-FORGE-1",
+        "source": {
+            "renderPlanVersion": "OX-RENDER-1",
+            "renderPlanHash": "sha256:" + "a" * 64,
+        },
+        "hardware": {
+            "profileVersion": "OX-HARDWARE-PROFILE-1",
+            "requestedTarget": "LOCAL_CPP",
+            "capability": "UNKNOWN",
+        },
+        "model": {
+            "bindingState": "UNBOUND",
+        },
+        "execution": {
+            "policy": "LOCAL_FIRST",
+            "mode": "PREPARE_ONLY",
+            "authorizationState": "BLOCKED",
+            "executionAllowed": False,
+        },
+        "output": {
+            "mediaGenerationAllowed": False,
+            "canonicalArtworkAllowed": False,
+        },
+    }
+
+
+def _command_candidate_dry_run(args: argparse.Namespace) -> int:
+    dry_run = build_candidate_dry_run(
+        candidate_id=args.candidate_id,
+        media_path=args.media_path,
+        render_plan_hash=args.render_plan_hash,
+        forge_contract=_default_candidate_dry_run_forge_contract(),
+        model_binding_hash=None,
+    )
+    dry_run["dryRunHash"] = candidate_dry_run_hash(
+        dry_run
+    )
+
+    print(
+        json.dumps(
+            dry_run,
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -637,6 +689,30 @@ def build_parser() -> argparse.ArgumentParser:
     )
     prompt_chain.set_defaults(
         func=_command_prompt_chain
+    )
+
+
+    candidate_dry_run = subcommands.add_parser(
+        "candidate-dry-run",
+        help="Build a prepare-only candidate dry run.",
+    )
+    candidate_dry_run.add_argument(
+        "--candidate-id",
+        default="candidate-token-0001-local-001",
+        help="Candidate identifier.",
+    )
+    candidate_dry_run.add_argument(
+        "--media-path",
+        default="output/candidates/token-0001/candidate-001.png",
+        help="Planned candidate media path.",
+    )
+    candidate_dry_run.add_argument(
+        "--render-plan-hash",
+        default="sha256:" + "a" * 64,
+        help="Render plan hash to bind into the dry run.",
+    )
+    candidate_dry_run.set_defaults(
+        func=_command_candidate_dry_run
     )
 
     return parser

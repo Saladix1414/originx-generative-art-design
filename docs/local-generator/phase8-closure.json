@@ -1,0 +1,14 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_8",
+  "name": "CLI Candidate Dry Run",
+  "status": "closed",
+  "command": "oxgad candidate-dry-run",
+  "state": "PREPARE_ONLY",
+  "mediaGenerated": false,
+  "backendInvocationAllowed": false,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}
