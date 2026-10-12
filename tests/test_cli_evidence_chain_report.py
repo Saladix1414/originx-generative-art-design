@@ -35,6 +35,7 @@ EXPECTED_STEPS = [
     "runtime-tool-availability",
     "model-acquisition-path",
     "model-download-authorization",
+    "model-download-approval",
 ]
 
 
@@ -90,7 +91,7 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-17:] == [
+    assert steps[-18:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
@@ -108,4 +109,5 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
         "runtime-tool-availability",
         "model-acquisition-path",
         "model-download-authorization",
+        "model-download-approval",
     ]

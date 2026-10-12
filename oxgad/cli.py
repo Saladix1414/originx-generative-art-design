@@ -161,6 +161,10 @@ EVIDENCE_CHAIN = [
         "step": "model-download-authorization",
         "schema": "ox-model-download-authorization-draft-1.schema.json",
     },
+    {
+        "step": "model-download-approval",
+        "schema": "ox-model-download-approval-token-1.schema.json",
+    },
 ]
 
 
@@ -194,6 +198,7 @@ CONTRACT_SCHEMAS = {
     "runtime-tool-availability": "schemas/ox-runtime-tool-availability-1.schema.json",
     "model-acquisition-path": "schemas/ox-model-acquisition-path-selection-1.schema.json",
     "model-download-authorization": "schemas/ox-model-download-authorization-draft-1.schema.json",
+    "model-download-approval": "schemas/ox-model-download-approval-token-1.schema.json",
     "candidate-manifest": "schemas/ox-candidate-manifest-1.schema.json",
     "candidate-output": "schemas/ox-candidate-output-1.schema.json",
 }

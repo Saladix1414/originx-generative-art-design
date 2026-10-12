@@ -1,0 +1,16 @@
+{
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE-59-CLOSURE-1",
+  "contract": "OX-MODEL-DOWNLOAD-APPROVAL-TOKEN-1",
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "imageGenerated": false,
+  "installationAllowed": false,
+  "mediaGenerationAllowed": false,
+  "modelDownloaded": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 60 - Model Download Final Authorization Gate",
+  "phase": 59,
+  "registeredContract": "model-download-approval",
+  "runtimeInvoked": false,
+  "state": "APPROVAL_TOKEN_DECLARED",
+  "status": "COMPLETE"
+}
