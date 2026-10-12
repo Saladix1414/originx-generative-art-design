@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-sd15-external-vae-artifact-1.schema.json",
+  "title": "OriginX SD 1.5 External VAE Artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifestVersion",
+    "modelId",
+    "componentId",
+    "state",
+    "source",
+    "artifact",
+    "approval",
+    "verification",
+    "governance"
+  ],
+  "properties": {
+    "manifestVersion": {
+      "const": "OX-SD15-EXTERNAL-VAE-ARTIFACT-1"
+    },
+    "modelId": {
+      "const": "OX-MODEL-002"
+    },
+    "componentId": {
+      "const": "OX-MODEL-002-VAE-FP16-1"
+    },
+    "state": {
+      "const": "ACQUIRED_AND_VERIFIED"
+    },
+    "source": {
+      "type": "object"
+    },
+    "artifact": {
+      "type": "object"
+    },
+    "approval": {
+      "type": "object"
+    },
+    "verification": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    }
+  }
+}

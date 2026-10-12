@@ -1,0 +1,15 @@
+{
+  "phase": 91,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-002",
+  "componentId": "OX-MODEL-002-VAE-FP16-1",
+  "artifactState": "ACQUIRED_AND_VERIFIED",
+  "sizeBytes": 167335342,
+  "sha256": "sha256:4fbcf0ebe55a0984f5a5e00d8c4521d52359af7229bb4d81890039d2aa16dd7c",
+  "executionAllowed": false,
+  "preflightRequired": true,
+  "genesisRetryAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false
+}
