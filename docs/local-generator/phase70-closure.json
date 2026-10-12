@@ -1,0 +1,12 @@
+{
+  "phase": 70,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "artifactCount": 3,
+  "totalObservedSizeBytes": 6348318966,
+  "hashesVerified": true,
+  "executionAllowed": false,
+  "canonicalizationAllowed": false,
+  "batchGenerationAllowed": false,
+  "nextPhase": "RUNTIME LOAD PREFLIGHT"
+}

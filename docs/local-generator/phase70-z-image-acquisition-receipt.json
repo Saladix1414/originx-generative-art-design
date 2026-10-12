@@ -1,0 +1,34 @@
+{
+  "receiptVersion": "OX-Z-IMAGE-ACQUISITION-RECEIPT-1",
+  "modelId": "OX-MODEL-001",
+  "state": "ARTIFACTS_DOWNLOADED_AND_VERIFIED",
+  "artifacts": [
+    {
+      "role": "DIFFUSION_TRANSFORMER",
+      "path": "models/z-image/z_image_turbo-Q4_0.gguf",
+      "sizeBytes": 3683370944,
+      "sha256": "sha256:2bc57986874c84f7ec6d02d9d7070a53b0029954a0e38a6e1342eb91095572f5",
+      "verified": true
+    },
+    {
+      "role": "TEXT_ENCODER_DEPENDENCY",
+      "path": "models/z-image/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "sizeBytes": 2497281120,
+      "sha256": "sha256:3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+      "verified": true
+    },
+    {
+      "role": "VAE",
+      "path": "models/z-image/z_image_vae.safetensors",
+      "sizeBytes": 167666902,
+      "sha256": "sha256:f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3",
+      "verified": true
+    }
+  ],
+  "totalObservedSizeBytes": 6348318966,
+  "governance": {
+    "executionAllowed": false,
+    "canonicalizationAllowed": false,
+    "batchGenerationAllowed": false
+  }
+}
