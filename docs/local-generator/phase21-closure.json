@@ -1,0 +1,13 @@
+{
+  "phase": 21,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE21-CLOSURE-1",
+  "command": "oxgad model-acquisition-plan",
+  "state": "DECLARED_NOT_ACQUIRED",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 22 - Model Acquisition Plan Contract"
+}

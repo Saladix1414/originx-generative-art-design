@@ -21,6 +21,7 @@ COMMANDS = {
     "runtime-adapter",
     "runtime-command-plan",
     "runtime-preflight",
+    "model-acquisition-plan",
 }
 
 

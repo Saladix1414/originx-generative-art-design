@@ -18,6 +18,7 @@ from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry
 from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_prompt_evidence_chain
 from typing import Any
 
+from oxgad.models.acquisition import build_local_generator_model_acquisition_plan_refresh
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -582,6 +583,12 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
 
 
 
+
+def _command_model_acquisition_plan(args: argparse.Namespace) -> int:
+    refresh = build_local_generator_model_acquisition_plan_refresh()
+    print(json.dumps(refresh, sort_keys=True))
+    return 0
+
 def _command_runtime_preflight(args: argparse.Namespace) -> int:
     adapter = build_declared_runtime_adapter(
         adapter_id=args.adapter_id,
@@ -893,6 +900,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     runtime_preflight.set_defaults(
         func=_command_runtime_preflight
+    )
+
+
+    model_acquisition_plan = subcommands.add_parser(
+        "model-acquisition-plan",
+        help="Print declared local model acquisition plan refresh.",
+    )
+    model_acquisition_plan.set_defaults(
+        func=_command_model_acquisition_plan
     )
 
     return parser
