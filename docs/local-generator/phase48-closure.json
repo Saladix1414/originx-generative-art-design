@@ -1,0 +1,13 @@
+{
+  "phase": 48,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE48-CLOSURE-1",
+  "command": "oxgad runtime-tool-availability",
+  "contract": "OX-RUNTIME-TOOL-AVAILABILITY-1",
+  "state": "MISSING",
+  "runtimeInvocationAllowed": false,
+  "modelExecutionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 49 - Runtime Tool Availability Contract Registry"
+}

@@ -21,6 +21,7 @@ COMMANDS = {
     "runtime-adapter",
     "runtime-command-plan",
     "runtime-preflight",
+    "runtime-tool-availability",
     "model-acquisition-plan",
     "model-artifact-evidence",
     "model-artifact-decision",

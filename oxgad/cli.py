@@ -26,6 +26,7 @@ from oxgad.models.artifact_approval import build_draft_model_artifact_acquisitio
 from oxgad.models.explicit_approval import build_not_granted_explicit_model_acquisition_approval
 from oxgad.models.artifact_placement import build_unplaced_model_artifact_placement
 from oxgad.models.artifact_placement_verification import build_missing_model_artifact_placement_verification
+from oxgad.forge.runtime_tool_availability import build_missing_runtime_tool_availability
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -678,6 +679,13 @@ def _command_model_acquisition_plan(args: argparse.Namespace) -> int:
     print(json.dumps(refresh, sort_keys=True))
     return 0
 
+
+def _command_runtime_tool_availability(args: argparse.Namespace) -> int:
+    availability = build_missing_runtime_tool_availability()
+    print(json.dumps(availability, sort_keys=True))
+    return 0
+
+
 def _command_runtime_preflight(args: argparse.Namespace) -> int:
     adapter = build_declared_runtime_adapter(
         adapter_id=args.adapter_id,
@@ -1061,6 +1069,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_artifact_placement_verification.set_defaults(
         func=_command_model_artifact_placement_verification
+    )
+
+
+    runtime_tool_availability = subcommands.add_parser(
+        "runtime-tool-availability",
+        help="Print missing local runtime tool availability.",
+    )
+    runtime_tool_availability.set_defaults(
+        func=_command_runtime_tool_availability
     )
 
     return parser
