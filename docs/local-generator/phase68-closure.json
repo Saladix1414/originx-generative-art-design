@@ -1,0 +1,12 @@
+{
+  "phase": 68,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "state": "DRY_RUN_ONLY",
+  "artifactCount": 3,
+  "expectedSizeBytes": 6348318966,
+  "networkInvoked": false,
+  "filesWritten": false,
+  "downloadAllowed": false,
+  "nextPhase": "CONTROLLED DOWNLOAD EXECUTOR"
+}
