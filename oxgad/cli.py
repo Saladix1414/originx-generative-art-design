@@ -151,6 +151,10 @@ EVIDENCE_CHAIN = [
         "step": "runtime-tool-availability",
         "schema": "ox-runtime-tool-availability-1.schema.json",
     },
+    {
+        "step": "model-acquisition-path",
+        "schema": "ox-model-acquisition-path-selection-1.schema.json",
+    },
 ]
 
 
@@ -182,6 +186,7 @@ CONTRACT_SCHEMAS = {
     "model-artifact-placement": "schemas/ox-model-artifact-placement-1.schema.json",
     "model-artifact-placement-verification": "schemas/ox-model-artifact-placement-verification-1.schema.json",
     "runtime-tool-availability": "schemas/ox-runtime-tool-availability-1.schema.json",
+    "model-acquisition-path": "schemas/ox-model-acquisition-path-selection-1.schema.json",
     "candidate-manifest": "schemas/ox-candidate-manifest-1.schema.json",
     "candidate-output": "schemas/ox-candidate-output-1.schema.json",
 }

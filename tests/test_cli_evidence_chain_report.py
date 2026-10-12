@@ -33,6 +33,7 @@ EXPECTED_STEPS = [
     "model-artifact-placement",
     "model-artifact-placement-verification",
     "runtime-tool-availability",
+    "model-acquisition-path",
 ]
 
 
@@ -88,7 +89,7 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-15:] == [
+    assert steps[-16:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
@@ -104,4 +105,5 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
         "model-artifact-placement",
         "model-artifact-placement-verification",
         "runtime-tool-availability",
+        "model-acquisition-path",
     ]
