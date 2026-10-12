@@ -1,0 +1,18 @@
+{
+  "approvalPhrase": "I APPROVE ORIGINX FIRST LOCAL MODEL DOWNLOAD",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE-57-CLOSURE-1",
+  "contract": "OX-MODEL-DOWNLOAD-APPROVAL-TOKEN-1",
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "imageGenerated": false,
+  "installationAllowed": false,
+  "mediaGenerationAllowed": false,
+  "modelDownloaded": false,
+  "modelExecuted": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 58 - Model Download Approval CLI",
+  "phase": 57,
+  "runtimeInvoked": false,
+  "selectedPath": "AUTHORIZED_DOWNLOAD",
+  "state": "APPROVAL_TOKEN_DECLARED",
+  "status": "COMPLETE"
+}
