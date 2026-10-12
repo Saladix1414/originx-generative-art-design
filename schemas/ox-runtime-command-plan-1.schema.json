@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-runtime-command-plan-1.schema.json",
+  "title": "OriginX Runtime Command Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "commandPlanVersion",
+    "state",
+    "adapterHash",
+    "command",
+    "governance"
+  ],
+  "properties": {
+    "commandPlanVersion": {
+      "const": "OX-RUNTIME-COMMAND-PLAN-1"
+    },
+    "state": {
+      "const": "DECLARED_NOT_EXECUTABLE"
+    },
+    "adapterHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "executable",
+        "argv",
+        "cwd",
+        "environment"
+      ],
+      "properties": {
+        "executable": {
+          "const": null
+        },
+        "argv": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "cwd": {
+          "const": null
+        },
+        "environment": {
+          "type": "object",
+          "maxProperties": 0
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commandConstructionImplemented",
+        "backendInvocationAllowed",
+        "shellAllowed",
+        "networkAllowed",
+        "modelExecutionAllowed"
+      ],
+      "properties": {
+        "commandConstructionImplemented": {
+          "const": false
+        },
+        "backendInvocationAllowed": {
+          "const": false
+        },
+        "shellAllowed": {
+          "const": false
+        },
+        "networkAllowed": {
+          "const": false
+        },
+        "modelExecutionAllowed": {
+          "const": false
+        }
+      }
+    }
+  }
+}

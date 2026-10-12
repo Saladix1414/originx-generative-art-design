@@ -1,0 +1,17 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_13",
+  "name": "Runtime Command Plan Contract",
+  "status": "closed",
+  "contract": "OX-RUNTIME-COMMAND-PLAN-1",
+  "state": "DECLARED_NOT_EXECUTABLE",
+  "commandConstructionImplemented": false,
+  "backendInvocationAllowed": false,
+  "shellAllowed": false,
+  "networkAllowed": false,
+  "modelExecutionAllowed": false,
+  "mediaGenerationImplemented": false,
+  "canonicalAuthority": false,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}
