@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-genesis-token-execution-gate-1.schema.json",
+  "title": "OriginX Genesis Single Token Execution Gate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gateVersion",
+    "batchId",
+    "tokenId",
+    "serial",
+    "state",
+    "profileId",
+    "approval",
+    "limits",
+    "governance",
+    "gateHash"
+  ],
+  "properties": {
+    "gateVersion": {
+      "const": "OX-GENESIS-TOKEN-EXECUTION-GATE-1"
+    },
+    "batchId": {
+      "const": "GENESIS-BATCH-0001"
+    },
+    "tokenId": {
+      "const": 1
+    },
+    "serial": {
+      "const": "#0001"
+    },
+    "state": {
+      "const": "PENDING_EXPLICIT_APPROVAL"
+    },
+    "profileId": {
+      "const": "GENESIS-SD15-CONSERVATIVE-384-V2"
+    },
+    "approval": {
+      "type": "object"
+    },
+    "limits": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    },
+    "gateHash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "phase": 86,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "tokenId": 1,
+  "interruptedAttemptRecorded": true,
+  "interruptedAttemptClassifiedAsTokenFailure": false,
+  "candidateImageProducedByInterruptedAttempt": false,
+  "renderProfileVersion": "OX-GENESIS-RENDER-PROFILE-2",
+  "renderProfileId": "GENESIS-SD15-CONSERVATIVE-384-V2",
+  "resolution": "384x384",
+  "steps": 10,
+  "sampler": "dpm++2m",
+  "scheduler": "karras",
+  "outputEncoding": "LOSSLESS_RGB8_PNG",
+  "identityRecordsPreserved": true,
+  "executionAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false,
+  "requiredPhrase": "I APPROVE GENESIS-BATCH-0001 TOKEN 0001 RENDER PROFILE 2"
+}

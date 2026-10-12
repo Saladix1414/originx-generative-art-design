@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-genesis-render-interruption-1.schema.json",
+  "title": "OriginX Genesis Render Interruption Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidenceVersion",
+    "batchId",
+    "tokenId",
+    "serial",
+    "state",
+    "attempt",
+    "observation",
+    "classification",
+    "governance",
+    "evidenceHash"
+  ],
+  "properties": {
+    "evidenceVersion": {
+      "const": "OX-GENESIS-RENDER-INTERRUPTION-1"
+    },
+    "batchId": {
+      "const": "GENESIS-BATCH-0001"
+    },
+    "tokenId": {
+      "const": 1
+    },
+    "serial": {
+      "const": "#0001"
+    },
+    "state": {
+      "const": "INTERRUPTED_BY_USER"
+    },
+    "attempt": {
+      "type": "object"
+    },
+    "observation": {
+      "type": "object"
+    },
+    "classification": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    },
+    "evidenceHash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    }
+  }
+}

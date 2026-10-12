@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-genesis-render-profile-2.schema.json",
+  "title": "OriginX Genesis Render Profile 2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profileVersion",
+    "profileId",
+    "scope",
+    "model",
+    "render",
+    "output",
+    "detailPolicy",
+    "identityPreservation",
+    "profileHash"
+  ],
+  "properties": {
+    "profileVersion": {
+      "const": "OX-GENESIS-RENDER-PROFILE-2"
+    },
+    "profileId": {
+      "const": "GENESIS-SD15-CONSERVATIVE-384-V2"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "model": {
+      "type": "object"
+    },
+    "render": {
+      "type": "object"
+    },
+    "output": {
+      "type": "object"
+    },
+    "detailPolicy": {
+      "type": "object"
+    },
+    "identityPreservation": {
+      "type": "object"
+    },
+    "profileHash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    }
+  }
+}
