@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-z-image-authorized-download-plan-1.schema.json",
+  "title": "OriginX Z-Image Authorized Download Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "planVersion",
+    "modelId",
+    "state",
+    "checks",
+    "approval",
+    "download",
+    "governance"
+  ],
+  "properties": {
+    "planVersion": {
+      "const": "OX-Z-IMAGE-AUTHORIZED-DOWNLOAD-PLAN-1"
+    },
+    "modelId": {
+      "const": "OX-MODEL-001"
+    },
+    "state": {
+      "const": "BLOCKED_PENDING_RAM_GATE_AND_EXPLICIT_APPROVAL"
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceVerified",
+        "licenseVerified",
+        "runtimeCompatibilityVerified",
+        "storageCapacityVerified",
+        "ramBenchmarkPassed"
+      ],
+      "properties": {
+        "sourceVerified": {
+          "const": true
+        },
+        "licenseVerified": {
+          "const": true
+        },
+        "runtimeCompatibilityVerified": {
+          "const": true
+        },
+        "storageCapacityVerified": {
+          "const": true
+        },
+        "ramBenchmarkPassed": {
+          "const": false
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "explicitApprovalRequired",
+        "explicitApprovalPresent"
+      ],
+      "properties": {
+        "explicitApprovalRequired": {
+          "const": true
+        },
+        "explicitApprovalPresent": {
+          "const": false
+        }
+      }
+    },
+    "download": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifactCount",
+        "expectedSizeBytes",
+        "minimumFreeStorageBytes"
+      ],
+      "properties": {
+        "artifactCount": {
+          "const": 3
+        },
+        "expectedSizeBytes": {
+          "const": 6348318966
+        },
+        "minimumFreeStorageBytes": {
+          "const": 12000000000
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "executionAllowed",
+        "canonicalizationAllowed"
+      ],
+      "properties": {
+        "downloadAllowed": {
+          "const": false
+        },
+        "installationAllowed": {
+          "const": false
+        },
+        "executionAllowed": {
+          "const": false
+        },
+        "canonicalizationAllowed": {
+          "const": false
+        }
+      }
+    }
+  }
+}

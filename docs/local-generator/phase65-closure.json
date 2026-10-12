@@ -1,0 +1,9 @@
+{
+  "phase": 65,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "state": "BLOCKED_PENDING_RAM_GATE_AND_EXPLICIT_APPROVAL",
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "nextPhase": "RAM FEASIBILITY PREFLIGHT"
+}
