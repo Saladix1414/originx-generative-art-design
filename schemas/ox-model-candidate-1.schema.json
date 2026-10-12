@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-candidate-1.schema.json",
+  "title": "OriginX Model Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidateVersion",
+    "modelId",
+    "name",
+    "family",
+    "artifact",
+    "runtimeCompatibility",
+    "governance"
+  ],
+  "properties": {
+    "candidateVersion": {
+      "const": "OX-MODEL-CANDIDATE-1"
+    },
+    "modelId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "expectedSizeBytes",
+        "expectedSha256"
+      ],
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "expectedSizeBytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "expectedSha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "runtimeCompatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtimeFamily",
+        "state"
+      ],
+      "properties": {
+        "runtimeFamily": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "UNASSESSED",
+            "COMPATIBLE",
+            "INCOMPATIBLE"
+          ]
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "executionAllowed"
+      ],
+      "properties": {
+        "downloadAllowed": {
+          "const": false
+        },
+        "installationAllowed": {
+          "const": false
+        },
+        "executionAllowed": {
+          "const": false
+        }
+      }
+    }
+  }
+}

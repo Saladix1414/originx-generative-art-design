@@ -1,0 +1,12 @@
+{
+  "phase": 62,
+  "status": "COMPLETE",
+  "contract": "OX-MODEL-CANDIDATE-1",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "modelDownloaded": false,
+  "runtimeInvoked": false,
+  "historicalContractsPreserved": true,
+  "nextPhase": "MODEL CANDIDATE SHORTLIST"
+}
