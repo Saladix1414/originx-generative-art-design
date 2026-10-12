@@ -27,6 +27,7 @@ EXPECTED_STEPS = [
     "model-acquisition-refresh",
     "model-artifact-evidence",
     "model-artifact-decision",
+    "model-artifact-authorization",
 ]
 
 
@@ -82,7 +83,7 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-9:] == [
+    assert steps[-10:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
@@ -92,4 +93,5 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
         "model-acquisition-refresh",
         "model-artifact-evidence",
         "model-artifact-decision",
+        "model-artifact-authorization",
     ]
