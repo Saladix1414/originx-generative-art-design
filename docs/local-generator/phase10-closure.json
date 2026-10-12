@@ -1,0 +1,17 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_10",
+  "name": "Runtime Adapter Contract",
+  "status": "closed",
+  "contract": "OX-RUNTIME-ADAPTER-1",
+  "interfaceMode": "DECLARED_ONLY",
+  "target": "LOCAL_CPP",
+  "runtimeFamily": "stable-diffusion.cpp",
+  "backendInvocationAllowed": false,
+  "commandConstructionImplemented": false,
+  "modelExecutionImplemented": false,
+  "mediaGenerationImplemented": false,
+  "canonicalAuthority": false,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}

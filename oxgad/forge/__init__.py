@@ -1,3 +1,4 @@
+from oxgad.forge.runtime_adapter import build_declared_runtime_adapter, runtime_adapter_hash, validate_runtime_adapter
 from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry_run_hash
 from oxgad.forge.candidate_provenance import build_candidate_provenance_hook, candidate_provenance_hook_hash, validate_candidate_provenance_hook
 from oxgad.forge.candidate_manifest import build_candidate_manifest, candidate_manifest_hash, validate_candidate_manifest
@@ -39,6 +40,9 @@ from oxgad.forge.validator import (
 )
 
 __all__ = [
+    "validate_runtime_adapter",
+    "runtime_adapter_hash",
+    "build_declared_runtime_adapter",
     "candidate_dry_run_hash",
     "build_candidate_dry_run",
     "validate_candidate_provenance_hook",

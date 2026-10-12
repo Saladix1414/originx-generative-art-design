@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-runtime-adapter-1.schema.json",
+  "title": "OriginX Runtime Adapter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "adapterVersion",
+    "adapterId",
+    "target",
+    "runtime",
+    "interfaceMode",
+    "capabilities",
+    "governance"
+  ],
+  "properties": {
+    "adapterVersion": {
+      "const": "OX-RUNTIME-ADAPTER-1"
+    },
+    "adapterId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$"
+    },
+    "target": {
+      "enum": [
+        "LOCAL_CPP",
+        "LOCAL_GPU"
+      ]
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "executablePath",
+        "version"
+      ],
+      "properties": {
+        "family": {
+          "enum": [
+            "stable-diffusion.cpp",
+            "unknown"
+          ]
+        },
+        "executablePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-zA-Z0-9._/ -]+$"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "interfaceMode": {
+      "const": "DECLARED_ONLY"
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "modelExecutionImplemented",
+        "mediaGenerationImplemented",
+        "commandConstructionImplemented"
+      ],
+      "properties": {
+        "modelExecutionImplemented": {
+          "const": false
+        },
+        "mediaGenerationImplemented": {
+          "const": false
+        },
+        "commandConstructionImplemented": {
+          "const": false
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directInvocationAllowed",
+        "backendInvocationAllowed",
+        "requiresExecutionDecision",
+        "requiresModelBinding",
+        "requiresCandidateProvenance"
+      ],
+      "properties": {
+        "directInvocationAllowed": {
+          "const": false
+        },
+        "backendInvocationAllowed": {
+          "const": false
+        },
+        "requiresExecutionDecision": {
+          "const": true
+        },
+        "requiresModelBinding": {
+          "const": true
+        },
+        "requiresCandidateProvenance": {
+          "const": true
+        }
+      }
+    }
+  }
+}
