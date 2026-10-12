@@ -1,0 +1,12 @@
+{
+  "phase": 64,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "artifactState": "EXPECTED_NOT_OBSERVED",
+  "artifactCount": 3,
+  "totalExpectedSizeBytes": 6348318966,
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextPhase": "AUTHORIZED DOWNLOAD PLAN"
+}

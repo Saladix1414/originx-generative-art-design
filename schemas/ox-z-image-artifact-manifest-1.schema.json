@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-z-image-artifact-manifest-1.schema.json",
+  "title": "OriginX Z-Image Artifact Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifestVersion",
+    "modelId",
+    "state",
+    "runtime",
+    "artifacts",
+    "totalExpectedSizeBytes",
+    "governance"
+  ],
+  "properties": {
+    "manifestVersion": {
+      "const": "OX-Z-IMAGE-ARTIFACT-MANIFEST-1"
+    },
+    "modelId": {
+      "const": "OX-MODEL-001"
+    },
+    "state": {
+      "const": "EXPECTED_NOT_OBSERVED"
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "commit",
+        "binarySha256"
+      ],
+      "properties": {
+        "family": {
+          "const": "stable-diffusion.cpp"
+        },
+        "commit": {
+          "const": "792bcd344c3fa4d14143b240d5f6cbb324583b18"
+        },
+        "binarySha256": {
+          "const": "sha256:a57f5f195e0dea9b3d0461af92e528c7c25a6a98f0bf2edc771a2f5835252e42"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "repository",
+          "revision",
+          "filename",
+          "license",
+          "expectedSizeBytes",
+          "expectedSha256",
+          "observed"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "DIFFUSION_TRANSFORMER",
+              "TEXT_ENCODER_DEPENDENCY",
+              "VAE"
+            ]
+          },
+          "repository": {
+            "type": "string",
+            "minLength": 3
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "filename": {
+            "type": "string",
+            "minLength": 1
+          },
+          "license": {
+            "const": "Apache-2.0"
+          },
+          "expectedSizeBytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "expectedSha256": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "observed": {
+            "const": false
+          }
+        }
+      }
+    },
+    "totalExpectedSizeBytes": {
+      "const": 6348318966
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "executionAllowed",
+        "canonicalizationAllowed"
+      ],
+      "properties": {
+        "downloadAllowed": {
+          "const": false
+        },
+        "executionAllowed": {
+          "const": false
+        },
+        "canonicalizationAllowed": {
+          "const": false
+        }
+      }
+    }
+  }
+}
