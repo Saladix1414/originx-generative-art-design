@@ -1,0 +1,12 @@
+{
+  "phase": 47,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE47-CLOSURE-1",
+  "contract": "OX-RUNTIME-TOOL-AVAILABILITY-1",
+  "state": "MISSING",
+  "runtimeInvocationAllowed": false,
+  "modelExecutionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 48 - Runtime Tool Availability CLI Inspection"
+}

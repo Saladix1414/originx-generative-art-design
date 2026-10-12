@@ -95,3 +95,10 @@ from oxgad.forge.runtime_preflight import (
     runtime_preflight_bundle_hash,
     validate_runtime_preflight_bundle,
 )
+
+from oxgad.forge.runtime_tool_availability import (
+    RUNTIME_TOOL_AVAILABILITY_VERSION,
+    build_missing_runtime_tool_availability,
+    runtime_tool_availability_hash,
+    validate_runtime_tool_availability,
+)

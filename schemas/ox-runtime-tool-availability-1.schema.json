@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-runtime-tool-availability-1.schema.json",
+  "title": "OriginX Runtime Tool Availability",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "availabilityVersion",
+    "state",
+    "tools",
+    "selected",
+    "governance",
+    "runtimeToolAvailabilityHash"
+  ],
+  "properties": {
+    "availabilityVersion": {
+      "const": "OX-RUNTIME-TOOL-AVAILABILITY-1"
+    },
+    "state": { "const": "MISSING" },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "available", "path"],
+        "properties": {
+          "name": {
+            "enum": [
+              "stable-diffusion",
+              "stable-diffusion-cli",
+              "sd",
+              "sd-cli",
+              "sd.cpp"
+            ]
+          },
+          "available": { "const": false },
+          "path": { "const": null }
+        }
+      }
+    },
+    "selected": { "const": null },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "availabilityGrantsExecutionAuthority",
+        "runtimeInvocationAllowed",
+        "modelExecutionAllowed",
+        "mediaGenerationAllowed"
+      ],
+      "properties": {
+        "availabilityGrantsExecutionAuthority": { "const": false },
+        "runtimeInvocationAllowed": { "const": false },
+        "modelExecutionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false }
+      }
+    },
+    "runtimeToolAvailabilityHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
