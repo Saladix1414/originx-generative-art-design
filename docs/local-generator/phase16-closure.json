@@ -1,0 +1,15 @@
+{
+  "phase": 16,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE16-CLOSURE-1",
+  "contract": "OX-RUNTIME-PREFLIGHT-BUNDLE-1",
+  "state": "BLOCKED_PRE_EXECUTION",
+  "preflightGrantsExecutionAuthority": false,
+  "backendInvocationAllowed": false,
+  "shellExecutionAllowed": false,
+  "networkAccessAllowed": false,
+  "modelExecutionAllowed": false,
+  "imageGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 17 - Runtime Preflight Contract Registry"
+}

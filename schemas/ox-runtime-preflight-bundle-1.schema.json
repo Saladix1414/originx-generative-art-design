@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-runtime-preflight-bundle-1.schema.json",
+  "title": "OriginX Runtime Preflight Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "preflightVersion",
+    "state",
+    "adapterHash",
+    "runtimeCommandPlanHash",
+    "checks",
+    "governance",
+    "runtimePreflightBundleHash"
+  ],
+  "properties": {
+    "preflightVersion": {
+      "const": "OX-RUNTIME-PREFLIGHT-BUNDLE-1"
+    },
+    "state": {
+      "const": "BLOCKED_PRE_EXECUTION"
+    },
+    "adapterHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "runtimeCommandPlanHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adapterDeclared",
+        "commandPlanDeclared",
+        "commandConstructed",
+        "runtimeExecutableBound",
+        "modelArtifactBound",
+        "executionAuthorized"
+      ],
+      "properties": {
+        "adapterDeclared": { "const": true },
+        "commandPlanDeclared": { "const": true },
+        "commandConstructed": { "const": false },
+        "runtimeExecutableBound": { "const": false },
+        "modelArtifactBound": { "const": false },
+        "executionAuthorized": { "const": false }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preflightGrantsExecutionAuthority",
+        "backendInvocationAllowed",
+        "shellExecutionAllowed",
+        "networkAccessAllowed",
+        "modelExecutionAllowed",
+        "imageGenerationAllowed"
+      ],
+      "properties": {
+        "preflightGrantsExecutionAuthority": { "const": false },
+        "backendInvocationAllowed": { "const": false },
+        "shellExecutionAllowed": { "const": false },
+        "networkAccessAllowed": { "const": false },
+        "modelExecutionAllowed": { "const": false },
+        "imageGenerationAllowed": { "const": false }
+      }
+    },
+    "runtimePreflightBundleHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
