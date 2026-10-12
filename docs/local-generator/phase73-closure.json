@@ -1,0 +1,14 @@
+{
+  "phase": 73,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "role": "REFERENCE_MODEL",
+  "modelStatus": "BENCHMARKED",
+  "localProductionStatus": "NOT_SUITABLE_ON_CURRENT_DEVICE",
+  "artifactsPreserved": true,
+  "historicalRegistrationPreserved": true,
+  "productionAliasAssigned": false,
+  "modelDownloaded": false,
+  "modelExecuted": false,
+  "nextPhase": "FLUX_1_SCHNELL_Q2_K_SOURCE_AUDIT"
+}
