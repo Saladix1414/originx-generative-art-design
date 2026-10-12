@@ -1,0 +1,15 @@
+{
+  "phase": 40,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE40-CLOSURE-1",
+  "registeredContract": "OX-EXPLICIT-MODEL-ACQUISITION-APPROVAL-1",
+  "evidenceStep": "explicit-model-acquisition-approval",
+  "state": "NOT_GRANTED",
+  "approvalRecorded": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 41 - Model Artifact Placement Contract"
+}

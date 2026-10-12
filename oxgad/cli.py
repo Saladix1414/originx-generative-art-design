@@ -131,6 +131,10 @@ EVIDENCE_CHAIN = [
         "step": "model-acquisition-approval",
         "schema": "ox-model-artifact-acquisition-approval-1.schema.json",
     },
+    {
+        "step": "explicit-model-acquisition-approval",
+        "schema": "ox-explicit-model-acquisition-approval-1.schema.json",
+    },
 ]
 
 
@@ -158,6 +162,7 @@ CONTRACT_SCHEMAS = {
     "model-artifact-decision": "schemas/ox-model-artifact-acquisition-decision-1.schema.json",
     "model-artifact-authorization": "schemas/ox-model-artifact-acquisition-authorization-1.schema.json",
     "model-acquisition-approval": "schemas/ox-model-artifact-acquisition-approval-1.schema.json",
+    "explicit-model-acquisition-approval": "schemas/ox-explicit-model-acquisition-approval-1.schema.json",
     "candidate-manifest": "schemas/ox-candidate-manifest-1.schema.json",
     "candidate-output": "schemas/ox-candidate-output-1.schema.json",
 }
