@@ -1,0 +1,14 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_4",
+  "name": "Candidate Manifest Binding",
+  "status": "closed",
+  "contract": "OX-CANDIDATE-MANIFEST-1",
+  "state": "CANDIDATE_MANIFEST_PREPARED",
+  "mediaGenerated": false,
+  "backendInvocationAllowed": false,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}

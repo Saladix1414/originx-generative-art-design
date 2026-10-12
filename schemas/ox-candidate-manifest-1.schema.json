@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-candidate-manifest-1.schema.json",
+  "title": "OriginX Candidate Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifestVersion",
+    "candidateId",
+    "state",
+    "links",
+    "authority"
+  ],
+  "properties": {
+    "manifestVersion": {
+      "const": "OX-CANDIDATE-MANIFEST-1"
+    },
+    "candidateId": {
+      "type": "string",
+      "pattern": "^candidate-[a-z0-9._-]{3,96}$"
+    },
+    "state": {
+      "const": "CANDIDATE_MANIFEST_PREPARED"
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateOutputHash",
+        "executionDecisionHash"
+      ],
+      "properties": {
+        "candidateOutputHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "executionDecisionHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mediaGenerated",
+        "candidateIsCanonical",
+        "manualApprovalRequired",
+        "backendInvocationAllowed"
+      ],
+      "properties": {
+        "mediaGenerated": {
+          "const": false
+        },
+        "candidateIsCanonical": {
+          "const": false
+        },
+        "manualApprovalRequired": {
+          "const": true
+        },
+        "backendInvocationAllowed": {
+          "const": false
+        }
+      }
+    }
+  }
+}
