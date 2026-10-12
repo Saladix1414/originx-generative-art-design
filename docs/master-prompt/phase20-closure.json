@@ -1,0 +1,10 @@
+{
+  "phase": "MASTER_PROMPT_PHASE_20",
+  "name": "Prompt Chain Readiness Binding",
+  "status": "closed",
+  "readinessField": "master_prompt_chain_ready",
+  "readOnly": true,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noPushExecuted": true
+}

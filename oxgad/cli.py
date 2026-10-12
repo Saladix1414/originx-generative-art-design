@@ -313,6 +313,19 @@ def _command_evidence_chain(args: argparse.Namespace) -> int:
     return 0
 
 
+
+def _master_prompt_chain_ready() -> bool:
+    return (
+        "master-prompt-chain" in CONTRACT_SCHEMAS
+        and any(
+            item.get("step") == "master-prompt-chain"
+            and item.get("schema")
+            == "ox-master-prompt-evidence-chain-1.schema.json"
+            for item in EVIDENCE_CHAIN
+        )
+    )
+
+
 def _command_readiness(args: argparse.Namespace) -> int:
     contract_results = _contract_validation_results()
     fixture_results = _fixture_directory_results(Path(args.fixtures))
@@ -320,8 +333,14 @@ def _command_readiness(args: argparse.Namespace) -> int:
     contracts_valid = all(result["valid"] for result in contract_results)
     fixtures_valid = all(result["valid"] for result in fixture_results)
     evidence_chain_complete = len(EVIDENCE_CHAIN) == len(CONTRACT_SCHEMAS)
+    master_prompt_chain_ready = _master_prompt_chain_ready()
 
-    ready = contracts_valid and fixtures_valid and evidence_chain_complete
+    ready = (
+        contracts_valid
+        and fixtures_valid
+        and evidence_chain_complete
+        and master_prompt_chain_ready
+    )
 
     print(
         json.dumps(
@@ -333,6 +352,7 @@ def _command_readiness(args: argparse.Namespace) -> int:
                 "fixture_count": len(fixture_results),
                 "evidence_chain_complete": evidence_chain_complete,
                 "evidence_chain_count": len(EVIDENCE_CHAIN),
+                "master_prompt_chain_ready": master_prompt_chain_ready,
             },
             sort_keys=True,
         )
@@ -379,6 +399,7 @@ def _command_stability(args: argparse.Namespace) -> int:
                 "contract_count": len(CONTRACT_SCHEMAS),
                 "fixture_count": len(FIXTURE_SCHEMA_MAP),
                 "evidence_chain_count": len(EVIDENCE_CHAIN),
+                "master_prompt_chain_ready": _master_prompt_chain_ready(),
                 "read_only": True,
             },
             sort_keys=True,
