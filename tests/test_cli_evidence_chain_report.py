@@ -23,6 +23,7 @@ EXPECTED_STEPS = [
     "candidate-output",
     "runtime-adapter",
     "runtime-command-plan",
+    "runtime-preflight-bundle",
 ]
 
 
@@ -78,10 +79,11 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-5:] == [
+    assert steps[-6:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
         "runtime-adapter",
         "runtime-command-plan",
+        "runtime-preflight-bundle",
     ]

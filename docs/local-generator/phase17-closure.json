@@ -1,0 +1,12 @@
+{
+  "phase": 17,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE17-CLOSURE-1",
+  "registeredContract": "OX-RUNTIME-PREFLIGHT-BUNDLE-1",
+  "evidenceStep": "runtime-preflight-bundle",
+  "backendInvocationAllowed": false,
+  "modelExecutionAllowed": false,
+  "imageGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 18 - Runtime Preflight CLI Inspection"
+}
