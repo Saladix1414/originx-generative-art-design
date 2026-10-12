@@ -24,6 +24,7 @@ from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisit
 from oxgad.models.artifact_authorization import build_blocked_model_artifact_acquisition_authorization
 from oxgad.models.artifact_approval import build_draft_model_artifact_acquisition_approval
 from oxgad.models.explicit_approval import build_not_granted_explicit_model_acquisition_approval
+from oxgad.models.artifact_placement import build_unplaced_model_artifact_placement
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -624,6 +625,12 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
 
 
 
+
+def _command_model_artifact_placement(args: argparse.Namespace) -> int:
+    placement = build_unplaced_model_artifact_placement()
+    print(json.dumps(placement, sort_keys=True))
+    return 0
+
 def _command_explicit_model_acquisition_approval(args: argparse.Namespace) -> int:
     approval = build_not_granted_explicit_model_acquisition_approval()
     print(json.dumps(approval, sort_keys=True))
@@ -1019,6 +1026,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     explicit_model_acquisition_approval.set_defaults(
         func=_command_explicit_model_acquisition_approval
+    )
+
+
+    model_artifact_placement = subcommands.add_parser(
+        "model-artifact-placement",
+        help="Print unplaced local model artifact placement.",
+    )
+    model_artifact_placement.set_defaults(
+        func=_command_model_artifact_placement
     )
 
     return parser

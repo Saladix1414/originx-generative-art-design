@@ -27,6 +27,7 @@ COMMANDS = {
     "model-artifact-authorization",
     "model-acquisition-approval",
     "explicit-model-acquisition-approval",
+    "model-artifact-placement",
 }
 
 
