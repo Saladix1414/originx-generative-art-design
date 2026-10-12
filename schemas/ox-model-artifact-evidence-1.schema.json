@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-artifact-evidence-1.schema.json",
+  "title": "OriginX Model Artifact Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidenceVersion", "state", "modelId", "expectedArtifact", "observedArtifact", "checks", "governance", "modelArtifactEvidenceHash"],
+  "properties": {
+    "evidenceVersion": {"const": "OX-MODEL-ARTIFACT-EVIDENCE-1"},
+    "state": {"const": "MISSING"},
+    "modelId": {"type": "string", "minLength": 3},
+    "expectedArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "sha256", "sizeBytes"],
+      "properties": {
+        "format": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "sizeBytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "observedArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "format", "sha256", "sizeBytes"],
+      "properties": {
+        "path": {"const": null},
+        "format": {"const": null},
+        "sha256": {"const": null},
+        "sizeBytes": {"const": null}
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifactPresent", "formatMatches", "hashMatches", "sizeMatches"],
+      "properties": {
+        "artifactPresent": {"const": false},
+        "formatMatches": {"const": false},
+        "hashMatches": {"const": false},
+        "sizeMatches": {"const": false}
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidenceGrantsTrust", "evidenceGrantsExecutionAuthority", "downloadAllowed", "installationAllowed", "executionAllowed", "mediaGenerationAllowed"],
+      "properties": {
+        "evidenceGrantsTrust": {"const": false},
+        "evidenceGrantsExecutionAuthority": {"const": false},
+        "downloadAllowed": {"const": false},
+        "installationAllowed": {"const": false},
+        "executionAllowed": {"const": false},
+        "mediaGenerationAllowed": {"const": false}
+      }
+    },
+    "modelArtifactEvidenceHash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "phase": 24,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE24-CLOSURE-1",
+  "contract": "OX-MODEL-ARTIFACT-EVIDENCE-1",
+  "state": "MISSING",
+  "evidenceGrantsTrust": false,
+  "evidenceGrantsExecutionAuthority": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 25 - Model Artifact Evidence CLI Inspection"
+}

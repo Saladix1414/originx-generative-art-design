@@ -113,3 +113,10 @@ from oxgad.models.acquisition import (
     build_local_generator_model_acquisition_plan_refresh,
     validate_local_generator_model_acquisition_plan_refresh,
 )
+
+from oxgad.models.artifact_evidence import (
+    MODEL_ARTIFACT_EVIDENCE_VERSION,
+    build_missing_model_artifact_evidence,
+    model_artifact_evidence_hash,
+    validate_model_artifact_evidence,
+)
