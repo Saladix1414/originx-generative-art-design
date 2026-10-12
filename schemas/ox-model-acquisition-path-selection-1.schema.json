@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-acquisition-path-selection-1.schema.json",
+  "title": "OriginX Model Acquisition Path Selection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "selectionVersion",
+    "selectedPath",
+    "state",
+    "rationale",
+    "governance",
+    "modelAcquisitionPathSelectionHash"
+  ],
+  "properties": {
+    "selectionVersion": {
+      "const": "OX-MODEL-ACQUISITION-PATH-SELECTION-1"
+    },
+    "selectedPath": {
+      "const": "AUTHORIZED_DOWNLOAD"
+    },
+    "state": {
+      "const": "SELECTED_NOT_AUTHORIZED"
+    },
+    "rationale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manualPlacementAvailable",
+        "downloadRequiresExplicitApproval",
+        "runtimeAvailable",
+        "modelArtifactPresent"
+      ],
+      "properties": {
+        "manualPlacementAvailable": { "const": false },
+        "downloadRequiresExplicitApproval": { "const": true },
+        "runtimeAvailable": { "const": false },
+        "modelArtifactPresent": { "const": false }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "trustGranted",
+        "executionAllowed",
+        "mediaGenerationAllowed",
+        "selectionGrantsAcquisitionAuthority",
+        "selectionGrantsExecutionAuthority"
+      ],
+      "properties": {
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "trustGranted": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false },
+        "selectionGrantsAcquisitionAuthority": { "const": false },
+        "selectionGrantsExecutionAuthority": { "const": false }
+      }
+    },
+    "modelAcquisitionPathSelectionHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}

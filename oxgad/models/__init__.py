@@ -162,3 +162,10 @@ from oxgad.models.artifact_placement_verification import (
     model_artifact_placement_verification_hash,
     validate_model_artifact_placement_verification,
 )
+
+from oxgad.models.acquisition_path import (
+    MODEL_ACQUISITION_PATH_SELECTION_VERSION,
+    build_authorized_download_path_selection,
+    model_acquisition_path_selection_hash,
+    validate_model_acquisition_path_selection,
+)

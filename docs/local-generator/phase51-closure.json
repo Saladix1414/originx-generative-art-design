@@ -1,0 +1,15 @@
+{
+  "phase": 51,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE51-CLOSURE-1",
+  "contract": "OX-MODEL-ACQUISITION-PATH-SELECTION-1",
+  "selectedPath": "AUTHORIZED_DOWNLOAD",
+  "state": "SELECTED_NOT_AUTHORIZED",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 52 - Model Acquisition Path CLI Inspection"
+}
