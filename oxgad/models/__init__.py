@@ -148,3 +148,10 @@ from oxgad.models.explicit_approval import (
     explicit_model_acquisition_approval_hash,
     validate_explicit_model_acquisition_approval,
 )
+
+from oxgad.models.artifact_placement import (
+    MODEL_ARTIFACT_PLACEMENT_VERSION,
+    build_unplaced_model_artifact_placement,
+    model_artifact_placement_hash,
+    validate_model_artifact_placement,
+)

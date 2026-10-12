@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-artifact-placement-1.schema.json",
+  "title": "OriginX Model Artifact Placement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "placementVersion",
+    "state",
+    "model",
+    "target",
+    "observed",
+    "governance",
+    "modelArtifactPlacementHash"
+  ],
+  "properties": {
+    "placementVersion": {
+      "const": "OX-MODEL-ARTIFACT-PLACEMENT-1"
+    },
+    "state": {
+      "const": "UNPLACED"
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "modelId",
+        "expectedSha256",
+        "expectedSizeBytes",
+        "format"
+      ],
+      "properties": {
+        "modelId": { "type": "string", "minLength": 3 },
+        "expectedSha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "expectedSizeBytes": { "type": "integer", "minimum": 1 },
+        "format": { "type": "string", "minLength": 1 }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directory",
+        "filename",
+        "path"
+      ],
+      "properties": {
+        "directory": { "const": "models" },
+        "filename": { "const": "v1-5-pruned-emaonly.safetensors" },
+        "path": { "const": "models/v1-5-pruned-emaonly.safetensors" }
+      }
+    },
+    "observed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pathExists",
+        "hashObserved",
+        "sizeObserved"
+      ],
+      "properties": {
+        "pathExists": { "const": false },
+        "hashObserved": { "const": false },
+        "sizeObserved": { "const": false }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "placementGrantsTrust",
+        "placementGrantsExecutionAuthority",
+        "downloadAllowed",
+        "installationAllowed",
+        "executionAllowed",
+        "mediaGenerationAllowed"
+      ],
+      "properties": {
+        "placementGrantsTrust": { "const": false },
+        "placementGrantsExecutionAuthority": { "const": false },
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false }
+      }
+    },
+    "modelArtifactPlacementHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
