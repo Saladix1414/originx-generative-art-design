@@ -120,3 +120,10 @@ from oxgad.models.artifact_evidence import (
     model_artifact_evidence_hash,
     validate_model_artifact_evidence,
 )
+
+from oxgad.models.artifact_decision import (
+    MODEL_ARTIFACT_ACQUISITION_DECISION_VERSION,
+    build_blocked_model_artifact_acquisition_decision,
+    model_artifact_acquisition_decision_hash,
+    validate_model_artifact_acquisition_decision,
+)
