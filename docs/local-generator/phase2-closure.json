@@ -1,0 +1,12 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_2",
+  "name": "Runtime Execution Decision Contract Binding",
+  "status": "closed",
+  "decision": "DENY",
+  "backendInvocationAllowed": false,
+  "mediaGenerationAllowed": false,
+  "canonicalAuthority": false,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}

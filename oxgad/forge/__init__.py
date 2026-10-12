@@ -1,3 +1,4 @@
+from oxgad.forge.execution_decision import build_execution_decision, execution_decision_hash, validate_execution_decision
 from oxgad.forge.backend import (
     LOCAL_FORGE_BACKEND_SCHEMA_PATH,
     LOCAL_FORGE_BACKEND_VERSION,
@@ -34,6 +35,9 @@ from oxgad.forge.validator import (
 )
 
 __all__ = [
+    "validate_execution_decision",
+    "execution_decision_hash",
+    "build_execution_decision",
     "LOCAL_FORGE_BACKEND_SCHEMA_PATH",
     "LOCAL_FORGE_BACKEND_VERSION",
     "LOCAL_FORGE_EXECUTION_BOUNDARY_VERSION",
