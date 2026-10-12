@@ -72,6 +72,18 @@ EVIDENCE_CHAIN = [
         "step": "master-prompt-chain",
         "schema": "ox-master-prompt-evidence-chain-1.schema.json",
     },
+    {
+        "step": "candidate-provenance",
+        "schema": "ox-candidate-provenance-hook-1.schema.json",
+    },
+    {
+        "step": "candidate-manifest",
+        "schema": "ox-candidate-manifest-1.schema.json",
+    },
+    {
+        "step": "candidate-output",
+        "schema": "ox-candidate-output-1.schema.json",
+    },
 ]
 
 
@@ -90,6 +102,9 @@ CONTRACT_SCHEMAS = {
     "export-audit": "schemas/ox-export-audit-ledger-1.schema.json",
     "project-readiness": "schemas/ox-project-readiness-summary-1.schema.json",
     "master-prompt-chain": "schemas/ox-master-prompt-evidence-chain-1.schema.json",
+    "candidate-provenance": "schemas/ox-candidate-provenance-hook-1.schema.json",
+    "candidate-manifest": "schemas/ox-candidate-manifest-1.schema.json",
+    "candidate-output": "schemas/ox-candidate-output-1.schema.json",
 }
 
 

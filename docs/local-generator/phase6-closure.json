@@ -1,0 +1,17 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_6",
+  "name": "Candidate Contract Registry",
+  "status": "closed",
+  "contracts": [
+    "candidate-output",
+    "candidate-manifest",
+    "candidate-provenance"
+  ],
+  "mediaGenerated": false,
+  "backendInvocationAllowed": false,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}

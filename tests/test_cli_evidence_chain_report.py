@@ -18,6 +18,9 @@ EXPECTED_STEPS = [
     "export-audit",
     "project-readiness",
     "master-prompt-chain",
+    "candidate-provenance",
+    "candidate-manifest",
+    "candidate-output",
 ]
 
 
@@ -53,17 +56,26 @@ def test_cli_evidence_chain_reports_schema_ids(capsys):
     assert "ox-provenance-manifest-1.schema.json" in schema_ids
     assert "ox-quality-gate-report-1.schema.json" in schema_ids
     assert "ox-master-prompt-evidence-chain-1.schema.json" in schema_ids
+    assert "ox-candidate-output-1.schema.json" in schema_ids
+    assert "ox-candidate-manifest-1.schema.json" in schema_ids
+    assert "ox-candidate-provenance-hook-1.schema.json" in schema_ids
 
 
-def test_cli_evidence_chain_includes_master_prompt_chain(capsys):
+def test_cli_evidence_chain_includes_master_prompt_and_candidate_chain(capsys):
     assert main(["evidence-chain"]) == 0
 
     output = json.loads(
         capsys.readouterr().out
     )
 
-    assert output["chain"][-1]["step"] == "master-prompt-chain"
-    assert (
-        output["chain"][-1]["schema"]
-        == "ox-master-prompt-evidence-chain-1.schema.json"
-    )
+    steps = [
+        item["step"]
+        for item in output["chain"]
+    ]
+
+    assert "master-prompt-chain" in steps
+    assert steps[-3:] == [
+        "candidate-provenance",
+        "candidate-manifest",
+        "candidate-output",
+    ]
