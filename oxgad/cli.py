@@ -22,6 +22,7 @@ from oxgad.models.acquisition import build_local_generator_model_acquisition_pla
 from oxgad.models.acquisition_path import build_authorized_download_path_selection
 from oxgad.models.download_authorization import build_model_download_authorization_draft
 from oxgad.models.download_approval import build_model_download_approval_token
+from oxgad.models.download_final_authorization import build_blocked_model_download_final_authorization
 from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
 from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisition_decision
 from oxgad.models.artifact_authorization import build_blocked_model_artifact_acquisition_authorization
@@ -803,6 +804,12 @@ def _command_model_download_approval(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_model_download_final_authorization(args: argparse.Namespace) -> int:
+    authorization = build_blocked_model_download_final_authorization()
+    print(json.dumps(authorization, sort_keys=True))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -1145,6 +1152,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_download_approval.set_defaults(
         func=_command_model_download_approval
+    )
+
+
+    model_download_final_authorization = subcommands.add_parser(
+        "model-download-final-authorization",
+        help="Print the blocked final model download authorization gate.",
+    )
+    model_download_final_authorization.set_defaults(
+        func=_command_model_download_final_authorization
     )
 
 

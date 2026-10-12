@@ -26,6 +26,7 @@ COMMANDS = {
     "model-acquisition-path",
     "model-download-authorization",
     "model-download-approval",
+    "model-download-final-authorization",
     "model-artifact-evidence",
     "model-artifact-decision",
     "model-artifact-authorization",
