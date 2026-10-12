@@ -1,0 +1,13 @@
+{
+  "phase": 63,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "productionAlias": "OX-GENESIS-MODEL-1",
+  "selectionState": "CANDIDATE_PENDING_10_TOKEN_GATE",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "canonicalizationAllowed": false,
+  "requiredBenchmarkTokens": 10,
+  "nextPhase": "Z-IMAGE SOURCE AND ARTIFACT VERIFICATION"
+}

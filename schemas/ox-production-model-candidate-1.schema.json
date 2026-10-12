@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-production-model-candidate-1.schema.json",
+  "title": "OriginX Production Model Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidateVersion",
+    "modelId",
+    "name",
+    "canonicalRole",
+    "productionAlias",
+    "runtimeFamily",
+    "format",
+    "quantization",
+    "license",
+    "selectionState",
+    "artifact",
+    "governance",
+    "benchmarkGate"
+  ],
+  "properties": {
+    "candidateVersion": {
+      "const": "OX-PRODUCTION-MODEL-CANDIDATE-1"
+    },
+    "modelId": {
+      "pattern": "^OX-MODEL-[0-9]{3}$",
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonicalRole": {
+      "const": "PRIMARY_LOCAL_BASE_MODEL"
+    },
+    "productionAlias": {
+      "type": "string",
+      "pattern": "^OX-[A-Z0-9-]+$"
+    },
+    "runtimeFamily": {
+      "const": "stable-diffusion.cpp"
+    },
+    "format": {
+      "const": "GGUF"
+    },
+    "quantization": {
+      "const": "Q4_0"
+    },
+    "license": {
+      "const": "Apache-2.0"
+    },
+    "selectionState": {
+      "const": "CANDIDATE_PENDING_10_TOKEN_GATE"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "expectedSizeBytes",
+        "expectedSha256"
+      ],
+      "properties": {
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expectedSizeBytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "expectedSha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "executionAllowed",
+        "canonicalizationAllowed"
+      ],
+      "properties": {
+        "downloadAllowed": {
+          "const": false
+        },
+        "installationAllowed": {
+          "const": false
+        },
+        "executionAllowed": {
+          "const": false
+        },
+        "canonicalizationAllowed": {
+          "const": false
+        }
+      }
+    },
+    "benchmarkGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requiredTokens",
+        "passed"
+      ],
+      "properties": {
+        "requiredTokens": {
+          "const": 10
+        },
+        "passed": {
+          "const": false
+        }
+      }
+    }
+  }
+}
