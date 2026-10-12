@@ -1,3 +1,4 @@
+from oxgad.forge.candidate_output import build_unapproved_candidate_output, candidate_output_hash, validate_candidate_output
 from oxgad.forge.execution_decision import build_execution_decision, execution_decision_hash, validate_execution_decision
 from oxgad.forge.backend import (
     LOCAL_FORGE_BACKEND_SCHEMA_PATH,
@@ -35,6 +36,9 @@ from oxgad.forge.validator import (
 )
 
 __all__ = [
+    "validate_candidate_output",
+    "candidate_output_hash",
+    "build_unapproved_candidate_output",
     "validate_execution_decision",
     "execution_decision_hash",
     "build_execution_decision",

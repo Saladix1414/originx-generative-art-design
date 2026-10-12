@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-candidate-output-1.schema.json",
+  "title": "OriginX Candidate Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidateVersion",
+    "candidateId",
+    "state",
+    "source",
+    "media",
+    "quality",
+    "authority"
+  ],
+  "properties": {
+    "candidateVersion": {
+      "const": "OX-CANDIDATE-OUTPUT-1"
+    },
+    "candidateId": {
+      "type": "string",
+      "pattern": "^candidate-[a-z0-9._-]{3,96}$"
+    },
+    "state": {
+      "const": "CANDIDATE_UNAPPROVED"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "renderPlanHash",
+        "executionDecisionHash",
+        "modelBindingHash"
+      ],
+      "properties": {
+        "renderPlanHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "executionDecisionHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "modelBindingHash": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "mediaHash",
+        "mimeType",
+        "width",
+        "height"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^output/candidates/[a-z0-9._/-]+$"
+        },
+        "mediaHash": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "mimeType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            null
+          ]
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "qualityGateStatus",
+        "canonicalPromotionAllowed"
+      ],
+      "properties": {
+        "qualityGateStatus": {
+          "const": "NOT_REVIEWED"
+        },
+        "canonicalPromotionAllowed": {
+          "const": false
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateIsCanonical",
+        "manualApprovalRequired",
+        "aiOutputIsCanonical"
+      ],
+      "properties": {
+        "candidateIsCanonical": {
+          "const": false
+        },
+        "manualApprovalRequired": {
+          "const": true
+        },
+        "aiOutputIsCanonical": {
+          "const": false
+        }
+      }
+    }
+  }
+}

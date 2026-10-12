@@ -1,0 +1,13 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_3",
+  "name": "Candidate Output Contract",
+  "status": "closed",
+  "contract": "OX-CANDIDATE-OUTPUT-1",
+  "state": "CANDIDATE_UNAPPROVED",
+  "mediaGenerated": false,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}
