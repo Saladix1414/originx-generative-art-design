@@ -21,8 +21,8 @@ def build_z_image_download_dry_run() -> dict[str, Any]:
             ),
             "expectedSizeBytes": 3683370944,
             "expectedSha256": (
-                "sha256:3f15efb272efb7133373f2936fcd1c95"
-                "abeefd3222e2d9b28baa8182115e5040"
+                "sha256:2bc57986874c84f7ec6d02d9d7070a53"
+                "b0029954a0e38a6e1342eb91095572f5"
             ),
         },
         {
@@ -39,8 +39,8 @@ def build_z_image_download_dry_run() -> dict[str, Any]:
             ),
             "expectedSizeBytes": 2497281120,
             "expectedSha256": (
-                "sha256:bf52d44a54b81d44219833556849529e"
-                "e96f09da673a38783dddc2e2eaf17881"
+                "sha256:3605803b982cb64aead44f6c1b2ae36e"
+                "3acdb41d8e46c8a94c6533bc4c67e597"
             ),
         },
         {
@@ -56,8 +56,8 @@ def build_z_image_download_dry_run() -> dict[str, Any]:
             ),
             "expectedSizeBytes": 167666902,
             "expectedSha256": (
-                "sha256:5fc08a93307850a89126de1e284972e1"
-                "a1d7bcbb061ed06edcfc2db5a2669dcd"
+                "sha256:f5b59a26851551b67ae1fe58d32e7648"
+                "6e1e812def4696a4bea97f16604d40a3"
             ),
         },
     ]

@@ -1,0 +1,11 @@
+{
+  "phase": 69,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "hashAuthority": "GIT_LFS_CONTENT_SHA256",
+  "artifactCount": 3,
+  "downloadAllowed": true,
+  "executionAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextPhase": "RESUME CONTROLLED DOWNLOAD"
+}
