@@ -1,0 +1,12 @@
+{
+  "phase": 22,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE22-CLOSURE-1",
+  "contract": "OX-MODEL-ACQUISITION-PLAN-REFRESH-1",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 23 - Model Acquisition Plan Contract Registry"
+}

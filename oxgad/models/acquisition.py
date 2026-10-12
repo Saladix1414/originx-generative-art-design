@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+
+import jsonschema
 from pathlib import Path
 from typing import Any
 
@@ -110,12 +112,15 @@ def model_acquisition_plan_hash(
 
 
 MODEL_ACQUISITION_PLAN_REFRESH_VERSION = "OX-MODEL-ACQUISITION-PLAN-REFRESH-1"
+MODEL_ACQUISITION_PLAN_REFRESH_SCHEMA_PATH = Path(
+    "schemas/ox-model-acquisition-plan-refresh-1.schema.json"
+)
 
 
 def build_local_generator_model_acquisition_plan_refresh() -> dict:
     """Return the local generator model acquisition plan without acquiring it."""
     plan = build_first_local_model_plan()
-    return {
+    refresh = {
         "refreshVersion": MODEL_ACQUISITION_PLAN_REFRESH_VERSION,
         "state": "DECLARED_NOT_ACQUIRED",
         "plan": plan,
@@ -134,3 +139,16 @@ def build_local_generator_model_acquisition_plan_refresh() -> dict:
             "refreshGrantsExecutionAuthority": False
         }
     }
+    return validate_local_generator_model_acquisition_plan_refresh(refresh)
+
+
+def validate_local_generator_model_acquisition_plan_refresh(
+    refresh: dict,
+) -> dict:
+    """Validate the local generator model acquisition plan refresh."""
+    schema = json.loads(
+        MODEL_ACQUISITION_PLAN_REFRESH_SCHEMA_PATH.read_text()
+    )
+    jsonschema.validate(refresh, schema)
+    validate_model_acquisition_plan(refresh["plan"])
+    return refresh

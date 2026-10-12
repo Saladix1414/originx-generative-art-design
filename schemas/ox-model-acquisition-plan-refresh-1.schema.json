@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-acquisition-plan-refresh-1.schema.json",
+  "title": "OriginX Model Acquisition Plan Refresh",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "refreshVersion",
+    "state",
+    "plan",
+    "availability",
+    "governance"
+  ],
+  "properties": {
+    "refreshVersion": {
+      "const": "OX-MODEL-ACQUISITION-PLAN-REFRESH-1"
+    },
+    "state": {
+      "const": "DECLARED_NOT_ACQUIRED"
+    },
+    "plan": {
+      "type": "object"
+    },
+    "availability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "usableModelArtifactsPresent",
+        "artifactPathBound",
+        "artifactHashObserved",
+        "artifactSizeObserved"
+      ],
+      "properties": {
+        "usableModelArtifactsPresent": { "const": false },
+        "artifactPathBound": { "const": false },
+        "artifactHashObserved": { "const": false },
+        "artifactSizeObserved": { "const": false }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "executionAllowed",
+        "mediaGenerationAllowed",
+        "refreshGrantsAcquisitionAuthority",
+        "refreshGrantsExecutionAuthority"
+      ],
+      "properties": {
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false },
+        "refreshGrantsAcquisitionAuthority": { "const": false },
+        "refreshGrantsExecutionAuthority": { "const": false }
+      }
+    }
+  }
+}

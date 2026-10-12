@@ -111,4 +111,5 @@ __all__ = [
 from oxgad.models.acquisition import (
     MODEL_ACQUISITION_PLAN_REFRESH_VERSION,
     build_local_generator_model_acquisition_plan_refresh,
+    validate_local_generator_model_acquisition_plan_refresh,
 )
