@@ -1,0 +1,15 @@
+{
+  "phase": 89,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "tokenId": 1,
+  "retryId": "GENESIS-0001-TECHNICAL-RETRY-1",
+  "executorPrepared": true,
+  "attemptsAuthorized": 1,
+  "singleChange": "NON_TILED_VAE_DECODE",
+  "identityPreserved": true,
+  "automaticRetryAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false
+}
