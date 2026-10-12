@@ -1,0 +1,12 @@
+{
+  "phase": 83,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "range": "#0001-#0010",
+  "executionState": "PENDING_EXPLICIT_APPROVAL",
+  "executionAllowed": false,
+  "candidateRenderingOnly": true,
+  "canonicalizationAllowed": false,
+  "nextBatchAllowed": false,
+  "nextPhase": "GENESIS_BATCH_EXPLICIT_APPROVAL"
+}
