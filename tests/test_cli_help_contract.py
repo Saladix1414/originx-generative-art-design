@@ -24,6 +24,7 @@ COMMANDS = {
     "runtime-tool-availability",
     "model-acquisition-plan",
     "model-acquisition-path",
+    "model-download-authorization",
     "model-artifact-evidence",
     "model-artifact-decision",
     "model-artifact-authorization",

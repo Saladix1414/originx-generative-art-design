@@ -1,0 +1,17 @@
+{
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE-55-CLOSURE-1",
+  "command": "oxgad model-download-authorization",
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "imageGenerated": false,
+  "installationAllowed": false,
+  "mediaGenerationAllowed": false,
+  "modelDownloaded": false,
+  "modelExecuted": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 56 - Model Download Authorization Contract Registry",
+  "phase": 55,
+  "runtimeInvoked": false,
+  "selectedPath": "AUTHORIZED_DOWNLOAD",
+  "state": "DRAFT_NOT_APPROVED",
+  "status": "COMPLETE"
+}

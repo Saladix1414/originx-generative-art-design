@@ -20,6 +20,7 @@ from typing import Any
 
 from oxgad.models.acquisition import build_local_generator_model_acquisition_plan_refresh
 from oxgad.models.acquisition_path import build_authorized_download_path_selection
+from oxgad.models.download_authorization import build_model_download_authorization_draft
 from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
 from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisition_decision
 from oxgad.models.artifact_authorization import build_blocked_model_artifact_acquisition_authorization
@@ -779,6 +780,12 @@ def _command_runtime_adapter(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_model_download_authorization(args: argparse.Namespace) -> int:
+    draft = build_model_download_authorization_draft()
+    print(json.dumps(draft, sort_keys=True))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -1105,6 +1112,15 @@ def build_parser() -> argparse.ArgumentParser:
     model_acquisition_path.set_defaults(
         func=_command_model_acquisition_path
     )
+
+    model_download_authorization = subcommands.add_parser(
+        "model-download-authorization",
+        help="Print the non-authorizing model download authorization draft.",
+    )
+    model_download_authorization.set_defaults(
+        func=_command_model_download_authorization
+    )
+
 
     return parser
 
