@@ -25,6 +25,7 @@ EXPECTED_STEPS = [
     "runtime-command-plan",
     "runtime-preflight-bundle",
     "model-acquisition-refresh",
+    "model-artifact-evidence",
 ]
 
 
@@ -80,7 +81,7 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-7:] == [
+    assert steps[-8:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
@@ -88,4 +89,5 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
         "runtime-command-plan",
         "runtime-preflight-bundle",
         "model-acquisition-refresh",
+        "model-artifact-evidence",
     ]
