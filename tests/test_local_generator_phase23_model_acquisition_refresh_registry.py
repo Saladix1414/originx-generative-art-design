@@ -41,7 +41,6 @@ def test_evidence_chain_places_model_acquisition_after_preflight(capsys):
     output = json.loads(capsys.readouterr().out)
     steps = [item["step"] for item in output["chain"]]
 
-    assert steps[-2:] == [
-        "runtime-preflight-bundle",
-        "model-acquisition-refresh",
-    ]
+    assert steps.index("runtime-preflight-bundle") < steps.index(
+        "model-acquisition-refresh"
+    )

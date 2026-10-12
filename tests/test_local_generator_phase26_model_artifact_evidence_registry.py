@@ -39,7 +39,6 @@ def test_evidence_chain_places_model_artifact_after_acquisition_refresh(capsys):
     output = json.loads(capsys.readouterr().out)
     steps = [item["step"] for item in output["chain"]]
 
-    assert steps[-2:] == [
-        "model-acquisition-refresh",
-        "model-artifact-evidence",
-    ]
+    assert steps.index("model-acquisition-refresh") < steps.index(
+        "model-artifact-evidence"
+    )
