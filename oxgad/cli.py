@@ -106,6 +106,10 @@ EVIDENCE_CHAIN = [
         "step": "runtime-preflight-bundle",
         "schema": "ox-runtime-preflight-bundle-1.schema.json",
     },
+    {
+        "step": "model-acquisition-refresh",
+        "schema": "ox-model-acquisition-plan-refresh-1.schema.json",
+    },
 ]
 
 
@@ -128,6 +132,7 @@ CONTRACT_SCHEMAS = {
     "runtime-adapter": "schemas/ox-runtime-adapter-1.schema.json",
     "runtime-command-plan": "schemas/ox-runtime-command-plan-1.schema.json",
     "runtime-preflight-bundle": "schemas/ox-runtime-preflight-bundle-1.schema.json",
+    "model-acquisition-refresh": "schemas/ox-model-acquisition-plan-refresh-1.schema.json",
     "candidate-manifest": "schemas/ox-candidate-manifest-1.schema.json",
     "candidate-output": "schemas/ox-candidate-output-1.schema.json",
 }

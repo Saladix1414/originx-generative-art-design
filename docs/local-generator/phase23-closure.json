@@ -1,0 +1,13 @@
+{
+  "phase": 23,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE23-CLOSURE-1",
+  "registeredContract": "OX-MODEL-ACQUISITION-PLAN-REFRESH-1",
+  "evidenceStep": "model-acquisition-refresh",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 24 - Model Artifact Evidence Contract"
+}
