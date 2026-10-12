@@ -1,0 +1,13 @@
+{
+  "phase": 75,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-002",
+  "selectedPath": "AUTHORIZED_DOWNLOAD",
+  "downloadState": "PENDING_EXPLICIT_APPROVAL",
+  "expectedSizeBytes": 1566768416,
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "modelDownloaded": false,
+  "modelExecuted": false,
+  "nextPhase": "SD15_EXPLICIT_DOWNLOAD_APPROVAL"
+}
