@@ -141,3 +141,10 @@ from oxgad.models.artifact_approval import (
     model_artifact_acquisition_approval_hash,
     validate_model_artifact_acquisition_approval,
 )
+
+from oxgad.models.explicit_approval import (
+    EXPLICIT_MODEL_ACQUISITION_APPROVAL_VERSION,
+    build_not_granted_explicit_model_acquisition_approval,
+    explicit_model_acquisition_approval_hash,
+    validate_explicit_model_acquisition_approval,
+)

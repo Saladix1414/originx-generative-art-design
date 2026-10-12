@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-explicit-model-acquisition-approval-1.schema.json",
+  "title": "OriginX Explicit Model Acquisition Approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "explicitApprovalVersion",
+    "state",
+    "source",
+    "approvalIntent",
+    "governance",
+    "explicitModelAcquisitionApprovalHash"
+  ],
+  "properties": {
+    "explicitApprovalVersion": {
+      "const": "OX-EXPLICIT-MODEL-ACQUISITION-APPROVAL-1"
+    },
+    "state": {
+      "const": "NOT_GRANTED"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "draftApprovalState",
+        "draftApprovalHash"
+      ],
+      "properties": {
+        "draftApprovalState": { "const": "DRAFT_NOT_APPROVED" },
+        "draftApprovalHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "approvalIntent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requiresExactUserApproval",
+        "approvalPhrase",
+        "approvalRecorded"
+      ],
+      "properties": {
+        "requiresExactUserApproval": { "const": true },
+        "approvalPhrase": { "const": null },
+        "approvalRecorded": { "const": false }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "trustGranted",
+        "executionAllowed",
+        "mediaGenerationAllowed",
+        "explicitApprovalGrantsAcquisitionAuthority",
+        "explicitApprovalGrantsExecutionAuthority"
+      ],
+      "properties": {
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "trustGranted": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false },
+        "explicitApprovalGrantsAcquisitionAuthority": { "const": false },
+        "explicitApprovalGrantsExecutionAuthority": { "const": false }
+      }
+    },
+    "explicitModelAcquisitionApprovalHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
