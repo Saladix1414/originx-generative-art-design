@@ -1,0 +1,21 @@
+{
+  "phase": 88,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "tokenId": 1,
+  "candidateState": "REJECTED_TECHNICAL_ARTIFACT",
+  "candidateMediaHash": "sha256:cf5f3567fee674760cfa22f79f66f0af4bd21b7dd5deb354d119db21b32f316f",
+  "qualityGatePassed": false,
+  "canonicalApproved": false,
+  "upscaleAllowed": false,
+  "identityPreserved": true,
+  "suspectedFailureStage": "VAE_TILED_DECODE",
+  "rootCauseConfirmed": false,
+  "technicalRetryPrepared": true,
+  "technicalRetryExecuted": false,
+  "retrySingleChange": "TILED_128X128_TO_NON_TILED_VAE_DECODE",
+  "automaticRetryAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false,
+  "requiredPhrase": "I APPROVE GENESIS-BATCH-0001 TOKEN 0001 TECHNICAL RETRY 1"
+}
