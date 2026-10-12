@@ -1,0 +1,13 @@
+{
+  "phase": 18,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE18-CLOSURE-1",
+  "command": "oxgad runtime-preflight",
+  "contract": "OX-RUNTIME-PREFLIGHT-BUNDLE-1",
+  "state": "BLOCKED_PRE_EXECUTION",
+  "backendInvocationAllowed": false,
+  "modelExecutionAllowed": false,
+  "imageGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 19 - Model Artifact Availability Audit"
+}

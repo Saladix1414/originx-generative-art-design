@@ -20,6 +20,7 @@ COMMANDS = {
     "candidate-dry-run",
     "runtime-adapter",
     "runtime-command-plan",
+    "runtime-preflight",
 }
 
 

@@ -11,6 +11,9 @@ from oxgad.forge.runtime_command_plan import (
     build_declared_runtime_command_plan,
     runtime_command_plan_hash,
 )
+from oxgad.forge.runtime_preflight import (
+    build_runtime_preflight_bundle,
+)
 from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry_run_hash
 from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_prompt_evidence_chain
 from typing import Any
@@ -578,6 +581,24 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
     }
 
 
+
+def _command_runtime_preflight(args: argparse.Namespace) -> int:
+    adapter = build_declared_runtime_adapter(
+        adapter_id=args.adapter_id,
+        target=args.target,
+        runtime_family=args.runtime_family,
+        executable_path=args.executable_path,
+        runtime_version=args.runtime_version,
+    )
+    command_plan = build_declared_runtime_command_plan(adapter)
+    bundle = build_runtime_preflight_bundle(
+        adapter,
+        command_plan,
+    )
+
+    print(json.dumps(bundle, sort_keys=True))
+    return 0
+
 def _command_runtime_command_plan(args: argparse.Namespace) -> int:
     adapter = build_declared_runtime_adapter(
         adapter_id=args.adapter_id,
@@ -836,6 +857,42 @@ def build_parser() -> argparse.ArgumentParser:
     )
     runtime_command_plan_parser.set_defaults(
         func=_command_runtime_command_plan
+    )
+
+
+    runtime_preflight = subcommands.add_parser(
+        "runtime-preflight",
+        help="Emit blocked local runtime preflight bundle.",
+    )
+    runtime_preflight.add_argument(
+        "--adapter-id",
+        default="originx.local_cpp.stable_diffusion_cpp",
+        help="Runtime adapter identifier.",
+    )
+    runtime_preflight.add_argument(
+        "--target",
+        default="LOCAL_CPP",
+        choices=["LOCAL_CPP", "LOCAL_GPU"],
+        help="Runtime target.",
+    )
+    runtime_preflight.add_argument(
+        "--runtime-family",
+        default="stable-diffusion.cpp",
+        choices=["stable-diffusion.cpp", "unknown"],
+        help="Runtime family.",
+    )
+    runtime_preflight.add_argument(
+        "--executable-path",
+        default=None,
+        help="Declared executable path. This is not invoked.",
+    )
+    runtime_preflight.add_argument(
+        "--runtime-version",
+        default=None,
+        help="Declared runtime version.",
+    )
+    runtime_preflight.set_defaults(
+        func=_command_runtime_preflight
     )
 
     return parser
