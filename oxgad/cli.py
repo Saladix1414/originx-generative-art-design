@@ -23,6 +23,7 @@ from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
 from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisition_decision
 from oxgad.models.artifact_authorization import build_blocked_model_artifact_acquisition_authorization
 from oxgad.models.artifact_approval import build_draft_model_artifact_acquisition_approval
+from oxgad.models.explicit_approval import build_not_granted_explicit_model_acquisition_approval
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -617,6 +618,12 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
 
 
 
+
+def _command_explicit_model_acquisition_approval(args: argparse.Namespace) -> int:
+    approval = build_not_granted_explicit_model_acquisition_approval()
+    print(json.dumps(approval, sort_keys=True))
+    return 0
+
 def _command_model_acquisition_approval(args: argparse.Namespace) -> int:
     approval = build_draft_model_artifact_acquisition_approval()
     print(json.dumps(approval, sort_keys=True))
@@ -998,6 +1005,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_acquisition_approval.set_defaults(
         func=_command_model_acquisition_approval
+    )
+
+
+    explicit_model_acquisition_approval = subcommands.add_parser(
+        "explicit-model-acquisition-approval",
+        help="Print not-granted explicit model acquisition approval.",
+    )
+    explicit_model_acquisition_approval.set_defaults(
+        func=_command_explicit_model_acquisition_approval
     )
 
     return parser

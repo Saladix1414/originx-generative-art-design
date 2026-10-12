@@ -1,0 +1,17 @@
+{
+  "phase": 39,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE39-CLOSURE-1",
+  "command": "oxgad explicit-model-acquisition-approval",
+  "contract": "OX-EXPLICIT-MODEL-ACQUISITION-APPROVAL-1",
+  "state": "NOT_GRANTED",
+  "requiresExactUserApproval": true,
+  "approvalRecorded": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 40 - Explicit Model Acquisition Approval Contract Registry"
+}
