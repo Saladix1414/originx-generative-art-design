@@ -1,0 +1,16 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_11",
+  "name": "Runtime Adapter Registry",
+  "status": "closed",
+  "contract": "runtime-adapter",
+  "schema": "schemas/ox-runtime-adapter-1.schema.json",
+  "interfaceMode": "DECLARED_ONLY",
+  "backendInvocationAllowed": false,
+  "commandConstructionImplemented": false,
+  "modelExecutionImplemented": false,
+  "mediaGenerationImplemented": false,
+  "canonicalAuthority": false,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}
