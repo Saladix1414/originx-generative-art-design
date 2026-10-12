@@ -1,0 +1,18 @@
+{
+  "phase": 87,
+  "status": "COMPLETE",
+  "batchId": "GENESIS-BATCH-0001",
+  "tokenId": 1,
+  "executor": "OX-GENESIS-PROFILE2-SINGLE-TOKEN-EXECUTOR",
+  "renderProfile": "OX-GENESIS-RENDER-PROFILE-2",
+  "resolution": "384x384",
+  "steps": 10,
+  "sampler": "dpm++2m",
+  "scheduler": "karras",
+  "batchSize": 1,
+  "outputEncoding": "LOSSLESS_RGB8_PNG",
+  "automaticRetryAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false
+}
