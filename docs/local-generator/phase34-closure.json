@@ -1,0 +1,15 @@
+{
+  "phase": 34,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE34-CLOSURE-1",
+  "contract": "OX-MODEL-ARTIFACT-ACQUISITION-APPROVAL-1",
+  "state": "DRAFT_NOT_APPROVED",
+  "approved": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 35 - Explicit Model Acquisition Approval CLI Inspection"
+}

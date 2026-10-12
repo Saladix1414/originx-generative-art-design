@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-artifact-acquisition-approval-1.schema.json",
+  "title": "OriginX Model Artifact Acquisition Approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "approvalVersion",
+    "state",
+    "source",
+    "approval",
+    "governance",
+    "modelArtifactAcquisitionApprovalHash"
+  ],
+  "properties": {
+    "approvalVersion": {
+      "const": "OX-MODEL-ARTIFACT-ACQUISITION-APPROVAL-1"
+    },
+    "state": {
+      "const": "DRAFT_NOT_APPROVED"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authorizationState",
+        "authorizationHash"
+      ],
+      "properties": {
+        "authorizationState": {
+          "const": "BLOCKED_PENDING_MANUAL_APPROVAL"
+        },
+        "authorizationHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "approved",
+        "approvedBy",
+        "approvalTimestamp",
+        "approvalScope"
+      ],
+      "properties": {
+        "approved": { "const": false },
+        "approvedBy": { "const": null },
+        "approvalTimestamp": { "const": null },
+        "approvalScope": {
+          "const": "MODEL_ARTIFACT_ACQUISITION_ONLY"
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadAllowed",
+        "installationAllowed",
+        "trustGranted",
+        "executionAllowed",
+        "mediaGenerationAllowed",
+        "approvalGrantsAcquisitionAuthority",
+        "approvalGrantsExecutionAuthority"
+      ],
+      "properties": {
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "trustGranted": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false },
+        "approvalGrantsAcquisitionAuthority": { "const": false },
+        "approvalGrantsExecutionAuthority": { "const": false }
+      }
+    },
+    "modelArtifactAcquisitionApprovalHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
