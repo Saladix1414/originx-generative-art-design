@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-sd15-external-vae-download-plan-1.schema.json",
+  "title": "OriginX SD 1.5 External VAE Download Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "planVersion",
+    "modelId",
+    "componentId",
+    "state",
+    "purpose",
+    "source",
+    "artifact",
+    "runtimeCompatibility",
+    "expectedMemoryProfile",
+    "approval",
+    "postDownload",
+    "governance",
+    "planHash"
+  ],
+  "properties": {
+    "planVersion": {
+      "const": "OX-SD15-EXTERNAL-VAE-DOWNLOAD-PLAN-1"
+    },
+    "modelId": {
+      "const": "OX-MODEL-002"
+    },
+    "componentId": {
+      "const": "OX-MODEL-002-VAE-FP16-1"
+    },
+    "state": {
+      "const": "PENDING_EXPLICIT_APPROVAL"
+    },
+    "purpose": {
+      "const": "REPLACE_DEFECTIVE_EMBEDDED_Q4_0_VAE"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "repository",
+        "revision",
+        "filename",
+        "license",
+        "gated"
+      ],
+      "properties": {
+        "provider": {
+          "const": "HUGGING_FACE"
+        },
+        "repository": {
+          "const": "stable-diffusion-v1-5/stable-diffusion-v1-5"
+        },
+        "revision": {
+          "const": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14"
+        },
+        "filename": {
+          "const": "vae/diffusion_pytorch_model.fp16.safetensors"
+        },
+        "license": {
+          "const": "CreativeML OpenRAIL-M"
+        },
+        "gated": {
+          "const": false
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "targetPath",
+        "format",
+        "precision",
+        "expectedSizeBytes",
+        "expectedSha256"
+      ],
+      "properties": {
+        "targetPath": {
+          "const": "models/sd15/vae/sd15-official-vae-fp16.safetensors"
+        },
+        "format": {
+          "const": "safetensors"
+        },
+        "precision": {
+          "const": "FP16"
+        },
+        "expectedSizeBytes": {
+          "const": 167335342
+        },
+        "expectedSha256": {
+          "const": "sha256:4fbcf0ebe55a0984f5a5e00d8c4521d52359af7229bb4d81890039d2aa16dd7c"
+        }
+      }
+    },
+    "runtimeCompatibility": {
+      "type": "object"
+    },
+    "expectedMemoryProfile": {
+      "type": "object"
+    },
+    "approval": {
+      "type": "object"
+    },
+    "postDownload": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    },
+    "planHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
