@@ -1,0 +1,25 @@
+{
+  "receiptVersion": "OX-SD15-RUNTIME-PREFLIGHT-RECEIPT-1",
+  "modelId": "OX-MODEL-002",
+  "state": "PASSED",
+  "resolution": "256x256",
+  "steps": 1,
+  "batchSize": 1,
+  "seed": 1001,
+  "durationSeconds": 156,
+  "output": {
+    "present": true,
+    "path": "output/candidates/0001-sd15-runtime-preflight.png",
+    "sizeBytes": 153765,
+    "sha256": "sha256:329259bd68cd488636db0c6b354ec6bbae8a379b2d9aa613ffda98e2b95e318d"
+  },
+  "deviceRestartObserved": false,
+  "governance": {
+    "runtimeLoadVerified": true,
+    "singleImageGenerationVerified": true,
+    "benchmarkTokensAllowed": false,
+    "finalProductionStatusGranted": false,
+    "batchGenerationAllowed": false,
+    "canonicalizationAllowed": false
+  }
+}
