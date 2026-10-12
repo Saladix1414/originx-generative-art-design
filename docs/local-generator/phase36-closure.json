@@ -1,0 +1,15 @@
+{
+  "phase": 36,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE36-CLOSURE-1",
+  "registeredContract": "OX-MODEL-ARTIFACT-ACQUISITION-APPROVAL-1",
+  "evidenceStep": "model-acquisition-approval",
+  "state": "DRAFT_NOT_APPROVED",
+  "approved": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 37 - User Approval Boundary Audit"
+}
