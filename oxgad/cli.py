@@ -19,6 +19,7 @@ from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_pro
 from typing import Any
 
 from oxgad.models.acquisition import build_local_generator_model_acquisition_plan_refresh
+from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -589,6 +590,12 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
 
 
 
+
+def _command_model_artifact_evidence(args: argparse.Namespace) -> int:
+    evidence = build_missing_model_artifact_evidence()
+    print(json.dumps(evidence, sort_keys=True))
+    return 0
+
 def _command_model_acquisition_plan(args: argparse.Namespace) -> int:
     refresh = build_local_generator_model_acquisition_plan_refresh()
     print(json.dumps(refresh, sort_keys=True))
@@ -914,6 +921,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_acquisition_plan.set_defaults(
         func=_command_model_acquisition_plan
+    )
+
+
+    model_artifact_evidence = subcommands.add_parser(
+        "model-artifact-evidence",
+        help="Print missing local model artifact evidence.",
+    )
+    model_artifact_evidence.set_defaults(
+        func=_command_model_artifact_evidence
     )
 
     return parser

@@ -22,6 +22,7 @@ COMMANDS = {
     "runtime-command-plan",
     "runtime-preflight",
     "model-acquisition-plan",
+    "model-artifact-evidence",
 }
 
 

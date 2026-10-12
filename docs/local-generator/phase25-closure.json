@@ -1,0 +1,16 @@
+{
+  "phase": 25,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE25-CLOSURE-1",
+  "command": "oxgad model-artifact-evidence",
+  "contract": "OX-MODEL-ARTIFACT-EVIDENCE-1",
+  "state": "MISSING",
+  "evidenceGrantsTrust": false,
+  "evidenceGrantsExecutionAuthority": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 26 - Model Artifact Evidence Contract Registry"
+}
