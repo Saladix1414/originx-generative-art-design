@@ -1,0 +1,16 @@
+{
+  "phase": 44,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE44-CLOSURE-1",
+  "contract": "OX-MODEL-ARTIFACT-PLACEMENT-VERIFICATION-1",
+  "state": "MISSING",
+  "targetPath": "models/v1-5-pruned-emaonly.safetensors",
+  "pathExists": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 45 - Model Artifact Placement Verification CLI Inspection"
+}

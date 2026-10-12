@@ -155,3 +155,10 @@ from oxgad.models.artifact_placement import (
     model_artifact_placement_hash,
     validate_model_artifact_placement,
 )
+
+from oxgad.models.artifact_placement_verification import (
+    MODEL_ARTIFACT_PLACEMENT_VERIFICATION_VERSION,
+    build_missing_model_artifact_placement_verification,
+    model_artifact_placement_verification_hash,
+    validate_model_artifact_placement_verification,
+)

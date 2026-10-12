@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-artifact-placement-verification-1.schema.json",
+  "title": "OriginX Model Artifact Placement Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "verificationVersion",
+    "state",
+    "source",
+    "target",
+    "observed",
+    "governance",
+    "modelArtifactPlacementVerificationHash"
+  ],
+  "properties": {
+    "verificationVersion": {
+      "const": "OX-MODEL-ARTIFACT-PLACEMENT-VERIFICATION-1"
+    },
+    "state": { "const": "MISSING" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["placementState", "placementHash"],
+      "properties": {
+        "placementState": { "const": "UNPLACED" },
+        "placementHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path"],
+      "properties": {
+        "path": { "const": "models/v1-5-pruned-emaonly.safetensors" }
+      }
+    },
+    "observed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pathExists", "isFile", "sizeBytes"],
+      "properties": {
+        "pathExists": { "const": false },
+        "isFile": { "const": false },
+        "sizeBytes": { "const": null }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verificationGrantsTrust",
+        "verificationGrantsExecutionAuthority",
+        "downloadAllowed",
+        "installationAllowed",
+        "executionAllowed",
+        "mediaGenerationAllowed"
+      ],
+      "properties": {
+        "verificationGrantsTrust": { "const": false },
+        "verificationGrantsExecutionAuthority": { "const": false },
+        "downloadAllowed": { "const": false },
+        "installationAllowed": { "const": false },
+        "executionAllowed": { "const": false },
+        "mediaGenerationAllowed": { "const": false }
+      }
+    },
+    "modelArtifactPlacementVerificationHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
