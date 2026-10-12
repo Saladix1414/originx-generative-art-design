@@ -1,0 +1,15 @@
+{
+  "phase": 71,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "state": "DRY_RUN_NOT_AUTHORIZED",
+  "candidateCount": 1,
+  "width": 256,
+  "height": 256,
+  "steps": 1,
+  "runtimeInvocationAllowed": false,
+  "imageGenerationAllowed": false,
+  "canonicalizationAllowed": false,
+  "batchGenerationAllowed": false,
+  "nextPhase": "EXPLICIT RUNTIME PREFLIGHT APPROVAL"
+}
