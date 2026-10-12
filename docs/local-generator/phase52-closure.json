@@ -1,0 +1,16 @@
+{
+  "phase": 52,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE52-CLOSURE-1",
+  "command": "oxgad model-acquisition-path",
+  "contract": "OX-MODEL-ACQUISITION-PATH-SELECTION-1",
+  "selectedPath": "AUTHORIZED_DOWNLOAD",
+  "state": "SELECTED_NOT_AUTHORIZED",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 53 - Model Acquisition Path Contract Registry"
+}

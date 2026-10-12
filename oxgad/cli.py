@@ -19,6 +19,7 @@ from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_pro
 from typing import Any
 
 from oxgad.models.acquisition import build_local_generator_model_acquisition_plan_refresh
+from oxgad.models.acquisition_path import build_authorized_download_path_selection
 from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
 from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisition_decision
 from oxgad.models.artifact_authorization import build_blocked_model_artifact_acquisition_authorization
@@ -679,6 +680,12 @@ def _command_model_artifact_evidence(args: argparse.Namespace) -> int:
     print(json.dumps(evidence, sort_keys=True))
     return 0
 
+
+def _command_model_acquisition_path(args: argparse.Namespace) -> int:
+    selection = build_authorized_download_path_selection()
+    print(json.dumps(selection, sort_keys=True))
+    return 0
+
 def _command_model_acquisition_plan(args: argparse.Namespace) -> int:
     refresh = build_local_generator_model_acquisition_plan_refresh()
     print(json.dumps(refresh, sort_keys=True))
@@ -1083,6 +1090,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     runtime_tool_availability.set_defaults(
         func=_command_runtime_tool_availability
+    )
+
+
+    model_acquisition_path = subcommands.add_parser(
+        "model-acquisition-path",
+        help="Print selected local model acquisition path.",
+    )
+    model_acquisition_path.set_defaults(
+        func=_command_model_acquisition_path
     )
 
     return parser
