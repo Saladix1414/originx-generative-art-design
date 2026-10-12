@@ -107,3 +107,30 @@ def model_acquisition_plan_hash(
 ) -> str:
     validate_model_acquisition_plan(value)
     return canonical_sha256(value)
+
+
+MODEL_ACQUISITION_PLAN_REFRESH_VERSION = "OX-MODEL-ACQUISITION-PLAN-REFRESH-1"
+
+
+def build_local_generator_model_acquisition_plan_refresh() -> dict:
+    """Return the local generator model acquisition plan without acquiring it."""
+    plan = build_first_local_model_plan()
+    return {
+        "refreshVersion": MODEL_ACQUISITION_PLAN_REFRESH_VERSION,
+        "state": "DECLARED_NOT_ACQUIRED",
+        "plan": plan,
+        "availability": {
+            "usableModelArtifactsPresent": False,
+            "artifactPathBound": False,
+            "artifactHashObserved": False,
+            "artifactSizeObserved": False
+        },
+        "governance": {
+            "downloadAllowed": False,
+            "installationAllowed": False,
+            "executionAllowed": False,
+            "mediaGenerationAllowed": False,
+            "refreshGrantsAcquisitionAuthority": False,
+            "refreshGrantsExecutionAuthority": False
+        }
+    }

@@ -1,0 +1,14 @@
+{
+  "phase": 20,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE20-CLOSURE-1",
+  "refreshVersion": "OX-MODEL-ACQUISITION-PLAN-REFRESH-1",
+  "state": "DECLARED_NOT_ACQUIRED",
+  "usableModelArtifactsPresent": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 21 - Model Acquisition Plan CLI Inspection"
+}

@@ -107,3 +107,8 @@ __all__ = [
     "register_model_metadata",
     "validate_model_registry_record",
 ]
+
+from oxgad.models.acquisition import (
+    MODEL_ACQUISITION_PLAN_REFRESH_VERSION,
+    build_local_generator_model_acquisition_plan_refresh,
+)
