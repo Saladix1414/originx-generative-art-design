@@ -25,6 +25,7 @@ from oxgad.models.artifact_authorization import build_blocked_model_artifact_acq
 from oxgad.models.artifact_approval import build_draft_model_artifact_acquisition_approval
 from oxgad.models.explicit_approval import build_not_granted_explicit_model_acquisition_approval
 from oxgad.models.artifact_placement import build_unplaced_model_artifact_placement
+from oxgad.models.artifact_placement_verification import build_missing_model_artifact_placement_verification
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -631,6 +632,12 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
 
 
 
+
+def _command_model_artifact_placement_verification(args: argparse.Namespace) -> int:
+    verification = build_missing_model_artifact_placement_verification()
+    print(json.dumps(verification, sort_keys=True))
+    return 0
+
 def _command_model_artifact_placement(args: argparse.Namespace) -> int:
     placement = build_unplaced_model_artifact_placement()
     print(json.dumps(placement, sort_keys=True))
@@ -1040,6 +1047,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_artifact_placement.set_defaults(
         func=_command_model_artifact_placement
+    )
+
+
+    model_artifact_placement_verification = subcommands.add_parser(
+        "model-artifact-placement-verification",
+        help="Print missing model artifact placement verification.",
+    )
+    model_artifact_placement_verification.set_defaults(
+        func=_command_model_artifact_placement_verification
     )
 
     return parser

@@ -28,6 +28,7 @@ COMMANDS = {
     "model-acquisition-approval",
     "explicit-model-acquisition-approval",
     "model-artifact-placement",
+    "model-artifact-placement-verification",
 }
 
 
