@@ -21,6 +21,7 @@ from typing import Any
 from oxgad.models.acquisition import build_local_generator_model_acquisition_plan_refresh
 from oxgad.models.acquisition_path import build_authorized_download_path_selection
 from oxgad.models.download_authorization import build_model_download_authorization_draft
+from oxgad.models.download_approval import build_model_download_approval_token
 from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
 from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisition_decision
 from oxgad.models.artifact_authorization import build_blocked_model_artifact_acquisition_authorization
@@ -791,6 +792,12 @@ def _command_model_download_authorization(args: argparse.Namespace) -> int:
     return 0
 
 
+def _command_model_download_approval(args: argparse.Namespace) -> int:
+    token = build_model_download_approval_token()
+    print(json.dumps(token, sort_keys=True))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -1124,6 +1131,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_download_authorization.set_defaults(
         func=_command_model_download_authorization
+    )
+
+
+    model_download_approval = subcommands.add_parser(
+        "model-download-approval",
+        help="Print the declared model download approval token.",
+    )
+    model_download_approval.set_defaults(
+        func=_command_model_download_approval
     )
 
 
