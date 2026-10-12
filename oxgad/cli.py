@@ -20,6 +20,7 @@ from typing import Any
 
 from oxgad.models.acquisition import build_local_generator_model_acquisition_plan_refresh
 from oxgad.models.artifact_evidence import build_missing_model_artifact_evidence
+from oxgad.models.artifact_decision import build_blocked_model_artifact_acquisition_decision
 from oxgad.master_prompt import (
     evaluate_master_prompt_quality,
     master_prompt_hash,
@@ -596,6 +597,12 @@ def _default_candidate_dry_run_forge_contract() -> dict[str, Any]:
 
 
 
+
+def _command_model_artifact_decision(args: argparse.Namespace) -> int:
+    decision = build_blocked_model_artifact_acquisition_decision()
+    print(json.dumps(decision, sort_keys=True))
+    return 0
+
 def _command_model_artifact_evidence(args: argparse.Namespace) -> int:
     evidence = build_missing_model_artifact_evidence()
     print(json.dumps(evidence, sort_keys=True))
@@ -935,6 +942,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     model_artifact_evidence.set_defaults(
         func=_command_model_artifact_evidence
+    )
+
+
+    model_artifact_decision = subcommands.add_parser(
+        "model-artifact-decision",
+        help="Print blocked local model artifact acquisition decision.",
+    )
+    model_artifact_decision.set_defaults(
+        func=_command_model_artifact_decision
     )
 
     return parser

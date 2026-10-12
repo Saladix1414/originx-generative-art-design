@@ -1,0 +1,15 @@
+{
+  "phase": 28,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE28-CLOSURE-1",
+  "command": "oxgad model-artifact-decision",
+  "contract": "OX-MODEL-ARTIFACT-ACQUISITION-DECISION-1",
+  "decision": "BLOCKED_NO_ARTIFACT",
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 29 - Model Artifact Acquisition Decision Contract Registry"
+}

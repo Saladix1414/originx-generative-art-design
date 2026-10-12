@@ -23,6 +23,7 @@ COMMANDS = {
     "runtime-preflight",
     "model-acquisition-plan",
     "model-artifact-evidence",
+    "model-artifact-decision",
 }
 
 
