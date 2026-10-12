@@ -6,6 +6,7 @@ import json
 import jsonschema
 from jsonschema import Draft202012Validator
 from pathlib import Path
+from oxgad.forge.runtime_adapter import build_declared_runtime_adapter, runtime_adapter_hash
 from oxgad.forge.candidate_dry_run import build_candidate_dry_run, candidate_dry_run_hash
 from oxgad.master_prompt.evidence import build_prompt_evidence_chain, verify_prompt_evidence_chain
 from typing import Any
@@ -585,6 +586,29 @@ def _command_candidate_dry_run(args: argparse.Namespace) -> int:
     return 0
 
 
+
+def _command_runtime_adapter(args: argparse.Namespace) -> int:
+    adapter = build_declared_runtime_adapter(
+        adapter_id=args.adapter_id,
+        target=args.target,
+        runtime_family=args.runtime_family,
+        executable_path=args.executable_path,
+        runtime_version=args.runtime_version,
+    )
+    adapter["runtimeAdapterHash"] = runtime_adapter_hash(
+        adapter
+    )
+
+    print(
+        json.dumps(
+            adapter,
+            sort_keys=True,
+        )
+    )
+
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oxgad",
@@ -718,6 +742,42 @@ def build_parser() -> argparse.ArgumentParser:
     )
     candidate_dry_run.set_defaults(
         func=_command_candidate_dry_run
+    )
+
+
+    runtime_adapter = subcommands.add_parser(
+        "runtime-adapter",
+        help="Print the declared local runtime adapter.",
+    )
+    runtime_adapter.add_argument(
+        "--adapter-id",
+        default="originx.local_cpp.stable_diffusion_cpp",
+        help="Runtime adapter identifier.",
+    )
+    runtime_adapter.add_argument(
+        "--target",
+        default="LOCAL_CPP",
+        choices=["LOCAL_CPP", "LOCAL_GPU"],
+        help="Runtime target.",
+    )
+    runtime_adapter.add_argument(
+        "--runtime-family",
+        default="stable-diffusion.cpp",
+        choices=["stable-diffusion.cpp", "unknown"],
+        help="Runtime family.",
+    )
+    runtime_adapter.add_argument(
+        "--executable-path",
+        default=None,
+        help="Declared executable path. This is not invoked.",
+    )
+    runtime_adapter.add_argument(
+        "--runtime-version",
+        default=None,
+        help="Declared runtime version.",
+    )
+    runtime_adapter.set_defaults(
+        func=_command_runtime_adapter
     )
 
     return parser

@@ -18,6 +18,7 @@ COMMANDS = {
     "prompt-chain",
     "prompt-validate",
     "candidate-dry-run",
+    "runtime-adapter",
 }
 
 

@@ -1,0 +1,15 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_12",
+  "name": "Runtime Adapter CLI Inspection",
+  "status": "closed",
+  "command": "oxgad runtime-adapter",
+  "interfaceMode": "DECLARED_ONLY",
+  "backendInvocationAllowed": false,
+  "commandConstructionImplemented": false,
+  "modelExecutionImplemented": false,
+  "mediaGenerationImplemented": false,
+  "canonicalAuthority": false,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}
