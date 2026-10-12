@@ -169,3 +169,4 @@ from oxgad.models.acquisition_path import (
     model_acquisition_path_selection_hash,
     validate_model_acquisition_path_selection,
 )
+from oxgad.models.download_authorization import build_model_download_authorization_draft, validate_model_download_authorization_draft
