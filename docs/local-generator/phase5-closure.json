@@ -1,0 +1,14 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_5",
+  "name": "Candidate Provenance Binding",
+  "status": "closed",
+  "contract": "OX-CANDIDATE-PROVENANCE-HOOK-1",
+  "state": "PROVENANCE_PREPARED",
+  "mediaGenerated": false,
+  "backendInvocationAllowed": false,
+  "canonicalAuthority": false,
+  "manualApprovalRequired": true,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}

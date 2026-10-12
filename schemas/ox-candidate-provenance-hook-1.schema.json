@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-candidate-provenance-hook-1.schema.json",
+  "title": "OriginX Candidate Provenance Hook",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hookVersion",
+    "candidateId",
+    "state",
+    "links",
+    "media",
+    "authority"
+  ],
+  "properties": {
+    "hookVersion": {
+      "const": "OX-CANDIDATE-PROVENANCE-HOOK-1"
+    },
+    "candidateId": {
+      "type": "string",
+      "pattern": "^candidate-[a-z0-9._-]{3,96}$"
+    },
+    "state": {
+      "const": "PROVENANCE_PREPARED"
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateOutputHash",
+        "candidateManifestHash",
+        "executionDecisionHash"
+      ],
+      "properties": {
+        "candidateOutputHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "candidateManifestHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "executionDecisionHash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mediaGenerated",
+        "mediaHash",
+        "path"
+      ],
+      "properties": {
+        "mediaGenerated": {
+          "const": false
+        },
+        "mediaHash": {
+          "const": null
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^output/candidates/[a-z0-9._/-]+$"
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateIsCanonical",
+        "manualApprovalRequired",
+        "backendInvocationAllowed",
+        "aiOutputIsCanonical"
+      ],
+      "properties": {
+        "candidateIsCanonical": {
+          "const": false
+        },
+        "manualApprovalRequired": {
+          "const": true
+        },
+        "backendInvocationAllowed": {
+          "const": false
+        },
+        "aiOutputIsCanonical": {
+          "const": false
+        }
+      }
+    }
+  }
+}
