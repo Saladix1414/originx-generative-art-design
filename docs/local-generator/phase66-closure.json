@@ -1,0 +1,12 @@
+{
+  "phase": 66,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "decision": "DISK_BACKED_BENCHMARK_ONLY",
+  "directRamPassed": false,
+  "thermalBenchmarkPassed": false,
+  "stabilityBenchmarkPassed": false,
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "nextPhase": "EXPLICIT DOWNLOAD APPROVAL"
+}
