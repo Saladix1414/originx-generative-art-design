@@ -1,0 +1,17 @@
+{
+  "phase": 32,
+  "status": "COMPLETE",
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE32-CLOSURE-1",
+  "command": "oxgad model-artifact-authorization",
+  "contract": "OX-MODEL-ARTIFACT-ACQUISITION-AUTHORIZATION-1",
+  "state": "BLOCKED_PENDING_MANUAL_APPROVAL",
+  "manualApprovalRequired": true,
+  "manualApprovalPresent": false,
+  "downloadAllowed": false,
+  "installationAllowed": false,
+  "trustGranted": false,
+  "executionAllowed": false,
+  "mediaGenerationAllowed": false,
+  "imageGenerationPerformed": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 33 - Model Artifact Acquisition Authorization Contract Registry"
+}

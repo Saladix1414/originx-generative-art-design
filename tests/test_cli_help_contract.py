@@ -24,6 +24,7 @@ COMMANDS = {
     "model-acquisition-plan",
     "model-artifact-evidence",
     "model-artifact-decision",
+    "model-artifact-authorization",
 }
 
 
