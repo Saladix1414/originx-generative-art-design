@@ -171,3 +171,4 @@ from oxgad.models.acquisition_path import (
 )
 from oxgad.models.download_authorization import build_model_download_authorization_draft, validate_model_download_authorization_draft
 from oxgad.models.download_approval import APPROVAL_PHRASE, build_model_download_approval_token, validate_model_download_approval_token
+from oxgad.models.download_final_authorization import build_blocked_model_download_final_authorization, validate_model_download_final_authorization

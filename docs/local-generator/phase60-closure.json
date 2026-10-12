@@ -1,0 +1,22 @@
+{
+  "approvalTokenPresent": true,
+  "closureVersion": "OX-LOCAL-GENERATOR-PHASE-60-CLOSURE-1",
+  "contract": "OX-MODEL-DOWNLOAD-FINAL-AUTHORIZATION-1",
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "imageGenerated": false,
+  "installationAllowed": false,
+  "licenseReviewCompleted": false,
+  "manualApprovalPresent": true,
+  "mediaGenerationAllowed": false,
+  "modelDownloaded": false,
+  "modelExecuted": false,
+  "nextPhase": "LOCAL GENERATOR PHASE 61 - Model Download Final Authorization CLI",
+  "phase": 60,
+  "runtimeCompatibilityChecked": false,
+  "runtimeInvoked": false,
+  "selectedPath": "AUTHORIZED_DOWNLOAD",
+  "state": "BLOCKED_PENDING_REQUIRED_CHECKS",
+  "status": "COMPLETE",
+  "storageCheckCompleted": false
+}
