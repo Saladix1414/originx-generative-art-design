@@ -1,0 +1,11 @@
+{
+  "phase": 67,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-001",
+  "state": "AWAITING_EXPLICIT_APPROVAL",
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "canonicalizationAllowed": false,
+  "requiredPhrase": "I APPROVE OX-MODEL-001 Z-IMAGE ARTIFACT DOWNLOAD",
+  "nextPhase": "CONTROLLED ARTIFACT DOWNLOAD"
+}
