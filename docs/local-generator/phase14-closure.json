@@ -1,0 +1,16 @@
+{
+  "phase": "LOCAL_GENERATOR_PHASE_14",
+  "name": "Runtime Command Plan Registry",
+  "status": "closed",
+  "contract": "runtime-command-plan",
+  "schema": "schemas/ox-runtime-command-plan-1.schema.json",
+  "state": "DECLARED_NOT_EXECUTABLE",
+  "backendInvocationAllowed": false,
+  "commandConstructionImplemented": false,
+  "modelExecutionAllowed": false,
+  "mediaGenerationImplemented": false,
+  "canonicalAuthority": false,
+  "noModelExecution": true,
+  "noImageGeneration": true,
+  "noPushExecuted": true
+}

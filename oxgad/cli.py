@@ -90,6 +90,10 @@ EVIDENCE_CHAIN = [
         "step": "runtime-adapter",
         "schema": "ox-runtime-adapter-1.schema.json",
     },
+    {
+        "step": "runtime-command-plan",
+        "schema": "ox-runtime-command-plan-1.schema.json",
+    },
 ]
 
 
@@ -110,6 +114,7 @@ CONTRACT_SCHEMAS = {
     "master-prompt-chain": "schemas/ox-master-prompt-evidence-chain-1.schema.json",
     "candidate-provenance": "schemas/ox-candidate-provenance-hook-1.schema.json",
     "runtime-adapter": "schemas/ox-runtime-adapter-1.schema.json",
+    "runtime-command-plan": "schemas/ox-runtime-command-plan-1.schema.json",
     "candidate-manifest": "schemas/ox-candidate-manifest-1.schema.json",
     "candidate-output": "schemas/ox-candidate-output-1.schema.json",
 }

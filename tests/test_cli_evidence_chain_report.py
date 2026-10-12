@@ -22,6 +22,7 @@ EXPECTED_STEPS = [
     "candidate-manifest",
     "candidate-output",
     "runtime-adapter",
+    "runtime-command-plan",
 ]
 
 
@@ -61,6 +62,7 @@ def test_cli_evidence_chain_reports_schema_ids(capsys):
     assert "ox-candidate-manifest-1.schema.json" in schema_ids
     assert "ox-candidate-provenance-hook-1.schema.json" in schema_ids
     assert "ox-runtime-adapter-1.schema.json" in schema_ids
+    assert "ox-runtime-command-plan-1.schema.json" in schema_ids
 
 
 def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
@@ -76,9 +78,10 @@ def test_cli_evidence_chain_includes_generation_preparation_chain(capsys):
     ]
 
     assert "master-prompt-chain" in steps
-    assert steps[-4:] == [
+    assert steps[-5:] == [
         "candidate-provenance",
         "candidate-manifest",
         "candidate-output",
         "runtime-adapter",
+        "runtime-command-plan",
     ]
