@@ -1,0 +1,17 @@
+{
+  "phase": 92,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-002",
+  "componentId": "OX-MODEL-002-VAE-FP16-1",
+  "preflightPrepared": true,
+  "preflightExecuted": false,
+  "resolution": "256x256",
+  "steps": 1,
+  "batchSize": 1,
+  "vaeDecodeMode": "NON_TILED",
+  "executionAllowed": false,
+  "genesisRetryAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false,
+  "requiredPhrase": "I APPROVE OX-MODEL-002 SD15 FP16 VAE SINGLE PREFLIGHT"
+}

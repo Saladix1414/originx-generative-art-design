@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-sd15-external-vae-preflight-plan-1.schema.json",
+  "title": "OriginX SD 1.5 External VAE Preflight Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "planVersion",
+    "modelId",
+    "componentId",
+    "state",
+    "purpose",
+    "artifacts",
+    "request",
+    "monitoring",
+    "successCriteria",
+    "approval",
+    "governance",
+    "planHash"
+  ],
+  "properties": {
+    "planVersion": {
+      "const": "OX-SD15-EXTERNAL-VAE-PREFLIGHT-PLAN-1"
+    },
+    "modelId": {
+      "const": "OX-MODEL-002"
+    },
+    "componentId": {
+      "const": "OX-MODEL-002-VAE-FP16-1"
+    },
+    "state": {
+      "const": "PENDING_EXPLICIT_APPROVAL"
+    },
+    "purpose": {
+      "const": "SINGLE_EXTERNAL_VAE_PREFLIGHT"
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "request": {
+      "type": "object"
+    },
+    "monitoring": {
+      "type": "object"
+    },
+    "successCriteria": {
+      "type": "object"
+    },
+    "approval": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    },
+    "planHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
