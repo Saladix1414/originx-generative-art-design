@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-sd15-operational-status-1.schema.json",
+  "title": "OriginX SD 1.5 Operational Status",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "statusVersion",
+    "modelId",
+    "status",
+    "technicalGate",
+    "visualGate",
+    "rejectionReason",
+    "role",
+    "productionAlias",
+    "productionAliasState",
+    "historicalRegistration",
+    "evidence",
+    "artifacts",
+    "governance"
+  ],
+  "properties": {
+    "statusVersion": {
+      "const": "OX-SD15-OPERATIONAL-STATUS-1"
+    },
+    "modelId": {
+      "const": "OX-MODEL-002"
+    },
+    "status": {
+      "const": "REJECTED_FOR_PRODUCTION"
+    },
+    "technicalGate": {
+      "const": "FAIL"
+    },
+    "visualGate": {
+      "const": "FAIL"
+    },
+    "rejectionReason": {
+      "const": "DOMINANT_BANDING_ARTIFACT"
+    },
+    "role": {
+      "type": "null"
+    },
+    "productionAlias": {
+      "type": "null"
+    },
+    "productionAliasState": {
+      "type": "object"
+    },
+    "historicalRegistration": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    }
+  }
+}

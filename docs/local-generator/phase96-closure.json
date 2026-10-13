@@ -1,0 +1,22 @@
+{
+  "phase": 96,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-002",
+  "modelStatus": "REJECTED_FOR_PRODUCTION",
+  "technicalGate": "FAIL",
+  "visualGate": "FAIL",
+  "qualityScore": 0,
+  "rejectionReason": "DOMINANT_BANDING_ARTIFACT",
+  "productionAlias": null,
+  "productionAliasState": "UNASSIGNED",
+  "evidenceHash": "sha256:6dc5c20a001a74e5c2dff457c01bf2c01d75397ec36e41a6091c4bbbcf7076b5",
+  "artifactsPreserved": true,
+  "additionalRendersAllowed": false,
+  "nextTokenAllowed": false,
+  "upscaleAllowed": false,
+  "canonicalizationAllowed": false,
+  "modelDownloadAllowed": false,
+  "silentWeightSubstitutionAllowed": false,
+  "acceptanceInvariant": "ONE_STEP_PREFLIGHT != PRODUCTION_VALIDATION",
+  "awaitingUserDecision": true
+}

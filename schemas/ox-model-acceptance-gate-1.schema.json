@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ox-model-acceptance-gate-1.schema.json",
+  "title": "OriginX Model Acceptance Gate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gateVersion",
+    "invariant",
+    "orderedStages",
+    "promotionRequirements",
+    "governance"
+  ],
+  "properties": {
+    "gateVersion": {
+      "const": "OX-MODEL-ACCEPTANCE-GATE-1"
+    },
+    "invariant": {
+      "const": "ONE_STEP_PREFLIGHT != PRODUCTION_VALIDATION"
+    },
+    "orderedStages": {
+      "const": [
+        "HARDWARE_PREFLIGHT",
+        "MINIMAL_INFERENCE_PREFLIGHT",
+        "FULL_REPRESENTATIVE_GENERATION",
+        "IMAGE_INTEGRITY_INSPECTION",
+        "VISUAL_QUALITY_GATE",
+        "PRODUCTION_PROMOTION"
+      ]
+    },
+    "promotionRequirements": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    }
+  }
+}
