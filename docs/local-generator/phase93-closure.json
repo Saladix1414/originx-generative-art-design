@@ -1,0 +1,15 @@
+{
+  "phase": 93,
+  "status": "COMPLETE",
+  "modelId": "OX-MODEL-002",
+  "componentId": "OX-MODEL-002-VAE-FP16-1",
+  "executorPrepared": true,
+  "executionsAuthorized": 1,
+  "resolution": "256x256",
+  "steps": 1,
+  "batchSize": 1,
+  "genesisRetryAllowed": false,
+  "canonicalizationAllowed": false,
+  "nextTokenAllowed": false,
+  "nextBatchAllowed": false
+}
