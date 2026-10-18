@@ -1,10 +1,9 @@
 {
   "akashic": {
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "initialEvents": [
       "DNA_FORGED",
       "NAME_ASSIGNED",
-      "RESONANCE_CREATED",
-      "RESONANCE_GLYPH_MANIFESTED",
       "ART_SPEC_CREATED",
       "RENDER_PLAN_CREATED"
     ],
@@ -12,18 +11,18 @@
       "containsPII": false,
       "publicSafe": true
     },
-    "recordVersion": "OX-AKASHIC-1"
+    "recordVersion": "OX-AKASHIC-PLANNING-1"
   },
   "anatomy": {
-    "bodyStructure": "MASSIVE_EXECUTIONER_FRAME",
+    "bodyStructure": "ancient-predatory",
     "eyeType": "DEEP_SET_RESONANT",
     "headStyle": "ORIGINAL_REGAL_PREDATORY",
-    "hornStyle": "FORWARD_EXECUTIONER_HOOKS",
+    "hornStyle": "swept-architectural-blades",
     "jawType": "ARMORED_SCARRED",
     "limbStyle": "POWERFUL_CLAWED",
     "silhouetteProfile": "EXECUTIONER_BLADED_HEAVY",
     "tailStyle": "HEAVY_COMBAT_TAIL",
-    "wingStyle": "HEAVY_EXECUTIONER_WINGS"
+    "wingStyle": "segmented-forged-membrane"
   },
   "armorAndRelics": {
     "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
@@ -38,7 +37,7 @@
   "classification": {
     "archetype": "EXECUTIONER",
     "combatRole": "EXECUTIONER_MONARCH",
-    "domain": "BLACK_TRIBUNAL_COURTYARD",
+    "domain": "obsidian-foundation-chasm",
     "moralTone": "DARK_MYTHIC_NEUTRAL",
     "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
     "temperament": "WRATHFUL_CONTAINED"
@@ -53,7 +52,7 @@
     ],
     "framing": "FULL_BODY_DOMINANT",
     "negativeSpaceControl": "BALANCED",
-    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "pose": "wings-raised-foundation-pose",
     "silhouettePriority": "HIGH",
     "storyBeat": "EXECUTIONER_REVEALED"
   },
@@ -80,9 +79,30 @@
     ]
   },
   "dna": {
-    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
-    "dnaSeedHash": "5ec2e08a2df3539095596256861de1d5737387d356cb85e91d82ddeae8ea8e23",
-    "note": "This phase does not replace the canonical OriginX DNA engine."
+    "bindingStatus": "CANONICAL_BOUND",
+    "dnaHash": "sha256:89bcc027bf2f08092b3d78b2b4c1e6888dcdb6a1fcae21363cbf70d644ffe178",
+    "dnaVersion": "OX-GENESIS-DNA-1",
+    "sourceAuthority": "OX-GENESIS-IDENTITY-1",
+    "value": {
+      "archetype": "primordial-colossal-dragon",
+      "augmentation": "ancient-proto-technology",
+      "bodyStructure": "ancient-predatory",
+      "dnaVersion": "OX-GENESIS-DNA-1",
+      "environment": "obsidian-foundation-chasm",
+      "hornArchitecture": "swept-architectural-blades",
+      "lightingProfile": "eclipse-backlight",
+      "lineage": {
+        "cohort": "GENESIS",
+        "era": "PRIMORDIAL ORIGIN",
+        "index": 5,
+        "maximumSupply": 1000,
+        "tier": "LEGENDARY"
+      },
+      "poseProfile": "wings-raised-foundation-pose",
+      "primaryMaterial": "obsidian",
+      "secondaryMaterial": "dark-forged-metal",
+      "wingGeometry": "segmented-forged-membrane"
+    }
   },
   "environment": {
     "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
@@ -93,12 +113,13 @@
       "MINERAL_DUST"
     ],
     "scale": "TITANIC",
-    "setting": "BLACK_TRIBUNAL_COURTYARD",
+    "setting": "obsidian-foundation-chasm",
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "geometry": "CRIMSON_TRIAD_BLADE",
-    "glyphVersion": "OX-GLYPH-1",
+    "glyphVersion": "OX-GLYPH-PLANNING-1",
     "influenceAreas": [
       "HORN_RHYTHM",
       "CHEST_FISSURES",
@@ -107,28 +128,40 @@
       "LIGHT_PATTERN"
     ]
   },
+  "governance": {
+    "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
+    "canonicalArtworkAuthorized": false,
+    "dnaAuthority": "OX-GENESIS-DNA-1",
+    "identityAuthority": "OX-GENESIS-IDENTITY-1",
+    "modelAuthority": false,
+    "renderAuthorized": false
+  },
   "identity": {
-    "canonicalName": "Korvaxis",
+    "canonicalName": "Drakorym the Foundation",
     "cohort": "GENESIS",
-    "epithet": "The Crimson Tribunal",
-    "era": "PRIMORDIAL_ORIGIN",
-    "generationVersion": "OX-GENESIS-1",
-    "seed": 2360381446,
+    "epithet": "Architect of the Ancient Deep",
+    "era": "PRIMORDIAL ORIGIN",
+    "generationTheme": "Genesis / Primordial Origin",
+    "generationVersion": "OX-GENESIS-GENERATION-1",
+    "identityVersion": "OX-GENESIS-IDENTITY-1",
+    "seed": 4655466092573055295,
+    "seedHash": "sha256:a94584b8f347a4e30887c4e0c221e82edba6cc1f440b29c73c1ef6ae6ad0f735",
     "serial": "#0005",
+    "structureProfileEra": "Ascended Origin",
     "tier": "LEGENDARY",
-    "title": "The Crimson Tribunal",
+    "title": "Architect of the Ancient Deep",
     "tokenId": 5
   },
-  "identityHash": "ab75f443ff42350dd224eef9645d08234f4d794677858c8b741d0ab6f60ea23b",
+  "identityHash": "2c8ac3fefa7b4e8426da0de98d25afb76f564b482339e1ab717759007dc00d48",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
-    "keyLight": "MOONLIT_COLD",
+    "keyLight": "eclipse-backlight",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
   },
   "materials": {
-    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "augmentation": "ancient-proto-technology",
     "damageProfile": "SCARRED_FRACTURED_ERODED",
     "microSurface": [
       "MINERAL_DEPOSITS",
@@ -136,10 +169,10 @@
       "ASH_DUST",
       "RUNE_ENGRAVINGS"
     ],
-    "primaryMaterial": "OBSIDIAN_SCALE",
-    "secondaryMaterial": "BASALT_PLATING",
+    "primaryMaterial": "obsidian",
+    "secondaryMaterial": "dark-forged-metal",
     "surfaceAge": "WEATHERED_ANCIENT",
-    "tertiaryMaterial": "DARK_FORGED_STEEL"
+    "tertiaryMaterial": "ANCIENT_PROTO_TECHNOLOGY"
   },
   "powers": {
     "breathType": "CRIMSON_CURSE",
@@ -164,16 +197,9 @@
     ]
   },
   "resonance": {
-    "glyphSeed": "5a8928139f3ad15e094882c5ee20b0b7c43fcb80a9ed30fec6b5ab5ae9539080",
-    "phaseDegrees": 185,
-    "primaryFrequency": 344,
-    "pulse": "FRACTURED_PULSE",
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "resonanceClass": "EXECUTIONER_RESONANCE",
-    "resonanceId": "ORX-RES-0005",
-    "resonanceSignature": "d06021c1d0d9f4c32baff1c278c3237e9d588036c3787642ee2bbeb7b56d554f",
-    "resonanceVersion": "OX-RESONANCE-1",
-    "secondaryFrequency": 641,
-    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
-    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
+    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
   }
 }

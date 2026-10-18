@@ -45,20 +45,11 @@ def main() -> None:
     assert len(names) == 10
 
     dna_hashes = {
-        spec["dna"]["dnaSeedHash"]
+        spec["dna"]["dnaHash"]
         for spec in specs
     }
 
     assert len(dna_hashes) == 10
-
-    resonance = {
-        spec["resonance"][
-            "resonanceSignature"
-        ]
-        for spec in specs
-    }
-
-    assert len(resonance) == 10
 
     powers = {
         spec["powers"][
@@ -82,7 +73,7 @@ def main() -> None:
 
         assert (
             spec["identity"]["era"]
-            == "PRIMORDIAL_ORIGIN"
+            == "PRIMORDIAL ORIGIN"
         )
 
         assert (
@@ -100,11 +91,47 @@ def main() -> None:
         )
 
         assert (
-            spec["dna"][
+            spec["resonance"][
                 "bindingStatus"
             ]
             ==
-            "PENDING_CANONICAL_DNA_ENGINE_BINDING"
+            "PENDING_CANONICAL_LORE_BINDING"
+        )
+
+        assert (
+            spec["glyph"][
+                "bindingStatus"
+            ]
+            ==
+            "PENDING_CANONICAL_LORE_BINDING"
+        )
+
+        assert (
+            spec["akashic"][
+                "bindingStatus"
+            ]
+            ==
+            "PENDING_CANONICAL_LORE_BINDING"
+        )
+
+        assert (
+            spec["dna"][
+                "bindingStatus"
+            ]
+            == "CANONICAL_BOUND"
+        )
+
+        assert (
+            spec["dna"][
+                "sourceAuthority"
+            ]
+            == "OX-GENESIS-IDENTITY-1"
+        )
+
+        assert (
+            spec["dna"][
+                "dnaHash"
+            ].startswith("sha256:")
         )
 
     errors = validate_batch(
@@ -136,11 +163,7 @@ def main() -> None:
     )
 
     print(
-        "DNA_SEED_UNIQUENESS=PASS"
-    )
-
-    print(
-        "RESONANCE_UNIQUENESS=PASS"
+        "CANONICAL_DNA_UNIQUENESS=PASS"
     )
 
     print(
@@ -152,12 +175,16 @@ def main() -> None:
     )
 
     print(
+        "CANONICAL_LORE_BINDING=PENDING"
+    )
+
+    print(
         "DETERMINISM=PASS"
     )
 
     print(
         "CANONICAL_DNA_BINDING="
-        "PENDING"
+        "BOUND"
     )
 
     print(

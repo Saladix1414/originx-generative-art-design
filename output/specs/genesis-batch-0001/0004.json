@@ -1,10 +1,9 @@
 {
   "akashic": {
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "initialEvents": [
       "DNA_FORGED",
       "NAME_ASSIGNED",
-      "RESONANCE_CREATED",
-      "RESONANCE_GLYPH_MANIFESTED",
       "ART_SPEC_CREATED",
       "RENDER_PLAN_CREATED"
     ],
@@ -12,18 +11,18 @@
       "containsPII": false,
       "publicSafe": true
     },
-    "recordVersion": "OX-AKASHIC-1"
+    "recordVersion": "OX-AKASHIC-PLANNING-1"
   },
   "anatomy": {
-    "bodyStructure": "FORTRESS_HEAVY_GUARDIAN",
+    "bodyStructure": "fortress-backed",
     "eyeType": "DEEP_SET_RESONANT",
     "headStyle": "ORIGINAL_REGAL_PREDATORY",
-    "hornStyle": "MEGALITHIC_VERTICAL_SPIRES",
+    "hornStyle": "layered-obsidian-buttresses",
     "jawType": "ARMORED_SCARRED",
     "limbStyle": "POWERFUL_CLAWED",
     "silhouetteProfile": "FORTRESS_MONOLITH_GUARDIAN",
     "tailStyle": "HEAVY_COMBAT_TAIL",
-    "wingStyle": "STONE_RIBBED_GUARDIAN_WINGS"
+    "wingStyle": "broad-basalt-fan"
   },
   "armorAndRelics": {
     "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
@@ -38,7 +37,7 @@
   "classification": {
     "archetype": "TEMPLE_GUARDIAN",
     "combatRole": "WARDEN",
-    "domain": "ANCIENT_GATE_FORTRESS",
+    "domain": "cyclopean-storm-sanctum",
     "moralTone": "DARK_MYTHIC_NEUTRAL",
     "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
     "temperament": "VIGILANT_PATIENT"
@@ -53,7 +52,7 @@
     ],
     "framing": "FULL_BODY_DOMINANT",
     "negativeSpaceControl": "BALANCED",
-    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "pose": "ascending-megalithic-profile",
     "silhouettePriority": "HIGH",
     "storyBeat": "TEMPLE_GUARDIAN_REVEALED"
   },
@@ -80,9 +79,30 @@
     ]
   },
   "dna": {
-    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
-    "dnaSeedHash": "218ee3335ce56960e591705ff8429d1ceb84e1c0c64ad9eea8654d39f804e14e",
-    "note": "This phase does not replace the canonical OriginX DNA engine."
+    "bindingStatus": "CANONICAL_BOUND",
+    "dnaHash": "sha256:f6364cf2316318483f2c8eaee4007029b9393c13e5fffbbae12d9b5e4e487def",
+    "dnaVersion": "OX-GENESIS-DNA-1",
+    "sourceAuthority": "OX-GENESIS-IDENTITY-1",
+    "value": {
+      "archetype": "primordial-colossal-dragon",
+      "augmentation": "ancient-proto-technology",
+      "bodyStructure": "fortress-backed",
+      "dnaVersion": "OX-GENESIS-DNA-1",
+      "environment": "cyclopean-storm-sanctum",
+      "hornArchitecture": "layered-obsidian-buttresses",
+      "lightingProfile": "cold-storm-toplight",
+      "lineage": {
+        "cohort": "GENESIS",
+        "era": "PRIMORDIAL ORIGIN",
+        "index": 4,
+        "maximumSupply": 1000,
+        "tier": "LEGENDARY"
+      },
+      "poseProfile": "ascending-megalithic-profile",
+      "primaryMaterial": "basalt",
+      "secondaryMaterial": "weathered-stone",
+      "wingGeometry": "broad-basalt-fan"
+    }
   },
   "environment": {
     "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
@@ -93,12 +113,13 @@
       "MINERAL_DUST"
     ],
     "scale": "TITANIC",
-    "setting": "ANCIENT_GATE_FORTRESS",
+    "setting": "cyclopean-storm-sanctum",
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "geometry": "MONOLITHIC_CROSS_AXIS",
-    "glyphVersion": "OX-GLYPH-1",
+    "glyphVersion": "OX-GLYPH-PLANNING-1",
     "influenceAreas": [
       "HORN_RHYTHM",
       "CHEST_FISSURES",
@@ -107,28 +128,40 @@
       "LIGHT_PATTERN"
     ]
   },
+  "governance": {
+    "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
+    "canonicalArtworkAuthorized": false,
+    "dnaAuthority": "OX-GENESIS-DNA-1",
+    "identityAuthority": "OX-GENESIS-IDENTITY-1",
+    "modelAuthority": false,
+    "renderAuthorized": false
+  },
   "identity": {
-    "canonicalName": "Aethrakar",
+    "canonicalName": "Nytherion Basalt Crown",
     "cohort": "GENESIS",
-    "epithet": "The Silent Monolith",
-    "era": "PRIMORDIAL_ORIGIN",
-    "generationVersion": "OX-GENESIS-1",
-    "seed": 970839773,
+    "epithet": "Sovereign of the Basalt Crown",
+    "era": "PRIMORDIAL ORIGIN",
+    "generationTheme": "Genesis / Primordial Origin",
+    "generationVersion": "OX-GENESIS-GENERATION-1",
+    "identityVersion": "OX-GENESIS-IDENTITY-1",
+    "seed": 619885554085082306,
+    "seedHash": "sha256:0da3862757253f086c65d57a04dd00caf65deb0797821a97ec1c78bd723797be",
     "serial": "#0004",
+    "structureProfileEra": "Ascended Origin",
     "tier": "LEGENDARY",
-    "title": "The Silent Monolith",
+    "title": "Sovereign of the Basalt Crown",
     "tokenId": 4
   },
-  "identityHash": "6479a036aa39f24789491415e6439d0a4089663804aa51b528c6ac1a0b9f3391",
+  "identityHash": "ec97c23ba408764786b8c859d8688e83ba9cd8b4d642f7899e795233ed171b9a",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
-    "keyLight": "MOONLIT_COLD",
+    "keyLight": "cold-storm-toplight",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
   },
   "materials": {
-    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "augmentation": "ancient-proto-technology",
     "damageProfile": "SCARRED_FRACTURED_ERODED",
     "microSurface": [
       "MINERAL_DEPOSITS",
@@ -136,10 +169,10 @@
       "ASH_DUST",
       "RUNE_ENGRAVINGS"
     ],
-    "primaryMaterial": "OBSIDIAN_SCALE",
-    "secondaryMaterial": "BASALT_PLATING",
+    "primaryMaterial": "basalt",
+    "secondaryMaterial": "weathered-stone",
     "surfaceAge": "WEATHERED_ANCIENT",
-    "tertiaryMaterial": "DARK_FORGED_STEEL"
+    "tertiaryMaterial": "ANCIENT_PROTO_TECHNOLOGY"
   },
   "powers": {
     "breathType": "GRAVITIC_PRESSURE",
@@ -164,16 +197,9 @@
     ]
   },
   "resonance": {
-    "glyphSeed": "ceba1427e431a584e5fc36020b2afef9a0f743257aa79cd219dfa4215263588c",
-    "phaseDegrees": 238,
-    "primaryFrequency": 370,
-    "pulse": "TEMPEST_RAPID",
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "resonanceClass": "TEMPLE_GUARDIAN_RESONANCE",
-    "resonanceId": "ORX-RES-0004",
-    "resonanceSignature": "bee6f42ae08656c399afb29e226e8c78c704e284ad0d692f9e25fe9085b24015",
-    "resonanceVersion": "OX-RESONANCE-1",
-    "secondaryFrequency": 506,
-    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
-    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
+    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
   }
 }

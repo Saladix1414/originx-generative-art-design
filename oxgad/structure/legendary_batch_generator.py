@@ -17,6 +17,9 @@ from oxgad.render.dragon_prompt_compiler import (
     compile_negative_prompt,
     compile_positive_prompt,
 )
+from oxgad.genesis.identity import (
+    build_genesis_identity,
+)
 from oxgad.structure.dragon_identity_rules import (
     validate_coherence,
     validate_individuality,
@@ -300,23 +303,35 @@ def build_spec(
             "This phase only permits tokenIds 1..10"
         )
 
-    name, title = NAMES[index]
-
-    seed = deterministic_seed(
-        token_id
+    canonical_identity = (
+        build_genesis_identity(
+            token_id
+        )
     )
 
-    dna_seed_hash = sha256_text(
-        "ORIGINX_DNA_SEED"
-        f"|{GENERATION_VERSION}"
-        f"|{token_id}"
-        f"|{seed}"
-    )
+    name = canonical_identity[
+        "canonicalName"
+    ]
 
-    resonance = resonance_payload(
-        token_id,
-        dna_seed_hash,
-    )
+    title = canonical_identity[
+        "title"
+    ]
+
+    dna = canonical_identity[
+        "dna"
+    ]
+
+    dna_hash = canonical_identity[
+        "dnaHash"
+    ]
+
+    seed = canonical_identity[
+        "seed"
+    ]
+
+    seed_hash = canonical_identity[
+        "seedHash"
+    ]
 
     weapon = WEAPONS[index]
 
@@ -337,37 +352,80 @@ def build_spec(
         "ENVIRONMENTAL_RESPONSE",
     ]
 
+    # --------------------------------------------------
+    # IMPORTANT:
+    # Identity and DNA are canonical Phase 79 authority.
+    # Personality/combat/power are additive artistic layers.
+    # --------------------------------------------------
+
     spec: dict[str, Any] = {
         "identity": {
+            "identityVersion": (
+                canonical_identity[
+                    "identityVersion"
+                ]
+            ),
             "tokenId": token_id,
             "serial": (
-                f"#{token_id:04d}"
+                canonical_identity[
+                    "serial"
+                ]
             ),
             "canonicalName": name,
             "title": title,
             "epithet": title,
-            "tier": "LEGENDARY",
-            "cohort": "GENESIS",
-            "era": "PRIMORDIAL_ORIGIN",
+            "tier": (
+                canonical_identity[
+                    "tier"
+                ]
+            ),
+            "cohort": (
+                canonical_identity[
+                    "cohort"
+                ]
+            ),
+            "era": (
+                canonical_identity[
+                    "era"
+                ]
+            ),
+            "generationTheme": (
+                canonical_identity[
+                    "generationTheme"
+                ]
+            ),
             "generationVersion": (
-                GENERATION_VERSION
+                canonical_identity[
+                    "generationVersion"
+                ]
+            ),
+            "structureProfileEra": (
+                canonical_identity[
+                    "structureProfileEra"
+                ]
             ),
             "seed": seed,
+            "seedHash": seed_hash,
         },
 
         "dna": {
             "bindingStatus": (
-                "PENDING_CANONICAL_DNA_ENGINE_BINDING"
+                "CANONICAL_BOUND"
             ),
-            "dnaSeedHash": dna_seed_hash,
-            "note": (
-                "This phase does not replace the "
-                "canonical OriginX DNA engine."
+            "dnaVersion": (
+                dna["dnaVersion"]
+            ),
+            "value": dna,
+            "dnaHash": dna_hash,
+            "sourceAuthority": (
+                "OX-GENESIS-IDENTITY-1"
             ),
         },
 
         "classification": {
-            "archetype": ARCHETYPES[index],
+            "archetype": (
+                ARCHETYPES[index]
+            ),
             "temperament": (
                 TEMPERAMENTS[index]
             ),
@@ -377,7 +435,9 @@ def build_spec(
             "combatRole": (
                 COMBAT_ROLES[index]
             ),
-            "domain": SETTINGS[index],
+            "domain": (
+                dna["environment"]
+            ),
             "moralTone": (
                 "DARK_MYTHIC_NEUTRAL"
             ),
@@ -385,13 +445,13 @@ def build_spec(
 
         "anatomy": {
             "bodyStructure": (
-                BODY_STRUCTURES[index]
+                dna["bodyStructure"]
             ),
             "headStyle": (
                 "ORIGINAL_REGAL_PREDATORY"
             ),
             "hornStyle": (
-                HORN_STYLES[index]
+                dna["hornArchitecture"]
             ),
             "jawType": (
                 "ARMORED_SCARRED"
@@ -400,7 +460,7 @@ def build_spec(
                 "DEEP_SET_RESONANT"
             ),
             "wingStyle": (
-                WING_STYLES[index]
+                dna["wingGeometry"]
             ),
             "tailStyle": (
                 "HEAVY_COMBAT_TAIL"
@@ -415,16 +475,16 @@ def build_spec(
 
         "materials": {
             "primaryMaterial": (
-                "OBSIDIAN_SCALE"
+                dna["primaryMaterial"]
             ),
             "secondaryMaterial": (
-                "BASALT_PLATING"
+                dna["secondaryMaterial"]
             ),
             "tertiaryMaterial": (
-                "DARK_FORGED_STEEL"
+                "ANCIENT_PROTO_TECHNOLOGY"
             ),
-            "boneLanguage": (
-                "CARVED_ANCIENT_RIDGES"
+            "augmentation": (
+                dna["augmentation"]
             ),
             "surfaceAge": (
                 "WEATHERED_ANCIENT"
@@ -457,7 +517,9 @@ def build_spec(
                 if has_weapon
                 else "NATURAL_POWER_DOMINANT"
             ),
-            "hasEmbeddedRelic": has_relic,
+            "hasEmbeddedRelic": (
+                has_relic
+            ),
             "relicType": (
                 "ANCIENT_RESONANCE_RELIC"
                 if has_relic
@@ -483,11 +545,36 @@ def build_spec(
             ),
         },
 
-        "resonance": resonance,
+        # --------------------------------------------------
+        # Resonance here remains an artistic planning layer.
+        # It is NOT promoted to canonical lore by this phase.
+        # Canonical lore binding comes separately.
+        # --------------------------------------------------
+
+        "resonance": {
+            "bindingStatus": (
+                "PENDING_CANONICAL_LORE_BINDING"
+            ),
+            "resonanceVersion": (
+                "OX-RESONANCE-PLANNING-1"
+            ),
+            "resonanceClass": (
+                ARCHETYPES[index]
+                + "_RESONANCE"
+            ),
+            "semanticNote": (
+                "Artistic planning layer only. "
+                "Canonical Genesis lore authority "
+                "must be bound separately."
+            ),
+        },
 
         "glyph": {
+            "bindingStatus": (
+                "PENDING_CANONICAL_LORE_BINDING"
+            ),
             "glyphVersion": (
-                "OX-GLYPH-1"
+                "OX-GLYPH-PLANNING-1"
             ),
             "geometry": (
                 GEOMETRIES[index]
@@ -502,7 +589,9 @@ def build_spec(
         },
 
         "environment": {
-            "setting": SETTINGS[index],
+            "setting": (
+                dna["environment"]
+            ),
             "architecture": (
                 "ANCIENT_GOTHIC_MEGALITHIC"
             ),
@@ -528,7 +617,7 @@ def build_spec(
                 "FULL_BODY_DOMINANT"
             ),
             "pose": (
-                "INDIVIDUAL_SOVEREIGN_POSE"
+                dna["poseProfile"]
             ),
             "silhouettePriority": (
                 "HIGH"
@@ -550,7 +639,7 @@ def build_spec(
 
         "lighting": {
             "keyLight": (
-                "MOONLIT_COLD"
+                dna["lightingProfile"]
             ),
             "rimLight": (
                 "CONTROLLED_RESONANCE"
@@ -602,14 +691,15 @@ def build_spec(
         },
 
         "akashic": {
+            "bindingStatus": (
+                "PENDING_CANONICAL_LORE_BINDING"
+            ),
             "recordVersion": (
-                "OX-AKASHIC-1"
+                "OX-AKASHIC-PLANNING-1"
             ),
             "initialEvents": [
                 "DNA_FORGED",
                 "NAME_ASSIGNED",
-                "RESONANCE_CREATED",
-                "RESONANCE_GLYPH_MANIFESTED",
                 "ART_SPEC_CREATED",
                 "RENDER_PLAN_CREATED",
             ],
@@ -617,6 +707,21 @@ def build_spec(
                 "publicSafe": True,
                 "containsPII": False,
             },
+        },
+
+        "governance": {
+            "identityAuthority": (
+                "OX-GENESIS-IDENTITY-1"
+            ),
+            "dnaAuthority": (
+                "OX-GENESIS-DNA-1"
+            ),
+            "artisticLayerAuthority": (
+                "OX-DRAGON-IDENTITY-1"
+            ),
+            "modelAuthority": False,
+            "renderAuthorized": False,
+            "canonicalArtworkAuthorized": False,
         },
     }
 
@@ -633,7 +738,6 @@ def build_spec(
 
     return spec
 
-
 def validate_batch(
     specs: list[dict[str, Any]],
 ) -> list[str]:
@@ -644,15 +748,8 @@ def validate_batch(
         for item in specs
     ]
 
-    dna_seeds = [
-        item["dna"]["dnaSeedHash"]
-        for item in specs
-    ]
-
-    resonances = [
-        item["resonance"][
-            "resonanceSignature"
-        ]
+    dna_hashes = [
+        item["dna"]["dnaHash"]
         for item in specs
     ]
 
@@ -668,18 +765,11 @@ def validate_batch(
             "DUPLICATE_CANONICAL_NAME"
         )
 
-    if len(dna_seeds) != len(
-        set(dna_seeds)
+    if len(dna_hashes) != len(
+        set(dna_hashes)
     ):
         errors.append(
-            "DUPLICATE_DNA_SEED_HASH"
-        )
-
-    if len(resonances) != len(
-        set(resonances)
-    ):
-        errors.append(
-            "DUPLICATE_RESONANCE_SIGNATURE"
+            "DUPLICATE_CANONICAL_DNA_HASH"
         )
 
     if len(abilities) != len(
@@ -833,16 +923,16 @@ def write_batch() -> dict[str, Any]:
                         "powers"
                     ]["signatureAbility"]
                 ),
-                "resonanceSignature": (
+                "resonanceBindingStatus": (
                     spec[
                         "resonance"
                     ][
-                        "resonanceSignature"
+                        "bindingStatus"
                     ]
                 ),
-                "dnaSeedHash": (
+                "dnaHash": (
                     spec["dna"][
-                        "dnaSeedHash"
+                        "dnaHash"
                     ]
                 ),
                 "identityHash": (

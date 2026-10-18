@@ -45,6 +45,48 @@ def compile_positive_prompt(
     comp = spec["composition"]
     light = spec["lighting"]
 
+    resonance_binding = res.get(
+        "bindingStatus"
+    )
+
+    glyph_binding = g.get(
+        "bindingStatus"
+    )
+
+    if (
+        resonance_binding
+        == "PENDING_CANONICAL_LORE_BINDING"
+    ):
+        resonance_segment = (
+            "Resonance planning layer: "
+            f"{readable(res.get('resonanceClass'))}; "
+            "canonical Resonance signature and spectrum "
+            "pending canonical lore binding."
+        )
+    else:
+        resonance_segment = (
+            "Resonance: "
+            f"{readable(res.get('resonanceClass'))}, "
+            f"{readable(res.get('spectrum'))}; "
+            f"signature: "
+            f"{readable(res.get('resonanceSignature'))}."
+        )
+
+    if (
+        glyph_binding
+        == "PENDING_CANONICAL_LORE_BINDING"
+    ):
+        glyph_segment = (
+            "Glyph planning influence: "
+            f"{readable(g.get('influenceAreas'))}; "
+            "canonical Glyph pending lore binding."
+        )
+    else:
+        glyph_segment = (
+            "Glyph influence: "
+            f"{readable(g.get('influenceAreas'))}."
+        )
+
     parts = [
         "Original OriginX dragon NFT artwork.",
         (
@@ -91,13 +133,8 @@ def compile_positive_prompt(
             f"{readable(p['energyMode'])}; "
             f"{readable(p['powerExpression'])}."
         ),
-        (
-            "Resonance: "
-            f"{readable(res['resonanceClass'])}, "
-            f"{readable(res['spectrum'])}; "
-            f"glyph influence: "
-            f"{readable(g['influenceAreas'])}."
-        ),
+        resonance_segment,
+        glyph_segment,
         (
             "Environment: "
             f"{readable(e['setting'])}, "

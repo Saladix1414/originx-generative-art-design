@@ -1,10 +1,9 @@
 {
   "akashic": {
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "initialEvents": [
       "DNA_FORGED",
       "NAME_ASSIGNED",
-      "RESONANCE_CREATED",
-      "RESONANCE_GLYPH_MANIFESTED",
       "ART_SPEC_CREATED",
       "RENDER_PLAN_CREATED"
     ],
@@ -12,18 +11,18 @@
       "containsPII": false,
       "publicSafe": true
     },
-    "recordVersion": "OX-AKASHIC-1"
+    "recordVersion": "OX-AKASHIC-PLANNING-1"
   },
   "anatomy": {
-    "bodyStructure": "HEAVY_QUADRUPED_MONUMENTAL",
+    "bodyStructure": "colossal-grounded",
     "eyeType": "DEEP_SET_RESONANT",
     "headStyle": "ORIGINAL_REGAL_PREDATORY",
-    "hornStyle": "ARCHITECTURAL_BACKWARD_ASYMMETRIC",
+    "hornStyle": "forward-megalithic-crown",
     "jawType": "ARMORED_SCARRED",
     "limbStyle": "POWERFUL_CLAWED",
     "silhouetteProfile": "SOVEREIGN_SPIKED_MASSIVE",
     "tailStyle": "HEAVY_COMBAT_TAIL",
-    "wingStyle": "BLADED_MEMBRANE_COLOSSAL"
+    "wingStyle": "massive-ribbed-vault"
   },
   "armorAndRelics": {
     "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
@@ -38,7 +37,7 @@
   "classification": {
     "archetype": "RELIC_BEARER",
     "combatRole": "RELIC_DEFENDER",
-    "domain": "COLOSSAL_RUINED_GOTHIC_CITADEL_PLATFORM",
+    "domain": "basalt-origin-citadel",
     "moralTone": "DARK_MYTHIC_NEUTRAL",
     "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
     "temperament": "COLD_SOVEREIGN"
@@ -53,7 +52,7 @@
     ],
     "framing": "FULL_BODY_DOMINANT",
     "negativeSpaceControl": "BALANCED",
-    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "pose": "grounded-apex-stance",
     "silhouettePriority": "HIGH",
     "storyBeat": "RELIC_BEARER_REVEALED"
   },
@@ -80,9 +79,30 @@
     ]
   },
   "dna": {
-    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
-    "dnaSeedHash": "cd333ab8e526ca8277be0cb2438d4a36c8f850ffadb33a518ea1cf9b6b1031d9",
-    "note": "This phase does not replace the canonical OriginX DNA engine."
+    "bindingStatus": "CANONICAL_BOUND",
+    "dnaHash": "sha256:c775e62b4bdd2feee5c587f4c8cd227a7d374b7121937194a9cf902d7efafe53",
+    "dnaVersion": "OX-GENESIS-DNA-1",
+    "sourceAuthority": "OX-GENESIS-IDENTITY-1",
+    "value": {
+      "archetype": "primordial-colossal-dragon",
+      "augmentation": "ancient-proto-technology",
+      "bodyStructure": "colossal-grounded",
+      "dnaVersion": "OX-GENESIS-DNA-1",
+      "environment": "basalt-origin-citadel",
+      "hornArchitecture": "forward-megalithic-crown",
+      "lightingProfile": "deep-crimson-forge-rim",
+      "lineage": {
+        "cohort": "GENESIS",
+        "era": "PRIMORDIAL ORIGIN",
+        "index": 1,
+        "maximumSupply": 1000,
+        "tier": "LEGENDARY"
+      },
+      "poseProfile": "grounded-apex-stance",
+      "primaryMaterial": "obsidian",
+      "secondaryMaterial": "weathered-stone",
+      "wingGeometry": "massive-ribbed-vault"
+    }
   },
   "environment": {
     "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
@@ -93,12 +113,13 @@
       "MINERAL_DUST"
     ],
     "scale": "TITANIC",
-    "setting": "COLOSSAL_RUINED_GOTHIC_CITADEL_PLATFORM",
+    "setting": "basalt-origin-citadel",
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "geometry": "RADIAL_FRACTURED_NINEFOLD",
-    "glyphVersion": "OX-GLYPH-1",
+    "glyphVersion": "OX-GLYPH-PLANNING-1",
     "influenceAreas": [
       "HORN_RHYTHM",
       "CHEST_FISSURES",
@@ -107,28 +128,40 @@
       "LIGHT_PATTERN"
     ]
   },
+  "governance": {
+    "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
+    "canonicalArtworkAuthorized": false,
+    "dnaAuthority": "OX-GENESIS-DNA-1",
+    "identityAuthority": "OX-GENESIS-IDENTITY-1",
+    "modelAuthority": false,
+    "renderAuthorized": false
+  },
   "identity": {
-    "canonicalName": "Vaerkaion",
+    "canonicalName": "Azhurak Primordialis",
     "cohort": "GENESIS",
-    "epithet": "The Obsidian Oath",
-    "era": "PRIMORDIAL_ORIGIN",
-    "generationVersion": "OX-GENESIS-1",
-    "seed": 3908656087,
+    "epithet": "The Primordial Witness",
+    "era": "PRIMORDIAL ORIGIN",
+    "generationTheme": "Genesis / Primordial Origin",
+    "generationVersion": "OX-GENESIS-GENERATION-1",
+    "identityVersion": "OX-GENESIS-IDENTITY-1",
+    "seed": 14993452400554643706,
+    "seedHash": "sha256:c584b8f1432b827c3ce9b2e0b802c87a3cc67278465ffcb5cf27294d7d4233b5",
     "serial": "#0001",
+    "structureProfileEra": "Ascended Origin",
     "tier": "LEGENDARY",
-    "title": "The Obsidian Oath",
+    "title": "The Primordial Witness",
     "tokenId": 1
   },
-  "identityHash": "9c3772eb6aea4edabdea3a1a42c30661913d81309658946ff6fac719d6909221",
+  "identityHash": "1b5b2e9cf695b198bea807a406acee18d1fda4794c7f2b58fff7e3825c48b227",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
-    "keyLight": "MOONLIT_COLD",
+    "keyLight": "deep-crimson-forge-rim",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
   },
   "materials": {
-    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "augmentation": "ancient-proto-technology",
     "damageProfile": "SCARRED_FRACTURED_ERODED",
     "microSurface": [
       "MINERAL_DEPOSITS",
@@ -136,10 +169,10 @@
       "ASH_DUST",
       "RUNE_ENGRAVINGS"
     ],
-    "primaryMaterial": "OBSIDIAN_SCALE",
-    "secondaryMaterial": "BASALT_PLATING",
+    "primaryMaterial": "obsidian",
+    "secondaryMaterial": "weathered-stone",
     "surfaceAge": "WEATHERED_ANCIENT",
-    "tertiaryMaterial": "DARK_FORGED_STEEL"
+    "tertiaryMaterial": "ANCIENT_PROTO_TECHNOLOGY"
   },
   "powers": {
     "breathType": "ABYSSAL_FLAME",
@@ -164,16 +197,9 @@
     ]
   },
   "resonance": {
-    "glyphSeed": "076f274e7f06bd4ad377ee2d6e21b27e8a89d902c31968730feed83a67bdc8b9",
-    "phaseDegrees": 295,
-    "primaryFrequency": 363,
-    "pulse": "RITUAL_STEADY",
+    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
     "resonanceClass": "RELIC_BEARER_RESONANCE",
-    "resonanceId": "ORX-RES-0001",
-    "resonanceSignature": "43d3a29637ff4ded4c2db05dd9a78c66722fe43847ac6de259e11fbf4ececebd",
-    "resonanceVersion": "OX-RESONANCE-1",
-    "secondaryFrequency": 322,
-    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
-    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
+    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
   }
 }
