@@ -1,0 +1,179 @@
+{
+  "akashic": {
+    "initialEvents": [
+      "DNA_FORGED",
+      "NAME_ASSIGNED",
+      "RESONANCE_CREATED",
+      "RESONANCE_GLYPH_MANIFESTED",
+      "ART_SPEC_CREATED",
+      "RENDER_PLAN_CREATED"
+    ],
+    "privacy": {
+      "containsPII": false,
+      "publicSafe": true
+    },
+    "recordVersion": "OX-AKASHIC-1"
+  },
+  "anatomy": {
+    "bodyStructure": "ATHLETIC_AERIAL_PREDATOR",
+    "eyeType": "DEEP_SET_RESONANT",
+    "headStyle": "ORIGINAL_REGAL_PREDATORY",
+    "hornStyle": "FORKED_LIGHTNING_ARCH",
+    "jawType": "ARMORED_SCARRED",
+    "limbStyle": "POWERFUL_CLAWED",
+    "silhouetteProfile": "AERIAL_FORKED_PREDATOR",
+    "tailStyle": "HEAVY_COMBAT_TAIL",
+    "wingStyle": "LONG_RAZORED_STORM_WINGS"
+  },
+  "armorAndRelics": {
+    "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
+    "hasArmor": true,
+    "hasEmbeddedRelic": false,
+    "hasWeapon": false,
+    "relicType": "NONE",
+    "weaponMaterial": "NONE",
+    "weaponType": "NONE",
+    "weaponUseStyle": "NATURAL_POWER_DOMINANT"
+  },
+  "classification": {
+    "archetype": "STORM_TYRANT",
+    "combatRole": "AERIAL_HUNTER",
+    "domain": "MEGALITHIC_SPIRE_SUMMIT",
+    "moralTone": "DARK_MYTHIC_NEUTRAL",
+    "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
+    "temperament": "CALCULATING"
+  },
+  "composition": {
+    "cameraAngle": "LOW_THREE_QUARTER_CINEMATIC",
+    "focalPriority": [
+      "HEAD",
+      "TORSO",
+      "POWER_OR_WEAPON",
+      "WINGS"
+    ],
+    "framing": "FULL_BODY_DOMINANT",
+    "negativeSpaceControl": "BALANCED",
+    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "silhouettePriority": "HIGH",
+    "storyBeat": "STORM_TYRANT_REVEALED"
+  },
+  "detailPolicy": {
+    "macroPriority": [
+      "ANATOMY",
+      "SILHOUETTE",
+      "POSE",
+      "COMPOSITION"
+    ],
+    "mesoPriority": [
+      "WINGS",
+      "HORNS",
+      "ARMOR",
+      "MATERIAL_REGIONS"
+    ],
+    "microPriority": [
+      "SCALE_TEXTURE",
+      "SCRATCHES",
+      "FRACTURES",
+      "RUNE_ENGRAVINGS",
+      "EYE_TEXTURE",
+      "MINERAL_DUST"
+    ]
+  },
+  "dna": {
+    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
+    "dnaSeedHash": "717a47f4b2faa9d815258126d18ad32c7c64ecc9b06a8beacb84cf2f05504ac1",
+    "note": "This phase does not replace the canonical OriginX DNA engine."
+  },
+  "environment": {
+    "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
+    "atmosphere": "DARK_CINEMATIC_MINERAL_HAZE",
+    "foregroundElements": [
+      "BROKEN_MONOLITHS",
+      "ANCIENT_SIGIL_STONE",
+      "MINERAL_DUST"
+    ],
+    "scale": "TITANIC",
+    "setting": "MEGALITHIC_SPIRE_SUMMIT",
+    "weather": "ASH_RAIN_FOG"
+  },
+  "glyph": {
+    "geometry": "FORKED_STORM_HEXAGON",
+    "glyphVersion": "OX-GLYPH-1",
+    "influenceAreas": [
+      "HORN_RHYTHM",
+      "CHEST_FISSURES",
+      "WING_GEOMETRY",
+      "ENVIRONMENT_SIGILS",
+      "LIGHT_PATTERN"
+    ]
+  },
+  "identity": {
+    "canonicalName": "Morvathen",
+    "cohort": "GENESIS",
+    "epithet": "The Tempest Crown",
+    "era": "PRIMORDIAL_ORIGIN",
+    "generationVersion": "OX-GENESIS-1",
+    "seed": 893460259,
+    "serial": "#0002",
+    "tier": "LEGENDARY",
+    "title": "The Tempest Crown",
+    "tokenId": 2
+  },
+  "identityHash": "e84e7b24162d863e806112c6fcd6e4e3bcc34d22b7916add0f7c4162f84a8b33",
+  "lighting": {
+    "accentLight": "SUBTLE_CYAN_CRIMSON",
+    "contrastLevel": "HIGH_CINEMATIC",
+    "keyLight": "MOONLIT_COLD",
+    "rimLight": "CONTROLLED_RESONANCE",
+    "shadowStyle": "DEEP_HEAVY"
+  },
+  "materials": {
+    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "damageProfile": "SCARRED_FRACTURED_ERODED",
+    "microSurface": [
+      "MINERAL_DEPOSITS",
+      "SCRATCHED_SURFACE",
+      "ASH_DUST",
+      "RUNE_ENGRAVINGS"
+    ],
+    "primaryMaterial": "OBSIDIAN_SCALE",
+    "secondaryMaterial": "BASALT_PLATING",
+    "surfaceAge": "WEATHERED_ANCIENT",
+    "tertiaryMaterial": "DARK_FORGED_STEEL"
+  },
+  "powers": {
+    "breathType": "THUNDER_RESONANCE",
+    "energyMode": "CONTROLLED_RESONANCE_MANIFESTATION",
+    "environmentInteraction": "POWER_ALTERS_LOCAL_ATMOSPHERE",
+    "powerExpression": [
+      "THUNDER_RESONANCE_BODY_MANIFESTATION",
+      "RESONANCE_GLYPH_IGNITION",
+      "ENVIRONMENTAL_RESPONSE"
+    ],
+    "signatureAbility": "THUNDER_RESONANCE"
+  },
+  "qualityTarget": {
+    "minimumScore": 92,
+    "mustPass": [
+      "anatomyScore",
+      "silhouetteScore",
+      "compositionScore",
+      "materialScore",
+      "identityConsistencyScore",
+      "visualGrammarScore"
+    ]
+  },
+  "resonance": {
+    "glyphSeed": "3bc10e74c4a80ec327f71b916c0343a9ab528d08b1f450fc14306301712e1f2f",
+    "phaseDegrees": 258,
+    "primaryFrequency": 512,
+    "pulse": "ABYSSAL_DEEP",
+    "resonanceClass": "STORM_TYRANT_RESONANCE",
+    "resonanceId": "ORX-RES-0002",
+    "resonanceSignature": "721cacd42b32a865ca789f5863258825d795568b6ed60b2d235dd60d1dc5a316",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 244,
+    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
+    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+  }
+}

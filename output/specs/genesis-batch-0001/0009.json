@@ -1,0 +1,179 @@
+{
+  "akashic": {
+    "initialEvents": [
+      "DNA_FORGED",
+      "NAME_ASSIGNED",
+      "RESONANCE_CREATED",
+      "RESONANCE_GLYPH_MANIFESTED",
+      "ART_SPEC_CREATED",
+      "RENDER_PLAN_CREATED"
+    ],
+    "privacy": {
+      "containsPII": false,
+      "publicSafe": true
+    },
+    "recordVersion": "OX-AKASHIC-1"
+  },
+  "anatomy": {
+    "bodyStructure": "BROAD_WARLORD_FRAME",
+    "eyeType": "DEEP_SET_RESONANT",
+    "headStyle": "ORIGINAL_REGAL_PREDATORY",
+    "hornStyle": "WAR_CREST_RAM_HORNS",
+    "jawType": "ARMORED_SCARRED",
+    "limbStyle": "POWERFUL_CLAWED",
+    "silhouetteProfile": "BROAD_WARLORD_TITAN",
+    "tailStyle": "HEAVY_COMBAT_TAIL",
+    "wingStyle": "BATTLE_SCARRED_WAR_WINGS"
+  },
+  "armorAndRelics": {
+    "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
+    "hasArmor": true,
+    "hasEmbeddedRelic": false,
+    "hasWeapon": true,
+    "relicType": "NONE",
+    "weaponMaterial": "OBSIDIAN_DARK_STEEL",
+    "weaponType": "CEREMONIAL_SPEAR",
+    "weaponUseStyle": "FRONTLINE_DESTROYER"
+  },
+  "classification": {
+    "archetype": "WARLORD",
+    "combatRole": "FRONTLINE_DESTROYER",
+    "domain": "WAR_TORN_MEgalITHIC_PLAZA",
+    "moralTone": "DARK_MYTHIC_NEUTRAL",
+    "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
+    "temperament": "MOURNFUL_CURSED"
+  },
+  "composition": {
+    "cameraAngle": "LOW_THREE_QUARTER_CINEMATIC",
+    "focalPriority": [
+      "HEAD",
+      "TORSO",
+      "POWER_OR_WEAPON",
+      "WINGS"
+    ],
+    "framing": "FULL_BODY_DOMINANT",
+    "negativeSpaceControl": "BALANCED",
+    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "silhouettePriority": "HIGH",
+    "storyBeat": "WARLORD_REVEALED"
+  },
+  "detailPolicy": {
+    "macroPriority": [
+      "ANATOMY",
+      "SILHOUETTE",
+      "POSE",
+      "COMPOSITION"
+    ],
+    "mesoPriority": [
+      "WINGS",
+      "HORNS",
+      "ARMOR",
+      "MATERIAL_REGIONS"
+    ],
+    "microPriority": [
+      "SCALE_TEXTURE",
+      "SCRATCHES",
+      "FRACTURES",
+      "RUNE_ENGRAVINGS",
+      "EYE_TEXTURE",
+      "MINERAL_DUST"
+    ]
+  },
+  "dna": {
+    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
+    "dnaSeedHash": "032e3f0886a2f1a635554717ef318b600d7ba072abed54b06879438e607edb62",
+    "note": "This phase does not replace the canonical OriginX DNA engine."
+  },
+  "environment": {
+    "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
+    "atmosphere": "DARK_CINEMATIC_MINERAL_HAZE",
+    "foregroundElements": [
+      "BROKEN_MONOLITHS",
+      "ANCIENT_SIGIL_STONE",
+      "MINERAL_DUST"
+    ],
+    "scale": "TITANIC",
+    "setting": "WAR_TORN_MEgalITHIC_PLAZA",
+    "weather": "ASH_RAIN_FOG"
+  },
+  "glyph": {
+    "geometry": "WAR_SIGIL_OCTAGON",
+    "glyphVersion": "OX-GLYPH-1",
+    "influenceAreas": [
+      "HORN_RHYTHM",
+      "CHEST_FISSURES",
+      "WING_GEOMETRY",
+      "ENVIRONMENT_SIGILS",
+      "LIGHT_PATTERN"
+    ]
+  },
+  "identity": {
+    "canonicalName": "Iraekor",
+    "cohort": "GENESIS",
+    "epithet": "The Shattered Sun",
+    "era": "PRIMORDIAL_ORIGIN",
+    "generationVersion": "OX-GENESIS-1",
+    "seed": 1058502887,
+    "serial": "#0009",
+    "tier": "LEGENDARY",
+    "title": "The Shattered Sun",
+    "tokenId": 9
+  },
+  "identityHash": "315003511f9a88a8b4d6b5f0763668d1fb28dd2cb2eb7da63df702cfc2509019",
+  "lighting": {
+    "accentLight": "SUBTLE_CYAN_CRIMSON",
+    "contrastLevel": "HIGH_CINEMATIC",
+    "keyLight": "MOONLIT_COLD",
+    "rimLight": "CONTROLLED_RESONANCE",
+    "shadowStyle": "DEEP_HEAVY"
+  },
+  "materials": {
+    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "damageProfile": "SCARRED_FRACTURED_ERODED",
+    "microSurface": [
+      "MINERAL_DEPOSITS",
+      "SCRATCHED_SURFACE",
+      "ASH_DUST",
+      "RUNE_ENGRAVINGS"
+    ],
+    "primaryMaterial": "OBSIDIAN_SCALE",
+    "secondaryMaterial": "BASALT_PLATING",
+    "surfaceAge": "WEATHERED_ANCIENT",
+    "tertiaryMaterial": "DARK_FORGED_STEEL"
+  },
+  "powers": {
+    "breathType": "OBSIDIAN_SHARD_PROJECTION",
+    "energyMode": "CONTROLLED_RESONANCE_MANIFESTATION",
+    "environmentInteraction": "POWER_ALTERS_LOCAL_ATMOSPHERE",
+    "powerExpression": [
+      "OBSIDIAN_SHARD_PROJECTION_BODY_MANIFESTATION",
+      "RESONANCE_GLYPH_IGNITION",
+      "ENVIRONMENTAL_RESPONSE"
+    ],
+    "signatureAbility": "OBSIDIAN_SHARD_PROJECTION"
+  },
+  "qualityTarget": {
+    "minimumScore": 92,
+    "mustPass": [
+      "anatomyScore",
+      "silhouetteScore",
+      "compositionScore",
+      "materialScore",
+      "identityConsistencyScore",
+      "visualGrammarScore"
+    ]
+  },
+  "resonance": {
+    "glyphSeed": "0f1e1f0907d0aebc85b751882129700682e80f7e8e7fc0efeb9fb7cd480db3cb",
+    "phaseDegrees": 302,
+    "primaryFrequency": 760,
+    "pulse": "FRACTURED_PULSE",
+    "resonanceClass": "WARLORD_RESONANCE",
+    "resonanceId": "ORX-RES-0009",
+    "resonanceSignature": "a7d0854e65066d6877387b78322af7b83f710fdb01660d7fcf421bdb61334c81",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 926,
+    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
+    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "akashic": {
+    "initialEvents": [
+      "DNA_FORGED",
+      "NAME_ASSIGNED",
+      "RESONANCE_CREATED",
+      "RESONANCE_GLYPH_MANIFESTED",
+      "ART_SPEC_CREATED",
+      "RENDER_PLAN_CREATED"
+    ],
+    "privacy": {
+      "containsPII": false,
+      "publicSafe": true
+    },
+    "recordVersion": "OX-AKASHIC-1"
+  },
+  "anatomy": {
+    "bodyStructure": "FORTRESS_HEAVY_GUARDIAN",
+    "eyeType": "DEEP_SET_RESONANT",
+    "headStyle": "ORIGINAL_REGAL_PREDATORY",
+    "hornStyle": "MEGALITHIC_VERTICAL_SPIRES",
+    "jawType": "ARMORED_SCARRED",
+    "limbStyle": "POWERFUL_CLAWED",
+    "silhouetteProfile": "FORTRESS_MONOLITH_GUARDIAN",
+    "tailStyle": "HEAVY_COMBAT_TAIL",
+    "wingStyle": "STONE_RIBBED_GUARDIAN_WINGS"
+  },
+  "armorAndRelics": {
+    "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
+    "hasArmor": true,
+    "hasEmbeddedRelic": false,
+    "hasWeapon": false,
+    "relicType": "NONE",
+    "weaponMaterial": "NONE",
+    "weaponType": "NONE",
+    "weaponUseStyle": "NATURAL_POWER_DOMINANT"
+  },
+  "classification": {
+    "archetype": "TEMPLE_GUARDIAN",
+    "combatRole": "WARDEN",
+    "domain": "ANCIENT_GATE_FORTRESS",
+    "moralTone": "DARK_MYTHIC_NEUTRAL",
+    "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
+    "temperament": "VIGILANT_PATIENT"
+  },
+  "composition": {
+    "cameraAngle": "LOW_THREE_QUARTER_CINEMATIC",
+    "focalPriority": [
+      "HEAD",
+      "TORSO",
+      "POWER_OR_WEAPON",
+      "WINGS"
+    ],
+    "framing": "FULL_BODY_DOMINANT",
+    "negativeSpaceControl": "BALANCED",
+    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "silhouettePriority": "HIGH",
+    "storyBeat": "TEMPLE_GUARDIAN_REVEALED"
+  },
+  "detailPolicy": {
+    "macroPriority": [
+      "ANATOMY",
+      "SILHOUETTE",
+      "POSE",
+      "COMPOSITION"
+    ],
+    "mesoPriority": [
+      "WINGS",
+      "HORNS",
+      "ARMOR",
+      "MATERIAL_REGIONS"
+    ],
+    "microPriority": [
+      "SCALE_TEXTURE",
+      "SCRATCHES",
+      "FRACTURES",
+      "RUNE_ENGRAVINGS",
+      "EYE_TEXTURE",
+      "MINERAL_DUST"
+    ]
+  },
+  "dna": {
+    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
+    "dnaSeedHash": "218ee3335ce56960e591705ff8429d1ceb84e1c0c64ad9eea8654d39f804e14e",
+    "note": "This phase does not replace the canonical OriginX DNA engine."
+  },
+  "environment": {
+    "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
+    "atmosphere": "DARK_CINEMATIC_MINERAL_HAZE",
+    "foregroundElements": [
+      "BROKEN_MONOLITHS",
+      "ANCIENT_SIGIL_STONE",
+      "MINERAL_DUST"
+    ],
+    "scale": "TITANIC",
+    "setting": "ANCIENT_GATE_FORTRESS",
+    "weather": "ASH_RAIN_FOG"
+  },
+  "glyph": {
+    "geometry": "MONOLITHIC_CROSS_AXIS",
+    "glyphVersion": "OX-GLYPH-1",
+    "influenceAreas": [
+      "HORN_RHYTHM",
+      "CHEST_FISSURES",
+      "WING_GEOMETRY",
+      "ENVIRONMENT_SIGILS",
+      "LIGHT_PATTERN"
+    ]
+  },
+  "identity": {
+    "canonicalName": "Aethrakar",
+    "cohort": "GENESIS",
+    "epithet": "The Silent Monolith",
+    "era": "PRIMORDIAL_ORIGIN",
+    "generationVersion": "OX-GENESIS-1",
+    "seed": 970839773,
+    "serial": "#0004",
+    "tier": "LEGENDARY",
+    "title": "The Silent Monolith",
+    "tokenId": 4
+  },
+  "identityHash": "6479a036aa39f24789491415e6439d0a4089663804aa51b528c6ac1a0b9f3391",
+  "lighting": {
+    "accentLight": "SUBTLE_CYAN_CRIMSON",
+    "contrastLevel": "HIGH_CINEMATIC",
+    "keyLight": "MOONLIT_COLD",
+    "rimLight": "CONTROLLED_RESONANCE",
+    "shadowStyle": "DEEP_HEAVY"
+  },
+  "materials": {
+    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "damageProfile": "SCARRED_FRACTURED_ERODED",
+    "microSurface": [
+      "MINERAL_DEPOSITS",
+      "SCRATCHED_SURFACE",
+      "ASH_DUST",
+      "RUNE_ENGRAVINGS"
+    ],
+    "primaryMaterial": "OBSIDIAN_SCALE",
+    "secondaryMaterial": "BASALT_PLATING",
+    "surfaceAge": "WEATHERED_ANCIENT",
+    "tertiaryMaterial": "DARK_FORGED_STEEL"
+  },
+  "powers": {
+    "breathType": "GRAVITIC_PRESSURE",
+    "energyMode": "CONTROLLED_RESONANCE_MANIFESTATION",
+    "environmentInteraction": "POWER_ALTERS_LOCAL_ATMOSPHERE",
+    "powerExpression": [
+      "GRAVITIC_PRESSURE_BODY_MANIFESTATION",
+      "RESONANCE_GLYPH_IGNITION",
+      "ENVIRONMENTAL_RESPONSE"
+    ],
+    "signatureAbility": "GRAVITIC_PRESSURE"
+  },
+  "qualityTarget": {
+    "minimumScore": 92,
+    "mustPass": [
+      "anatomyScore",
+      "silhouetteScore",
+      "compositionScore",
+      "materialScore",
+      "identityConsistencyScore",
+      "visualGrammarScore"
+    ]
+  },
+  "resonance": {
+    "glyphSeed": "ceba1427e431a584e5fc36020b2afef9a0f743257aa79cd219dfa4215263588c",
+    "phaseDegrees": 238,
+    "primaryFrequency": 370,
+    "pulse": "TEMPEST_RAPID",
+    "resonanceClass": "TEMPLE_GUARDIAN_RESONANCE",
+    "resonanceId": "ORX-RES-0004",
+    "resonanceSignature": "bee6f42ae08656c399afb29e226e8c78c704e284ad0d692f9e25fe9085b24015",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 506,
+    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
+    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+  }
+}

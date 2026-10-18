@@ -1,0 +1,179 @@
+{
+  "akashic": {
+    "initialEvents": [
+      "DNA_FORGED",
+      "NAME_ASSIGNED",
+      "RESONANCE_CREATED",
+      "RESONANCE_GLYPH_MANIFESTED",
+      "ART_SPEC_CREATED",
+      "RENDER_PLAN_CREATED"
+    ],
+    "privacy": {
+      "containsPII": false,
+      "publicSafe": true
+    },
+    "recordVersion": "OX-AKASHIC-1"
+  },
+  "anatomy": {
+    "bodyStructure": "COLOSSAL_DEEP_CHESTED",
+    "eyeType": "DEEP_SET_RESONANT",
+    "headStyle": "ORIGINAL_REGAL_PREDATORY",
+    "hornStyle": "ABYSSAL_CROWN_RING",
+    "jawType": "ARMORED_SCARRED",
+    "limbStyle": "POWERFUL_CLAWED",
+    "silhouetteProfile": "CROWNED_ABYSSAL_COLOSSUS",
+    "tailStyle": "HEAVY_COMBAT_TAIL",
+    "wingStyle": "ABYSSAL_VEILED_WINGS"
+  },
+  "armorAndRelics": {
+    "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
+    "hasArmor": true,
+    "hasEmbeddedRelic": true,
+    "hasWeapon": true,
+    "relicType": "ANCIENT_RESONANCE_RELIC",
+    "weaponMaterial": "OBSIDIAN_DARK_STEEL",
+    "weaponType": "RELIC_CHAIN",
+    "weaponUseStyle": "SIEGE_BREAKER"
+  },
+  "classification": {
+    "archetype": "ABYSSAL_MONARCH",
+    "combatRole": "SIEGE_BREAKER",
+    "domain": "ABYSSAL_THRONE_CHASM",
+    "moralTone": "DARK_MYTHIC_NEUTRAL",
+    "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
+    "temperament": "NOBLE_SEVERE"
+  },
+  "composition": {
+    "cameraAngle": "LOW_THREE_QUARTER_CINEMATIC",
+    "focalPriority": [
+      "HEAD",
+      "TORSO",
+      "POWER_OR_WEAPON",
+      "WINGS"
+    ],
+    "framing": "FULL_BODY_DOMINANT",
+    "negativeSpaceControl": "BALANCED",
+    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "silhouettePriority": "HIGH",
+    "storyBeat": "ABYSSAL_MONARCH_REVEALED"
+  },
+  "detailPolicy": {
+    "macroPriority": [
+      "ANATOMY",
+      "SILHOUETTE",
+      "POSE",
+      "COMPOSITION"
+    ],
+    "mesoPriority": [
+      "WINGS",
+      "HORNS",
+      "ARMOR",
+      "MATERIAL_REGIONS"
+    ],
+    "microPriority": [
+      "SCALE_TEXTURE",
+      "SCRATCHES",
+      "FRACTURES",
+      "RUNE_ENGRAVINGS",
+      "EYE_TEXTURE",
+      "MINERAL_DUST"
+    ]
+  },
+  "dna": {
+    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
+    "dnaSeedHash": "eb33b2528f9700d83359edec07511b5a869573a77adc2bdf2e0c26595eca125a",
+    "note": "This phase does not replace the canonical OriginX DNA engine."
+  },
+  "environment": {
+    "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
+    "atmosphere": "DARK_CINEMATIC_MINERAL_HAZE",
+    "foregroundElements": [
+      "BROKEN_MONOLITHS",
+      "ANCIENT_SIGIL_STONE",
+      "MINERAL_DUST"
+    ],
+    "scale": "TITANIC",
+    "setting": "ABYSSAL_THRONE_CHASM",
+    "weather": "ASH_RAIN_FOG"
+  },
+  "glyph": {
+    "geometry": "ABYSSAL_CONCENTRIC_RING",
+    "glyphVersion": "OX-GLYPH-1",
+    "influenceAreas": [
+      "HORN_RHYTHM",
+      "CHEST_FISSURES",
+      "WING_GEOMETRY",
+      "ENVIRONMENT_SIGILS",
+      "LIGHT_PATTERN"
+    ]
+  },
+  "identity": {
+    "canonicalName": "Nhalgorim",
+    "cohort": "GENESIS",
+    "epithet": "The Keeper Below",
+    "era": "PRIMORDIAL_ORIGIN",
+    "generationVersion": "OX-GENESIS-1",
+    "seed": 1764243531,
+    "serial": "#0006",
+    "tier": "LEGENDARY",
+    "title": "The Keeper Below",
+    "tokenId": 6
+  },
+  "identityHash": "767eb714915ab0bb093c2a8449022eec73031b00f28befe0992083efbf091b1f",
+  "lighting": {
+    "accentLight": "SUBTLE_CYAN_CRIMSON",
+    "contrastLevel": "HIGH_CINEMATIC",
+    "keyLight": "MOONLIT_COLD",
+    "rimLight": "CONTROLLED_RESONANCE",
+    "shadowStyle": "DEEP_HEAVY"
+  },
+  "materials": {
+    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "damageProfile": "SCARRED_FRACTURED_ERODED",
+    "microSurface": [
+      "MINERAL_DEPOSITS",
+      "SCRATCHED_SURFACE",
+      "ASH_DUST",
+      "RUNE_ENGRAVINGS"
+    ],
+    "primaryMaterial": "OBSIDIAN_SCALE",
+    "secondaryMaterial": "BASALT_PLATING",
+    "surfaceAge": "WEATHERED_ANCIENT",
+    "tertiaryMaterial": "DARK_FORGED_STEEL"
+  },
+  "powers": {
+    "breathType": "SEISMIC_FORCE",
+    "energyMode": "CONTROLLED_RESONANCE_MANIFESTATION",
+    "environmentInteraction": "POWER_ALTERS_LOCAL_ATMOSPHERE",
+    "powerExpression": [
+      "SEISMIC_FORCE_BODY_MANIFESTATION",
+      "RESONANCE_GLYPH_IGNITION",
+      "ENVIRONMENTAL_RESPONSE"
+    ],
+    "signatureAbility": "SEISMIC_FORCE"
+  },
+  "qualityTarget": {
+    "minimumScore": 92,
+    "mustPass": [
+      "anatomyScore",
+      "silhouetteScore",
+      "compositionScore",
+      "materialScore",
+      "identityConsistencyScore",
+      "visualGrammarScore"
+    ]
+  },
+  "resonance": {
+    "glyphSeed": "c30a2db3d63650122694af3eb388715deb66f10fd3e24182cc2092b68e05632f",
+    "phaseDegrees": 269,
+    "primaryFrequency": 420,
+    "pulse": "TEMPEST_RAPID",
+    "resonanceClass": "ABYSSAL_MONARCH_RESONANCE",
+    "resonanceId": "ORX-RES-0006",
+    "resonanceSignature": "1d607aabd295baecefcbbb3f3795c9f4cdf3d4edc5415dd1996307ee34818847",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 903,
+    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
+    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "akashic": {
+    "initialEvents": [
+      "DNA_FORGED",
+      "NAME_ASSIGNED",
+      "RESONANCE_CREATED",
+      "RESONANCE_GLYPH_MANIFESTED",
+      "ART_SPEC_CREATED",
+      "RENDER_PLAN_CREATED"
+    ],
+    "privacy": {
+      "containsPII": false,
+      "publicSafe": true
+    },
+    "recordVersion": "OX-AKASHIC-1"
+  },
+  "anatomy": {
+    "bodyStructure": "MASSIVE_EXECUTIONER_FRAME",
+    "eyeType": "DEEP_SET_RESONANT",
+    "headStyle": "ORIGINAL_REGAL_PREDATORY",
+    "hornStyle": "FORWARD_EXECUTIONER_HOOKS",
+    "jawType": "ARMORED_SCARRED",
+    "limbStyle": "POWERFUL_CLAWED",
+    "silhouetteProfile": "EXECUTIONER_BLADED_HEAVY",
+    "tailStyle": "HEAVY_COMBAT_TAIL",
+    "wingStyle": "HEAVY_EXECUTIONER_WINGS"
+  },
+  "armorAndRelics": {
+    "armorProfile": "ORIGINX_RITUAL_BATTLE_ARMOR",
+    "hasArmor": true,
+    "hasEmbeddedRelic": false,
+    "hasWeapon": true,
+    "relicType": "NONE",
+    "weaponMaterial": "OBSIDIAN_DARK_STEEL",
+    "weaponType": "OBSIDIAN_HALBERD",
+    "weaponUseStyle": "EXECUTIONER_MONARCH"
+  },
+  "classification": {
+    "archetype": "EXECUTIONER",
+    "combatRole": "EXECUTIONER_MONARCH",
+    "domain": "BLACK_TRIBUNAL_COURTYARD",
+    "moralTone": "DARK_MYTHIC_NEUTRAL",
+    "presence": "ANCIENT_MONUMENTAL_SOVEREIGN",
+    "temperament": "WRATHFUL_CONTAINED"
+  },
+  "composition": {
+    "cameraAngle": "LOW_THREE_QUARTER_CINEMATIC",
+    "focalPriority": [
+      "HEAD",
+      "TORSO",
+      "POWER_OR_WEAPON",
+      "WINGS"
+    ],
+    "framing": "FULL_BODY_DOMINANT",
+    "negativeSpaceControl": "BALANCED",
+    "pose": "INDIVIDUAL_SOVEREIGN_POSE",
+    "silhouettePriority": "HIGH",
+    "storyBeat": "EXECUTIONER_REVEALED"
+  },
+  "detailPolicy": {
+    "macroPriority": [
+      "ANATOMY",
+      "SILHOUETTE",
+      "POSE",
+      "COMPOSITION"
+    ],
+    "mesoPriority": [
+      "WINGS",
+      "HORNS",
+      "ARMOR",
+      "MATERIAL_REGIONS"
+    ],
+    "microPriority": [
+      "SCALE_TEXTURE",
+      "SCRATCHES",
+      "FRACTURES",
+      "RUNE_ENGRAVINGS",
+      "EYE_TEXTURE",
+      "MINERAL_DUST"
+    ]
+  },
+  "dna": {
+    "bindingStatus": "PENDING_CANONICAL_DNA_ENGINE_BINDING",
+    "dnaSeedHash": "5ec2e08a2df3539095596256861de1d5737387d356cb85e91d82ddeae8ea8e23",
+    "note": "This phase does not replace the canonical OriginX DNA engine."
+  },
+  "environment": {
+    "architecture": "ANCIENT_GOTHIC_MEGALITHIC",
+    "atmosphere": "DARK_CINEMATIC_MINERAL_HAZE",
+    "foregroundElements": [
+      "BROKEN_MONOLITHS",
+      "ANCIENT_SIGIL_STONE",
+      "MINERAL_DUST"
+    ],
+    "scale": "TITANIC",
+    "setting": "BLACK_TRIBUNAL_COURTYARD",
+    "weather": "ASH_RAIN_FOG"
+  },
+  "glyph": {
+    "geometry": "CRIMSON_TRIAD_BLADE",
+    "glyphVersion": "OX-GLYPH-1",
+    "influenceAreas": [
+      "HORN_RHYTHM",
+      "CHEST_FISSURES",
+      "WING_GEOMETRY",
+      "ENVIRONMENT_SIGILS",
+      "LIGHT_PATTERN"
+    ]
+  },
+  "identity": {
+    "canonicalName": "Korvaxis",
+    "cohort": "GENESIS",
+    "epithet": "The Crimson Tribunal",
+    "era": "PRIMORDIAL_ORIGIN",
+    "generationVersion": "OX-GENESIS-1",
+    "seed": 2360381446,
+    "serial": "#0005",
+    "tier": "LEGENDARY",
+    "title": "The Crimson Tribunal",
+    "tokenId": 5
+  },
+  "identityHash": "ab75f443ff42350dd224eef9645d08234f4d794677858c8b741d0ab6f60ea23b",
+  "lighting": {
+    "accentLight": "SUBTLE_CYAN_CRIMSON",
+    "contrastLevel": "HIGH_CINEMATIC",
+    "keyLight": "MOONLIT_COLD",
+    "rimLight": "CONTROLLED_RESONANCE",
+    "shadowStyle": "DEEP_HEAVY"
+  },
+  "materials": {
+    "boneLanguage": "CARVED_ANCIENT_RIDGES",
+    "damageProfile": "SCARRED_FRACTURED_ERODED",
+    "microSurface": [
+      "MINERAL_DEPOSITS",
+      "SCRATCHED_SURFACE",
+      "ASH_DUST",
+      "RUNE_ENGRAVINGS"
+    ],
+    "primaryMaterial": "OBSIDIAN_SCALE",
+    "secondaryMaterial": "BASALT_PLATING",
+    "surfaceAge": "WEATHERED_ANCIENT",
+    "tertiaryMaterial": "DARK_FORGED_STEEL"
+  },
+  "powers": {
+    "breathType": "CRIMSON_CURSE",
+    "energyMode": "CONTROLLED_RESONANCE_MANIFESTATION",
+    "environmentInteraction": "POWER_ALTERS_LOCAL_ATMOSPHERE",
+    "powerExpression": [
+      "CRIMSON_CURSE_BODY_MANIFESTATION",
+      "RESONANCE_GLYPH_IGNITION",
+      "ENVIRONMENTAL_RESPONSE"
+    ],
+    "signatureAbility": "CRIMSON_CURSE"
+  },
+  "qualityTarget": {
+    "minimumScore": 92,
+    "mustPass": [
+      "anatomyScore",
+      "silhouetteScore",
+      "compositionScore",
+      "materialScore",
+      "identityConsistencyScore",
+      "visualGrammarScore"
+    ]
+  },
+  "resonance": {
+    "glyphSeed": "5a8928139f3ad15e094882c5ee20b0b7c43fcb80a9ed30fec6b5ab5ae9539080",
+    "phaseDegrees": 185,
+    "primaryFrequency": 344,
+    "pulse": "FRACTURED_PULSE",
+    "resonanceClass": "EXECUTIONER_RESONANCE",
+    "resonanceId": "ORX-RES-0005",
+    "resonanceSignature": "d06021c1d0d9f4c32baff1c278c3237e9d588036c3787642ee2bbeb7b56d554f",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 641,
+    "semanticNote": "Artistic and mathematical identity. Not a scientific or spiritual measurement.",
+    "spectrum": "OBSIDIAN_CYAN_CRIMSON"
+  }
+}
