@@ -1,0 +1,76 @@
+{
+  "catalogVersion": "OX-DRAGON-CATALOGS-1",
+
+  "archetypes": [
+    "WARLORD",
+    "RELIC_BEARER",
+    "TEMPLE_GUARDIAN",
+    "ABYSSAL_MONARCH",
+    "EXECUTIONER",
+    "ORACLE",
+    "SENTINEL",
+    "STORM_TYRANT",
+    "ASHEN_PROPHET",
+    "FORGE_KEEPER",
+    "RUNE_SOVEREIGN",
+    "VOID_HUNTER"
+  ],
+
+  "temperaments": [
+    "COLD_SOVEREIGN",
+    "RITUALISTIC",
+    "SAVAGE_DISCIPLINED",
+    "NOBLE_SEVERE",
+    "ASCETIC_ANCIENT",
+    "CALCULATING",
+    "WRATHFUL_CONTAINED",
+    "MOURNFUL_CURSED",
+    "VIGILANT_PATIENT"
+  ],
+
+  "combatRoles": [
+    "FRONTLINE_DESTROYER",
+    "EXECUTIONER_MONARCH",
+    "RELIC_DEFENDER",
+    "SIEGE_BREAKER",
+    "AERIAL_HUNTER",
+    "HEX_CHANNELER",
+    "TEMPEST_CASTER",
+    "WARDEN",
+    "DUELIST_PREDATOR"
+  ],
+
+  "weaponTypes": [
+    "NONE",
+    "CHAINED_GREATSWORD",
+    "CEREMONIAL_SPEAR",
+    "OBSIDIAN_HALBERD",
+    "RITUAL_STAFF",
+    "TAIL_BLADE",
+    "ENERGY_FORGED_CLAWS",
+    "RELIC_CHAIN",
+    "WING_BLADES"
+  ],
+
+  "signatureAbilities": [
+    "ABYSSAL_FLAME",
+    "VOID_BREATH",
+    "MINERAL_STORM",
+    "THUNDER_RESONANCE",
+    "CRIMSON_CURSE",
+    "ASH_MANIPULATION",
+    "SPECTRAL_PULSE",
+    "GRAVITIC_PRESSURE",
+    "RUNE_IGNITION",
+    "STORM_SUMMONING",
+    "OBSIDIAN_SHARD_PROJECTION",
+    "FOG_CONCEALMENT",
+    "SEISMIC_FORCE"
+  ],
+
+  "legendaryWeaponDistribution": {
+    "physicalWeaponPercent": 35,
+    "relicPercent": 25,
+    "powerDominantPercent": 40
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "identity": {
+    "tokenId": 1,
+    "serial": "#0001",
+    "canonicalName": "Vaerkaion",
+    "title": "The Obsidian Oath",
+    "epithet": "Warden of the Black Vow",
+    "tier": "LEGENDARY",
+    "cohort": "GENESIS",
+    "era": "PRIMORDIAL_ORIGIN",
+    "generationVersion": "OX-GENESIS-1",
+    "seed": 3628481919
+  },
+
+  "classification": {
+    "archetype": "RELIC_BEARER",
+    "temperament": "COLD_SOVEREIGN",
+    "presence": "IMMENSE_OPPRESSIVE_ANCIENT",
+    "combatRole": "RELIC_DEFENDER",
+    "domain": "ABYSSAL_FORTRESS",
+    "moralTone": "SEVERE_NEUTRAL_DARK"
+  },
+
+  "anatomy": {
+    "bodyStructure": "HEAVY_QUADRUPED_MONUMENTAL",
+    "headStyle": "ELONGATED_REGAL_PREDATORY",
+    "hornStyle": "ARCHITECTURAL_BACKWARD_ASYMMETRIC",
+    "jawType": "ARMORED_SCARRED",
+    "eyeType": "DEEP_SET_GLOWING",
+    "wingStyle": "BLADED_MEMBRANE_COLOSSAL",
+    "tailStyle": "HEAVY_WHIP_BLADE_TIPPED",
+    "limbStyle": "POWERFUL_CLAWED_STONE_ARMORED",
+    "silhouetteProfile": "SOVEREIGN_SPIKED_MASSIVE"
+  },
+
+  "materials": {
+    "primaryMaterial": "OBSIDIAN_SCALE",
+    "secondaryMaterial": "BASALT_PLATING",
+    "tertiaryMaterial": "DARK_FORGED_STEEL",
+    "boneLanguage": "CARVED_BONE_RIDGES",
+    "surfaceAge": "WEATHERED_ANCIENT",
+    "damageProfile": "SCARRED_FRACTURED_ERODED",
+    "microSurface": [
+      "MINERAL_DEPOSITS",
+      "SCRATCHED_METAL",
+      "ASH_DUST",
+      "RUNE_ENGRAVINGS"
+    ]
+  },
+
+  "armorAndRelics": {
+    "hasArmor": true,
+    "armorProfile": "PARTIAL_RITUAL_BATTLE_ARMOR",
+    "hasWeapon": true,
+    "weaponType": "CHAINED_GREATSWORD",
+    "weaponMaterial": "OBSIDIAN_DARK_STEEL",
+    "weaponUseStyle": "CEREMONIAL_EXECUTIONER",
+    "hasEmbeddedRelic": true,
+    "relicType": "SIGIL_HEART_CORE"
+  },
+
+  "powers": {
+    "signatureAbility": "ABYSSAL_FLAME",
+    "energyMode": "RESTRAINED_INTERNAL_VOLCANIC_PULSE",
+    "powerExpression": [
+      "EMBER_VEIN_FISSURES",
+      "BLACK_SMOKE_EXHALATION",
+      "GLYPH_IGNITION",
+      "PRESSURE_AURA"
+    ],
+    "breathType": "VOID_FIRE",
+    "environmentInteraction": "ASH_SWIRL_AND_LIGHT_DISTORTION"
+  },
+
+  "resonance": {
+    "resonanceVersion": "OX-RESONANCE-1",
+    "resonanceId": "ORX-RES-0001",
+    "resonanceClass": "ABYSSAL_SOVEREIGN",
+    "resonanceSignature": "low-phase-obsidian-cyan-pulse",
+    "spectrum": "OBSIDIAN_CYAN_CRIMSON_LOW",
+    "primaryFrequency": 83,
+    "secondaryFrequency": 17,
+    "pulse": "GRAVITIC_SLOW",
+    "phaseDegrees": 214,
+    "glyphSeed": "OX-GLYPH-SEED-0001"
+  },
+
+  "glyph": {
+    "glyphVersion": "OX-GLYPH-1",
+    "geometry": "RADIAL_FRACTURED_NINEFOLD",
+    "influenceAreas": [
+      "HORN_RHYTHM",
+      "CHEST_FISSURES",
+      "WING_GEOMETRY",
+      "ENVIRONMENT_SIGILS",
+      "LIGHT_PATTERN"
+    ]
+  },
+
+  "environment": {
+    "setting": "COLOSSAL_RUINED_GOTHIC_CITADEL_PLATFORM",
+    "architecture": "CATHEDRAL_INDUSTRIAL_MEGALITHIC",
+    "weather": "ASH_AND_RAIN",
+    "atmosphere": "FOG_SMOKE_MOON_HAZE",
+    "scale": "TITANIC",
+    "foregroundElements": [
+      "BROKEN_PILLARS",
+      "SIGIL_STONE",
+      "BLACK_WATER",
+      "CHAIN_FRAGMENTS"
+    ]
+  },
+
+  "composition": {
+    "cameraAngle": "LOW_THREE_QUARTER_HEROIC",
+    "framing": "FULL_BODY_DOMINANT",
+    "pose": "FORWARD_WEIGHTED_SOVEREIGN_STANCE",
+    "silhouettePriority": "HIGH",
+    "focalPriority": [
+      "HEAD",
+      "CHEST_CORE",
+      "WEAPON",
+      "WINGS"
+    ],
+    "negativeSpaceControl": "BALANCED",
+    "storyBeat": "ANCIENT_RULER_AWAKENED"
+  },
+
+  "lighting": {
+    "keyLight": "MOONLIT_COLD",
+    "rimLight": "SUBTLE_CYAN",
+    "accentLight": "CONTROLLED_CRIMSON_INTERNAL_GLOW",
+    "contrastLevel": "HIGH_CINEMATIC",
+    "shadowStyle": "DEEP_HEAVY"
+  },
+
+  "detailPolicy": {
+    "macroPriority": [
+      "ANATOMY",
+      "SILHOUETTE",
+      "POSE",
+      "COMPOSITION"
+    ],
+    "mesoPriority": [
+      "WINGS",
+      "HORNS",
+      "ARMOR",
+      "MATERIAL_REGIONS"
+    ],
+    "microPriority": [
+      "SCALE_TEXTURE",
+      "SCRATCHES",
+      "FRACTURES",
+      "RUNE_ENGRAVINGS",
+      "EYE_TEXTURE",
+      "MINERAL_DUST"
+    ]
+  },
+
+  "qualityTarget": {
+    "minimumScore": 92,
+    "mustPass": [
+      "anatomyScore",
+      "silhouetteScore",
+      "compositionScore",
+      "materialScore",
+      "identityConsistencyScore",
+      "visualGrammarScore"
+    ]
+  },
+
+  "akashic": {
+    "recordVersion": "OX-AKASHIC-1",
+    "initialEvents": [
+      "DNA_FORGED",
+      "NAME_ASSIGNED",
+      "RESONANCE_CREATED",
+      "RESONANCE_GLYPH_MANIFESTED",
+      "ART_SPEC_CREATED",
+      "RENDER_PLAN_CREATED"
+    ]
+  }
+}

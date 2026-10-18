@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://originx.local/schemas/ox-dragon-identity-1.schema.json",
+  "title": "OriginX Dragon Identity v1",
+  "type": "object",
+  "required": [
+    "identity",
+    "classification",
+    "anatomy",
+    "materials",
+    "armorAndRelics",
+    "powers",
+    "resonance",
+    "glyph",
+    "environment",
+    "composition",
+    "lighting",
+    "detailPolicy",
+    "qualityTarget",
+    "akashic"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": [
+        "tokenId",
+        "serial",
+        "canonicalName",
+        "title",
+        "tier",
+        "cohort",
+        "era",
+        "generationVersion",
+        "seed"
+      ],
+      "properties": {
+        "tokenId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6000
+        },
+        "serial": {
+          "type": "string"
+        },
+        "canonicalName": {
+          "type": "string",
+          "minLength": 3
+        },
+        "title": {
+          "type": "string",
+          "minLength": 3
+        },
+        "epithet": {
+          "type": "string"
+        },
+        "tier": {
+          "enum": [
+            "LEGENDARY",
+            "EPIC",
+            "RARE"
+          ]
+        },
+        "cohort": {
+          "enum": [
+            "GENESIS",
+            "EVOLVED",
+            "ASCENDED"
+          ]
+        },
+        "era": {
+          "enum": [
+            "PRIMORDIAL_ORIGIN",
+            "EVOLVED_ORIGIN",
+            "ASCENDED_ORIGIN"
+          ]
+        },
+        "generationVersion": {
+          "type": "string"
+        },
+        "seed": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "classification": {
+      "type": "object",
+      "required": [
+        "archetype",
+        "temperament",
+        "presence",
+        "combatRole",
+        "domain"
+      ],
+      "additionalProperties": true
+    },
+
+    "anatomy": {
+      "type": "object",
+      "required": [
+        "bodyStructure",
+        "headStyle",
+        "hornStyle",
+        "eyeType",
+        "wingStyle",
+        "tailStyle",
+        "limbStyle",
+        "silhouetteProfile"
+      ],
+      "additionalProperties": true
+    },
+
+    "materials": {
+      "type": "object",
+      "required": [
+        "primaryMaterial",
+        "secondaryMaterial",
+        "surfaceAge",
+        "damageProfile"
+      ],
+      "additionalProperties": true
+    },
+
+    "armorAndRelics": {
+      "type": "object",
+      "required": [
+        "hasArmor",
+        "hasWeapon",
+        "hasEmbeddedRelic"
+      ],
+      "additionalProperties": true
+    },
+
+    "powers": {
+      "type": "object",
+      "required": [
+        "signatureAbility",
+        "energyMode",
+        "powerExpression"
+      ],
+      "additionalProperties": true
+    },
+
+    "resonance": {
+      "type": "object",
+      "required": [
+        "resonanceVersion",
+        "resonanceId",
+        "resonanceClass",
+        "resonanceSignature",
+        "spectrum",
+        "primaryFrequency",
+        "secondaryFrequency",
+        "pulse",
+        "phaseDegrees",
+        "glyphSeed"
+      ],
+      "additionalProperties": true
+    },
+
+    "glyph": {
+      "type": "object",
+      "required": [
+        "glyphVersion",
+        "geometry",
+        "influenceAreas"
+      ],
+      "additionalProperties": true
+    },
+
+    "environment": {
+      "type": "object",
+      "required": [
+        "setting",
+        "architecture",
+        "weather",
+        "atmosphere",
+        "scale"
+      ],
+      "additionalProperties": true
+    },
+
+    "composition": {
+      "type": "object",
+      "required": [
+        "cameraAngle",
+        "framing",
+        "pose",
+        "silhouettePriority",
+        "storyBeat"
+      ],
+      "additionalProperties": true
+    },
+
+    "lighting": {
+      "type": "object",
+      "required": [
+        "keyLight",
+        "rimLight",
+        "accentLight",
+        "contrastLevel",
+        "shadowStyle"
+      ],
+      "additionalProperties": true
+    },
+
+    "detailPolicy": {
+      "type": "object",
+      "required": [
+        "macroPriority",
+        "mesoPriority",
+        "microPriority"
+      ]
+    },
+
+    "qualityTarget": {
+      "type": "object",
+      "required": [
+        "minimumScore",
+        "mustPass"
+      ],
+      "properties": {
+        "minimumScore": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "mustPass": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+
+    "akashic": {
+      "type": "object",
+      "required": [
+        "recordVersion",
+        "initialEvents"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
