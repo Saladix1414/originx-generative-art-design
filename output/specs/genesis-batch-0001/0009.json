@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:092df8783125e31c44d20809baa05c2e1973153a9b74de416ef3ef7136dd1cab",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0009-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:2fe66beaab57c62a43c435c7b6cf01d2c06254f922f708f29a4ca39437f761d8"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:0b1ccf0476e10efbc7142502f34752db7fac76e73e90ac69000b808a474ca12d",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0009-EVENT-0002",
+        "payload": {
+          "canonicalName": "Kaelzaryn Storm Reliquary",
+          "title": "Herald of the Founding Storm"
+        },
+        "previousEventHash": "sha256:092df8783125e31c44d20809baa05c2e1973153a9b74de416ef3ef7136dd1cab",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:c02fdfb77271f0475f6aad39f06fc774df73fa818e074ac4abe2ec8ea3462868",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0009-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0009",
+          "resonanceSignature": "sha256:72b9f9c9aea4f8b79fab1904a5f06f735a24aad4186ecbbd21e67754ed2769b8"
+        },
+        "previousEventHash": "sha256:0b1ccf0476e10efbc7142502f34752db7fac76e73e90ac69000b808a474ca12d",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:b01f1835d0de4ec70564743a2006359bc23f39907513a05b37faad421f707744",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0009-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:f4f2485880ec52fc19d23decf6f69a976d6477fdcd200809c8a8f3ae843dda70",
+          "svgHash": "sha256:2f14265569bcd768f34ed3bd3e44f6b60420968a7b37dd5f724f7169de149166"
+        },
+        "previousEventHash": "sha256:c02fdfb77271f0475f6aad39f06fc774df73fa818e074ac4abe2ec8ea3462868",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:b01f1835d0de4ec70564743a2006359bc23f39907513a05b37faad421f707744",
+    "tamperEvident": true,
+    "tokenId": 9
   },
   "anatomy": {
     "bodyStructure": "fortress-backed",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "WAR_SIGIL_OCTAGON",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 2,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 3,
+      "rotationDegrees": 13,
+      "spokes": 6
+    },
+    "glyphSeed": 2828641449974094336,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:f4f2485880ec52fc19d23decf6f69a976d6477fdcd200809c8a8f3ae843dda70",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(13.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(73.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(133.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(193.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(253.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(313.000 128 128)\"/></svg>",
+    "svgHash": "sha256:2f14265569bcd768f34ed3bd3e44f6b60420968a7b37dd5f724f7169de149166",
+    "tokenId": 9,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "Herald of the Founding Storm",
     "tokenId": 9
   },
-  "identityHash": "472cf2a207c4fec4df4551d3179a7f11a1528b6e0f7abe36f633e0a3e5e4895c",
+  "identityHash": "b7da87583ccb734fcb89668edf7c347884077dc0e3a6c4342a5df880071fe456",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "cold-storm-toplight",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:303f78b070bca18fd66c1f3865e3f6a48b527b849034d6c2f40758731a44108a",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "WARLORD_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 2828641449974094336,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 13,
+    "primaryFrequency": 456,
+    "pulse": 8,
+    "resonanceClass": "TEMPEST",
+    "resonanceId": "OX-RES-GENESIS-0009",
+    "resonanceSignature": "sha256:72b9f9c9aea4f8b79fab1904a5f06f735a24aad4186ecbbd21e67754ed2769b8",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 584,
+    "spectrum": [
+      "storm-blue",
+      "obsidian",
+      "restrained-crimson"
+    ]
   }
 }

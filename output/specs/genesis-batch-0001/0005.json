@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:563aea1c45655c68e52ec4499c539767545a2961c1c9e32028ab153bbfbfdbef",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0005-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:89bcc027bf2f08092b3d78b2b4c1e6888dcdb6a1fcae21363cbf70d644ffe178"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:d411bf1ab024a2e6147a422bdcdb69c0956d6ea9738edaae9c68a20a8e5f42af",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0005-EVENT-0002",
+        "payload": {
+          "canonicalName": "Drakorym the Foundation",
+          "title": "Architect of the Ancient Deep"
+        },
+        "previousEventHash": "sha256:563aea1c45655c68e52ec4499c539767545a2961c1c9e32028ab153bbfbfdbef",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:f275ecbd63275bae06998984c51810bd412a64c02a1d5d1a732e8439dfae6c0c",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0005-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0005",
+          "resonanceSignature": "sha256:867515b16dc6a32271d97d6b0e3834e8201bc705c8548ddc0b82b27b3a2c93c0"
+        },
+        "previousEventHash": "sha256:d411bf1ab024a2e6147a422bdcdb69c0956d6ea9738edaae9c68a20a8e5f42af",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:7570b23244646200a3fc38786fc47e8f66b38711178562d5984c1cfd0133ea9c",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0005-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:3b56c4d280e867b13fb1dc188e615429c9f6dea1dfa38fd8b79546787f9a8750",
+          "svgHash": "sha256:969e164a4156cafb8845a176c97cb2ba3d76d76aeeca4af23fedcff3f64cb5a3"
+        },
+        "previousEventHash": "sha256:f275ecbd63275bae06998984c51810bd412a64c02a1d5d1a732e8439dfae6c0c",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:7570b23244646200a3fc38786fc47e8f66b38711178562d5984c1cfd0133ea9c",
+    "tamperEvident": true,
+    "tokenId": 5
   },
   "anatomy": {
     "bodyStructure": "ancient-predatory",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "CRIMSON_TRIAD_BLADE",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 3,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 5,
+      "rotationDegrees": 33,
+      "spokes": 6
+    },
+    "glyphSeed": 14013362419327474190,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:3b56c4d280e867b13fb1dc188e615429c9f6dea1dfa38fd8b79546787f9a8750",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><circle cx=\"128\" cy=\"128\" r=\"104\"/><circle cx=\"128\" cy=\"128\" r=\"124\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(33.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(93.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(153.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(213.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(273.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(333.000 128 128)\"/></svg>",
+    "svgHash": "sha256:969e164a4156cafb8845a176c97cb2ba3d76d76aeeca4af23fedcff3f64cb5a3",
+    "tokenId": 5,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "Architect of the Ancient Deep",
     "tokenId": 5
   },
-  "identityHash": "2c8ac3fefa7b4e8426da0de98d25afb76f564b482339e1ab717759007dc00d48",
+  "identityHash": "d06e917d2abeac9f30500f2cdb511dc070d50b41cb578b77885e67ef9cda0365",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "eclipse-backlight",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:1c6935829e1fc44bfe43a767db198658886a07b48b46f26a7d08c318530a75da",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "EXECUTIONER_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 14013362419327474190,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 33,
+    "primaryFrequency": 592,
+    "pulse": 9,
+    "resonanceClass": "CHTHONIC",
+    "resonanceId": "OX-RES-GENESIS-0005",
+    "resonanceSignature": "sha256:867515b16dc6a32271d97d6b0e3834e8201bc705c8548ddc0b82b27b3a2c93c0",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 735,
+    "spectrum": [
+      "mineral-cyan",
+      "weathered-stone",
+      "deep-black"
+    ]
   }
 }

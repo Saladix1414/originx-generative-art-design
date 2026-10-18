@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:003289ca22f54813ff5aaaf924b2c3722088286e9f0320c81231ceb023206015",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0007-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:cf97354371885381f46bbc09d1edbd3e7c0dde2044e4e742b3b2dc974fa0349d"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:1b905b8b4aae0120ee0ca2ae7f27373b02111a7d8f29ba2dd3cfbb2f785f0c4f",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0007-EVENT-0002",
+        "payload": {
+          "canonicalName": "Zhaevor Ash Sovereign",
+          "title": "The Ash-Bound Origin"
+        },
+        "previousEventHash": "sha256:003289ca22f54813ff5aaaf924b2c3722088286e9f0320c81231ceb023206015",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:53aadef4b6cb7fa3002c9c507f84ad2c6829bac48638eeea70ce6dbd9c1cb546",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0007-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0007",
+          "resonanceSignature": "sha256:2a5ee19c4f9ead777df2bc41f61faf0cd52467d335cc922479384eebbac1542f"
+        },
+        "previousEventHash": "sha256:1b905b8b4aae0120ee0ca2ae7f27373b02111a7d8f29ba2dd3cfbb2f785f0c4f",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:04bfe92d76b7963699fc9f2cdd7f169a6975919d8cd04f27d1aca1bd8bac252a",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0007-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:f0ccb1bf4aa7f656f4ae478d3ca70558bfad1d59fc02e53ce187820eb4534503",
+          "svgHash": "sha256:ef26a88bb2f5fbebb22b5702a82205b50654cb695c3232517dcb35193455b9fe"
+        },
+        "previousEventHash": "sha256:53aadef4b6cb7fa3002c9c507f84ad2c6829bac48638eeea70ce6dbd9c1cb546",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:04bfe92d76b7963699fc9f2cdd7f169a6975919d8cd04f27d1aca1bd8bac252a",
+    "tamperEvident": true,
+    "tokenId": 7
   },
   "anatomy": {
     "bodyStructure": "monumental-serpentine",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "RUNIC_TWELVEFOLD_LATTICE",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 2,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 5,
+      "rotationDegrees": 189,
+      "spokes": 9
+    },
+    "glyphSeed": 5121516665532352397,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:f0ccb1bf4aa7f656f4ae478d3ca70558bfad1d59fc02e53ce187820eb4534503",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><circle cx=\"128\" cy=\"128\" r=\"104\"/><circle cx=\"128\" cy=\"128\" r=\"124\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(189.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(229.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(269.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(309.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(349.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(29.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(69.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(109.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(149.000 128 128)\"/></svg>",
+    "svgHash": "sha256:ef26a88bb2f5fbebb22b5702a82205b50654cb695c3232517dcb35193455b9fe",
+    "tokenId": 7,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "The Ash-Bound Origin",
     "tokenId": 7
   },
-  "identityHash": "a02d9d44aae355b91e03d2bffca857fe3a9ba9e15067bad40b3bb4d8ffc8d132",
+  "identityHash": "ffec9ee475119ff7d3024bd66e9c6946096aeff1c74d994785680b41b1b49b98",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "subsurface-mineral-glow",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:ae1d3898a9540f961b3724e3ed027f4b2901ce26b649d62226f0cdc3cff292c0",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "RUNE_SOVEREIGN_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 5121516665532352397,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 189,
+    "primaryFrequency": 321,
+    "pulse": 9,
+    "resonanceClass": "ABYSSAL",
+    "resonanceId": "OX-RES-GENESIS-0007",
+    "resonanceSignature": "sha256:2a5ee19c4f9ead777df2bc41f61faf0cd52467d335cc922479384eebbac1542f",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 612,
+    "spectrum": [
+      "restrained-crimson",
+      "basalt-grey",
+      "ash-white"
+    ]
   }
 }

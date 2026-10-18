@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:b6373b003a80975786258f87b95137b5b27f5f952ff684fddf69054bc0b1e0e4",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0008-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:91fae8aadc6c9696de3385252865d54ea4bc296f9c1512d7ceb3c209c376ce81"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:e7bbc207bd4739fbcd0c5eeb3ee6250601aa445c3b8658d2a9efaaac7190545d",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0008-EVENT-0002",
+        "payload": {
+          "canonicalName": "Tharokh Obsidian Wing",
+          "title": "Warden of the Obsidian Firmament"
+        },
+        "previousEventHash": "sha256:b6373b003a80975786258f87b95137b5b27f5f952ff684fddf69054bc0b1e0e4",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:6a87b26f519f96d40eb53c039605b84e6764766cff257601c3c54ec7240541d8",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0008-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0008",
+          "resonanceSignature": "sha256:b03c7ea2e72ac6f311169cedaa1ad2d94b35d722141e2d2cc9f0d22632d0fc45"
+        },
+        "previousEventHash": "sha256:e7bbc207bd4739fbcd0c5eeb3ee6250601aa445c3b8658d2a9efaaac7190545d",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:1075e634157fcff8ccf17289118ed9abdad590305ac078abc9737c67269793d4",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0008-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:e20f9e39a7a14db8d21f09ce36651e6a89094928dc09d4707b45d450e422019b",
+          "svgHash": "sha256:08f4cb9f5a06ff46040579cdc8d4984ce9c96bffea3b8fe416eee85862d753c5"
+        },
+        "previousEventHash": "sha256:6a87b26f519f96d40eb53c039605b84e6764766cff257601c3c54ec7240541d8",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:1075e634157fcff8ccf17289118ed9abdad590305ac078abc9737c67269793d4",
+    "tamperEvident": true,
+    "tokenId": 8
   },
   "anatomy": {
     "bodyStructure": "massive-broad-chested",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "VOID_BROKEN_CRESCENT",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 1,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 4,
+      "rotationDegrees": 241,
+      "spokes": 6
+    },
+    "glyphSeed": 827733474616777975,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:e20f9e39a7a14db8d21f09ce36651e6a89094928dc09d4707b45d450e422019b",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><circle cx=\"128\" cy=\"128\" r=\"104\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(241.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(301.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(1.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(61.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(121.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(181.000 128 128)\"/></svg>",
+    "svgHash": "sha256:08f4cb9f5a06ff46040579cdc8d4984ce9c96bffea3b8fe416eee85862d753c5",
+    "tokenId": 8,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "Warden of the Obsidian Firmament",
     "tokenId": 8
   },
-  "identityHash": "4b9d33b0d23e7ca0b64f634756fc323b2faf67d7f06641c5d0772eb30ff4f8aa",
+  "identityHash": "bcf079940840c07897a90c21ff896e1cbfe9d6bf91b19d76d9683ea3d74dfec4",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "restrained-cyan-rim",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:ac3f5a79235280d45eae7246a4020570d54a2fcd64fff48d78d7beaa387b1a4d",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "VOID_HUNTER_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 827733474616777975,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 241,
+    "primaryFrequency": 650,
+    "pulse": 5,
+    "resonanceClass": "FORGEBOUND",
+    "resonanceId": "OX-RES-GENESIS-0008",
+    "resonanceSignature": "sha256:b03c7ea2e72ac6f311169cedaa1ad2d94b35d722141e2d2cc9f0d22632d0fc45",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 359,
+    "spectrum": [
+      "cold-cyan",
+      "dark-forged-metal",
+      "ember-red"
+    ]
   }
 }

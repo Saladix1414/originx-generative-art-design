@@ -84,18 +84,11 @@ def main() -> None:
         )
 
         assert (
-            spec["akashic"]["privacy"][
-                "containsPII"
-            ]
-            is False
-        )
-
-        assert (
             spec["resonance"][
                 "bindingStatus"
             ]
             ==
-            "PENDING_CANONICAL_LORE_BINDING"
+            "CANONICAL_BOUND"
         )
 
         assert (
@@ -103,7 +96,7 @@ def main() -> None:
                 "bindingStatus"
             ]
             ==
-            "PENDING_CANONICAL_LORE_BINDING"
+            "CANONICAL_BOUND"
         )
 
         assert (
@@ -111,7 +104,74 @@ def main() -> None:
                 "bindingStatus"
             ]
             ==
-            "PENDING_CANONICAL_LORE_BINDING"
+            "CANONICAL_BOUND"
+        )
+
+        assert (
+            spec["akashic"][
+                "tokenId"
+            ]
+            ==
+            spec["identity"][
+                "tokenId"
+            ]
+        )
+
+        assert (
+            spec["akashic"][
+                "appendOnly"
+            ]
+            is True
+        )
+
+        assert (
+            spec["akashic"][
+                "tamperEvident"
+            ]
+            is True
+        )
+
+        assert (
+            isinstance(
+                spec["akashic"][
+                    "events"
+                ],
+                list,
+            )
+        )
+
+        assert (
+            spec["akashic"][
+                "headHash"
+            ].startswith(
+                "sha256:"
+            )
+        )
+
+        assert (
+            spec["loreBinding"][
+                "bindingStatus"
+            ]
+            ==
+            "CANONICAL_BOUND"
+        )
+
+        assert (
+            spec["loreBinding"][
+                "loreVersion"
+            ]
+            ==
+            "OX-GENESIS-LORE-1"
+        )
+
+        assert (
+            spec["resonance"][
+                "glyphSeed"
+            ]
+            ==
+            spec["glyph"][
+                "glyphSeed"
+            ]
         )
 
         assert (
@@ -175,7 +235,7 @@ def main() -> None:
     )
 
     print(
-        "CANONICAL_LORE_BINDING=PENDING"
+        "CANONICAL_LORE_BINDING=BOUND"
     )
 
     print(

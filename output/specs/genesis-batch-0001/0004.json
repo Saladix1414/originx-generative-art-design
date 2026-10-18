@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:dcb1011ad856fe60eb83cf3bd271b952e44dabe559b29c0cc74e07d09e33ab56",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0004-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:f6364cf2316318483f2c8eaee4007029b9393c13e5fffbbae12d9b5e4e487def"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:f34ee1a6c9aacceb5d44d29610f685c02123e1e587e4bd13b98e717e447bd8db",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0004-EVENT-0002",
+        "payload": {
+          "canonicalName": "Nytherion Basalt Crown",
+          "title": "Sovereign of the Basalt Crown"
+        },
+        "previousEventHash": "sha256:dcb1011ad856fe60eb83cf3bd271b952e44dabe559b29c0cc74e07d09e33ab56",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:f73d0c07245b982d35fee4ce2c370894e0a82920ebf7f089126bf4ebd13c27bd",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0004-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0004",
+          "resonanceSignature": "sha256:9d564d432b8d7788c65192134c66b4dc057341ac413743d677243d39ff98abf4"
+        },
+        "previousEventHash": "sha256:f34ee1a6c9aacceb5d44d29610f685c02123e1e587e4bd13b98e717e447bd8db",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:17e26ee6cc41e2a14893f3d545108cb09ff2f2c89673dbe2352572df02c96f10",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0004-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:85df3e532e4ff0e8d625e768c463023514b99daa4c70f1c11d9114f2fb75e4ce",
+          "svgHash": "sha256:2b346f1ebb79b7c329cb1f87375266db166c5937fdec3bebec5906bc4f072ef6"
+        },
+        "previousEventHash": "sha256:f73d0c07245b982d35fee4ce2c370894e0a82920ebf7f089126bf4ebd13c27bd",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:17e26ee6cc41e2a14893f3d545108cb09ff2f2c89673dbe2352572df02c96f10",
+    "tamperEvident": true,
+    "tokenId": 4
   },
   "anatomy": {
     "bodyStructure": "fortress-backed",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "MONOLITHIC_CROSS_AXIS",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 4,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 5,
+      "rotationDegrees": 89,
+      "spokes": 5
+    },
+    "glyphSeed": 11104704610129110673,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:85df3e532e4ff0e8d625e768c463023514b99daa4c70f1c11d9114f2fb75e4ce",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><circle cx=\"128\" cy=\"128\" r=\"104\"/><circle cx=\"128\" cy=\"128\" r=\"124\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(89.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(161.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(233.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(305.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(17.000 128 128)\"/></svg>",
+    "svgHash": "sha256:2b346f1ebb79b7c329cb1f87375266db166c5937fdec3bebec5906bc4f072ef6",
+    "tokenId": 4,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "Sovereign of the Basalt Crown",
     "tokenId": 4
   },
-  "identityHash": "ec97c23ba408764786b8c859d8688e83ba9cd8b4d642f7899e795233ed171b9a",
+  "identityHash": "8c91b2a7e94a7f3fccfaf08b8e03458b49eec748247f6e351fcb75128c7e4b86",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "cold-storm-toplight",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:dc86c68773b1f8e7c2d732d594a3b689169665bc4eab7f6616d086555df31156",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "TEMPLE_GUARDIAN_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 11104704610129110673,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 89,
+    "primaryFrequency": 175,
+    "pulse": 7,
+    "resonanceClass": "TEMPEST",
+    "resonanceId": "OX-RES-GENESIS-0004",
+    "resonanceSignature": "sha256:9d564d432b8d7788c65192134c66b4dc057341ac413743d677243d39ff98abf4",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 232,
+    "spectrum": [
+      "storm-blue",
+      "obsidian",
+      "restrained-crimson"
+    ]
   }
 }

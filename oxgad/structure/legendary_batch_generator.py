@@ -293,6 +293,59 @@ def resonance_payload(
     }
 
 
+def load_canonical_genesis_lore(
+    token_id: int,
+) -> dict[str, Any]:
+    path = (
+        ROOT
+        / "output"
+        / "genesis"
+        / "batch-0001"
+        / f"token-{token_id:04d}"
+        / "contracts"
+        / "lore.json"
+    )
+
+    if not path.is_file():
+        raise FileNotFoundError(
+            "Canonical Genesis lore contract "
+            f"not found: {path}"
+        )
+
+    value = json.loads(
+        path.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    if (
+        value.get("loreVersion")
+        != "OX-GENESIS-LORE-1"
+    ):
+        raise ValueError(
+            "Unexpected Genesis lore version"
+        )
+
+    if value.get("tokenId") != token_id:
+        raise ValueError(
+            "Genesis lore tokenId mismatch"
+        )
+
+    resonance = value["resonance"]
+    glyph = value["glyph"]
+    akashic = value["akashic"]
+
+    if (
+        resonance["glyphSeed"]
+        != glyph["glyphSeed"]
+    ):
+        raise ValueError(
+            "Genesis Resonance/Glyph seed mismatch"
+        )
+
+    return value
+
+
 def build_spec(
     token_id: int,
 ) -> dict[str, Any]:
@@ -307,6 +360,24 @@ def build_spec(
         build_genesis_identity(
             token_id
         )
+    )
+
+    canonical_lore = (
+        load_canonical_genesis_lore(
+            token_id
+        )
+    )
+
+    canonical_resonance = (
+        canonical_lore["resonance"]
+    )
+
+    canonical_glyph = (
+        canonical_lore["glyph"]
+    )
+
+    canonical_akashic = (
+        canonical_lore["akashic"]
     )
 
     name = canonical_identity[
@@ -552,40 +623,17 @@ def build_spec(
         # --------------------------------------------------
 
         "resonance": {
+            **canonical_resonance,
             "bindingStatus": (
-                "PENDING_CANONICAL_LORE_BINDING"
-            ),
-            "resonanceVersion": (
-                "OX-RESONANCE-PLANNING-1"
-            ),
-            "resonanceClass": (
-                ARCHETYPES[index]
-                + "_RESONANCE"
-            ),
-            "semanticNote": (
-                "Artistic planning layer only. "
-                "Canonical Genesis lore authority "
-                "must be bound separately."
+                "CANONICAL_BOUND"
             ),
         },
 
         "glyph": {
+            **canonical_glyph,
             "bindingStatus": (
-                "PENDING_CANONICAL_LORE_BINDING"
+                "CANONICAL_BOUND"
             ),
-            "glyphVersion": (
-                "OX-GLYPH-PLANNING-1"
-            ),
-            "geometry": (
-                GEOMETRIES[index]
-            ),
-            "influenceAreas": [
-                "HORN_RHYTHM",
-                "CHEST_FISSURES",
-                "WING_GEOMETRY",
-                "ENVIRONMENT_SIGILS",
-                "LIGHT_PATTERN",
-            ],
         },
 
         "environment": {
@@ -691,22 +739,29 @@ def build_spec(
         },
 
         "akashic": {
+            **canonical_akashic,
             "bindingStatus": (
-                "PENDING_CANONICAL_LORE_BINDING"
+                "CANONICAL_BOUND"
             ),
-            "recordVersion": (
-                "OX-AKASHIC-PLANNING-1"
+        },
+
+        "loreBinding": {
+            "bindingStatus": (
+                "CANONICAL_BOUND"
             ),
-            "initialEvents": [
-                "DNA_FORGED",
-                "NAME_ASSIGNED",
-                "ART_SPEC_CREATED",
-                "RENDER_PLAN_CREATED",
-            ],
-            "privacy": {
-                "publicSafe": True,
-                "containsPII": False,
-            },
+            "loreVersion": (
+                canonical_lore[
+                    "loreVersion"
+                ]
+            ),
+            "packageHash": (
+                canonical_lore[
+                    "packageHash"
+                ]
+            ),
+            "sourceAuthority": (
+                "OX-GENESIS-LORE-1"
+            ),
         },
 
         "governance": {

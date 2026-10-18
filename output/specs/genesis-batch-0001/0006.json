@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:359497772aeeea84ef371caf4e32fbd728cddb4536ec075da359554b58c0f72c",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0006-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:971eb67a5cab407c21a0b1a33b8dd280a369aaab520975723b55ee94e91389f2"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:45e6570b8c15a02b7c6bfff0cbbf0d592b18d92b7eaf24589633f68422d28180",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0006-EVENT-0002",
+        "payload": {
+          "canonicalName": "Oryxath Megalith",
+          "title": "Guardian of the Megalith Gate"
+        },
+        "previousEventHash": "sha256:359497772aeeea84ef371caf4e32fbd728cddb4536ec075da359554b58c0f72c",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:a5e977dfb4521f788b24a41f82c7e1142b4b4307586e43d15d53cb1e2e69b4b5",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0006-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0006",
+          "resonanceSignature": "sha256:18b4d023920b6b542b9ff09fa1503f4939621233654ece5cf4491fb9f825caea"
+        },
+        "previousEventHash": "sha256:45e6570b8c15a02b7c6bfff0cbbf0d592b18d92b7eaf24589633f68422d28180",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:77603c3a54369ea0c60467262bdf7d281bc0eb7ad4664ebbdc87f5c21368b3b7",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0006-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:67d48f6520c9951d4d62eefdfcfc0ff382015f280cc9244a00d0ea02a3030f26",
+          "svgHash": "sha256:859be74cad703b5fcc8dad734a702e49f93f192b2ac9a902875ad12e2488572f"
+        },
+        "previousEventHash": "sha256:a5e977dfb4521f788b24a41f82c7e1142b4b4307586e43d15d53cb1e2e69b4b5",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:77603c3a54369ea0c60467262bdf7d281bc0eb7ad4664ebbdc87f5c21368b3b7",
+    "tamperEvident": true,
+    "tokenId": 6
   },
   "anatomy": {
     "bodyStructure": "colossal-grounded",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "ABYSSAL_CONCENTRIC_RING",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 4,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 5,
+      "rotationDegrees": 182,
+      "spokes": 10
+    },
+    "glyphSeed": 12311474997821631770,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:67d48f6520c9951d4d62eefdfcfc0ff382015f280cc9244a00d0ea02a3030f26",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><circle cx=\"128\" cy=\"128\" r=\"104\"/><circle cx=\"128\" cy=\"128\" r=\"124\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(182.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(218.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(254.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(290.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(326.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(2.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(38.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(74.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(110.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(146.000 128 128)\"/></svg>",
+    "svgHash": "sha256:859be74cad703b5fcc8dad734a702e49f93f192b2ac9a902875ad12e2488572f",
+    "tokenId": 6,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "Guardian of the Megalith Gate",
     "tokenId": 6
   },
-  "identityHash": "4799f3e6a9ec12a96b2b7f22889abd19259aed233570060cee1b9af6ed5d5d42",
+  "identityHash": "9efbfbb7eda867264ed591256baa36b8083b075e036372a72d7f19ad90f92999",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "deep-crimson-forge-rim",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:8bf7de66aa1b975c2c623508db7bb2ab7eec6d2af49cb3fd283da0c42625585f",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "ABYSSAL_MONARCH_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 12311474997821631770,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 182,
+    "primaryFrequency": 421,
+    "pulse": 12,
+    "resonanceClass": "MONOLITHIC",
+    "resonanceId": "OX-RES-GENESIS-0006",
+    "resonanceSignature": "sha256:18b4d023920b6b542b9ff09fa1503f4939621233654ece5cf4491fb9f825caea",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 530,
+    "spectrum": [
+      "deep-cyan",
+      "obsidian-black",
+      "mineral-white"
+    ]
   }
 }

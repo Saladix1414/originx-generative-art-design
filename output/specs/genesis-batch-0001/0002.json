@@ -1,17 +1,64 @@
 {
   "akashic": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "initialEvents": [
-      "DNA_FORGED",
-      "NAME_ASSIGNED",
-      "ART_SPEC_CREATED",
-      "RENDER_PLAN_CREATED"
+    "akashicVersion": "OX-AKASHIC-1",
+    "appendOnly": true,
+    "bindingStatus": "CANONICAL_BOUND",
+    "events": [
+      {
+        "containsPII": false,
+        "eventHash": "sha256:cdd3af3078befa610cfbe470f8eddea3a474d7191ba38ea3930e74f56aed2b90",
+        "eventType": "DNA_FORGED",
+        "lifecycleReference": "GENESIS-0002-EVENT-0001",
+        "payload": {
+          "dnaHash": "sha256:c42be7b46c48e0d4a98e2fb806740b55455505d7b4329cc0d85862d8995d5b3a"
+        },
+        "previousEventHash": null,
+        "publicSafe": true,
+        "sequence": 1
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:599a0c8a1114f5fde5f9e7506c5d410c370783f8a657465af4c7d08cccfac98d",
+        "eventType": "NAME_ASSIGNED",
+        "lifecycleReference": "GENESIS-0002-EVENT-0002",
+        "payload": {
+          "canonicalName": "Vaeltharos Monolith",
+          "title": "Keeper of the First Monolith"
+        },
+        "previousEventHash": "sha256:cdd3af3078befa610cfbe470f8eddea3a474d7191ba38ea3930e74f56aed2b90",
+        "publicSafe": true,
+        "sequence": 2
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:56f19ec052145f1e958b5e7374ab576c656b5415cbe6eaddc3dc43c47bac1791",
+        "eventType": "RESONANCE_CREATED",
+        "lifecycleReference": "GENESIS-0002-EVENT-0003",
+        "payload": {
+          "resonanceId": "OX-RES-GENESIS-0002",
+          "resonanceSignature": "sha256:df7507485e86fe7b76a9a47b396237677e03c7700c3f197176e19737bd9705fb"
+        },
+        "previousEventHash": "sha256:599a0c8a1114f5fde5f9e7506c5d410c370783f8a657465af4c7d08cccfac98d",
+        "publicSafe": true,
+        "sequence": 3
+      },
+      {
+        "containsPII": false,
+        "eventHash": "sha256:5b0a2e96b3a0c614fbb97bcefd572c529e55346ee1b0a79699a0e39149cbd831",
+        "eventType": "RESONANCE_GLYPH_MANIFESTED",
+        "lifecycleReference": "GENESIS-0002-EVENT-0004",
+        "payload": {
+          "manifestHash": "sha256:66daedc0b939ea495f49dfeb6bf9a9cd73308103eaca40b8fb95855d9ad567f8",
+          "svgHash": "sha256:2eab4a5dc75778e4fcb63690fb0393b793337364df8ec5f59f011e6d321a3807"
+        },
+        "previousEventHash": "sha256:56f19ec052145f1e958b5e7374ab576c656b5415cbe6eaddc3dc43c47bac1791",
+        "publicSafe": true,
+        "sequence": 4
+      }
     ],
-    "privacy": {
-      "containsPII": false,
-      "publicSafe": true
-    },
-    "recordVersion": "OX-AKASHIC-PLANNING-1"
+    "headHash": "sha256:5b0a2e96b3a0c614fbb97bcefd572c529e55346ee1b0a79699a0e39149cbd831",
+    "tamperEvident": true,
+    "tokenId": 2
   },
   "anatomy": {
     "bodyStructure": "monumental-serpentine",
@@ -117,16 +164,29 @@
     "weather": "ASH_RAIN_FOG"
   },
   "glyph": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "geometry": "FORKED_STORM_HEXAGON",
-    "glyphVersion": "OX-GLYPH-PLANNING-1",
-    "influenceAreas": [
-      "HORN_RHYTHM",
-      "CHEST_FISSURES",
-      "WING_GEOMETRY",
-      "ENVIRONMENT_SIGILS",
-      "LIGHT_PATTERN"
-    ]
+    "bindingStatus": "CANONICAL_BOUND",
+    "geometry": {
+      "asymmetryIndex": 0,
+      "influenceTargets": [
+        "horn rhythm",
+        "wing geometry",
+        "energy topology",
+        "cracks",
+        "engravings",
+        "architecture",
+        "lighting patterns"
+      ],
+      "rings": 3,
+      "rotationDegrees": 53,
+      "spokes": 8
+    },
+    "glyphSeed": 6952391794509078466,
+    "glyphVersion": "OX-RESONANCE-GLYPH-1",
+    "manifestHash": "sha256:66daedc0b939ea495f49dfeb6bf9a9cd73308103eaca40b8fb95855d9ad567f8",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"128\" cy=\"128\" r=\"44\"/><circle cx=\"128\" cy=\"128\" r=\"64\"/><circle cx=\"128\" cy=\"128\" r=\"84\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(53.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(98.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(143.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(188.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(233.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(278.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(323.000 128 128)\"/><line x1=\"128\" y1=\"128\" x2=\"128\" y2=\"24\" transform=\"rotate(8.000 128 128)\"/></svg>",
+    "svgHash": "sha256:2eab4a5dc75778e4fcb63690fb0393b793337364df8ec5f59f011e6d321a3807",
+    "tokenId": 2,
+    "watermarkRequired": false
   },
   "governance": {
     "artisticLayerAuthority": "OX-DRAGON-IDENTITY-1",
@@ -152,13 +212,19 @@
     "title": "Keeper of the First Monolith",
     "tokenId": 2
   },
-  "identityHash": "5d896506b62254fb68989f66e6bc3f6f9719caa697ebe71ac9bed02b7a262a2a",
+  "identityHash": "dd2597e0e72d09ab26ec82b7be3c8487fc1394fc620a692af0fc38efe873449a",
   "lighting": {
     "accentLight": "SUBTLE_CYAN_CRIMSON",
     "contrastLevel": "HIGH_CINEMATIC",
     "keyLight": "subsurface-mineral-glow",
     "rimLight": "CONTROLLED_RESONANCE",
     "shadowStyle": "DEEP_HEAVY"
+  },
+  "loreBinding": {
+    "bindingStatus": "CANONICAL_BOUND",
+    "loreVersion": "OX-GENESIS-LORE-1",
+    "packageHash": "sha256:a04864e7e378c96ccac7c8c0f65d4693b2e7851415baf4b2f51845ff08668aba",
+    "sourceAuthority": "OX-GENESIS-LORE-1"
   },
   "materials": {
     "augmentation": "ancient-proto-technology",
@@ -197,9 +263,21 @@
     ]
   },
   "resonance": {
-    "bindingStatus": "PENDING_CANONICAL_LORE_BINDING",
-    "resonanceClass": "STORM_TYRANT_RESONANCE",
-    "resonanceVersion": "OX-RESONANCE-PLANNING-1",
-    "semanticNote": "Artistic planning layer only. Canonical Genesis lore authority must be bound separately."
+    "bindingStatus": "CANONICAL_BOUND",
+    "glyphSeed": 6952391794509078466,
+    "interpretation": "Deterministic artistic and mathematical parameters; not a claim of spiritual, physical, or scientific energy.",
+    "phaseDegrees": 53,
+    "primaryFrequency": 333,
+    "pulse": 3,
+    "resonanceClass": "ABYSSAL",
+    "resonanceId": "OX-RES-GENESIS-0002",
+    "resonanceSignature": "sha256:df7507485e86fe7b76a9a47b396237677e03c7700c3f197176e19737bd9705fb",
+    "resonanceVersion": "OX-RESONANCE-1",
+    "secondaryFrequency": 136,
+    "spectrum": [
+      "restrained-crimson",
+      "basalt-grey",
+      "ash-white"
+    ]
   }
 }
