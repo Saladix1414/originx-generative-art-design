@@ -1,0 +1,60 @@
+{
+  "manifestVersion": "OX-LOCAL-MODEL-ARTIFACT-MANIFEST-1",
+  "modelId": "OX-MODEL-002",
+  "variant": "I32_PRESERVE_F16_GGUF",
+  "state": "LOCAL_DIAGNOSTIC_ACCEPTED",
+  "purpose": "LOCAL_ORIGINX_IMAGE_GENERATION",
+  "artifacts": {
+    "model": {
+      "path": "models/sd15/diagnostic/stable-diffusion-v1-5-i32-preserve-F16.gguf",
+      "expectedSha256": "7ec2996af34b67ee993f828705157e7926fefb3d099198c7404bb2a2e13e37b0",
+      "expectedSizeBytes": 2213699024,
+      "format": "GGUF",
+      "tensorPolicy": "F16_F32_WITH_I32_PRESERVED",
+      "sha256": "sha256:7ec2996af34b67ee993f828705157e7926fefb3d099198c7404bb2a2e13e37b0",
+      "sizeBytes": 2213699024,
+      "presentLocally": true,
+      "committedToGit": false
+    },
+    "vae": {
+      "path": "models/sd15/vae/sd15-official-vae-fp16.safetensors",
+      "expectedSha256": "4fbcf0ebe55a0984f5a5e00d8c4521d52359af7229bb4d81890039d2aa16dd7c",
+      "expectedSizeBytes": 167335342,
+      "format": "SAFETENSORS",
+      "sha256": "sha256:4fbcf0ebe55a0984f5a5e00d8c4521d52359af7229bb4d81890039d2aa16dd7c",
+      "sizeBytes": 167335342,
+      "presentLocally": true,
+      "committedToGit": false
+    },
+    "source": {
+      "path": "models/sd15/source/v1-5-pruned-emaonly.safetensors",
+      "expectedSha256": "6ce0161689b3853acaa03779ec93eafe75a02f4ced659bee03f50797806fa2fa",
+      "expectedSizeBytes": 4265146304,
+      "format": "SAFETENSORS",
+      "sha256": "sha256:6ce0161689b3853acaa03779ec93eafe75a02f4ced659bee03f50797806fa2fa",
+      "sizeBytes": 4265146304,
+      "presentLocally": true,
+      "committedToGit": false
+    }
+  },
+  "runtime": {
+    "sourceCommit": "792bcd344c3fa4d14143b240d5f6cbb324583b18",
+    "originalRuntimeSha256": "sha256:a57f5f195e0dea9b3d0461af92e528c7c25a6a98f0bf2edc771a2f5835252e42",
+    "conversionRuntimeSha256": "sha256:e74d065f15de99aaab6a425894e322ba4cfd1455d8930b395d4cea36e2e8bfc8",
+    "conversionPatch": "preserve GGML_TYPE_I32"
+  },
+  "storage": {
+    "binaryArtifactsCommitted": false,
+    "reason": "Model binaries exceed standard Git/GitHub limits and Git LFS is unavailable.",
+    "reconstructionRequired": true
+  },
+  "governance": {
+    "localDiagnosticRenderingAllowed": true,
+    "automaticCanonicalizationAllowed": false,
+    "automaticProductionPromotionAllowed": false,
+    "mintingAllowed": false,
+    "pushExecuted": false
+  },
+  "recordedAt": "2026-10-19T00:10:13.964675+00:00",
+  "manifestHash": "sha256:c3969aac763a0b8c923457d5efb41fb39e2042f4dfc74b009a4e21b8202d4e03"
+}

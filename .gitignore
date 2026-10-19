@@ -22,3 +22,4 @@ output/canonical/*
 .phase-reports/
 .venv-phase*/
 *.egg-info/
+.venv*/
