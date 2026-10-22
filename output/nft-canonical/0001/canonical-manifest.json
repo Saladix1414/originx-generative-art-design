@@ -1,0 +1,27 @@
+{
+  "authority": {
+    "artCanonical": true,
+    "metadataPublished": false,
+    "mintAuthorized": false,
+    "minted": false
+  },
+  "canonicalName": "Azhurak Primordialis",
+  "collectionTier": "RARE",
+  "collectionWave": 1,
+  "currentAkashicHeadHash": "sha256:51169025ac3f5c1f03c10cde285541cc7a08586ba1151770d06a3dda8f6c3569",
+  "dnaHash": "sha256:c775e62b4bdd2feee5c587f4c8cd227a7d374b7121937194a9cf902d7efafe53",
+  "economicProfile": {
+    "primaryPriceUsdt": "50.00",
+    "reserveContributionBps": 2500,
+    "tier": "RARE",
+    "wave": 1
+  },
+  "foundingSerial": 1,
+  "imageSha256": "sha256:cbdda8994a57ee0300a32d235c87f735c4e8a7985c28ef440d63aebafc1f653f",
+  "initialAkashicHeadHash": "sha256:a777443cc20bf89190696b741546287d50f2b6c36617b3390bb80865d4676059",
+  "lorePackageHash": "sha256:cf7a12bb2459267d4a30f632c182cd10e7b178dc094ed43b0444df667da1d693",
+  "manifestHash": "sha256:407407cb0e08a237a9fe48dfe50ea449bdee7522f6293b69042ee6e2db81f690",
+  "manifestVersion": "OX-NFT-CANONICAL-MANIFEST-1",
+  "metadataSha256": "sha256:fbe4f7ad689b4c9b267fdddb14a5a1f9472317b75de06b588bc26c823ee5296f",
+  "tokenId": 1
+}

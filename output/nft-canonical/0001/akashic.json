@@ -1,0 +1,121 @@
+{
+  "akashicVersion": "OX-AKASHIC-2",
+  "appendOnly": true,
+  "events": [
+    {
+      "containsPII": false,
+      "eventHash": "sha256:0e198792814364d08daadae06cf3439b457bc39ef16b593dd143faf6fa516544",
+      "eventType": "DNA_FORGED",
+      "lifecycleReference": "GENESIS-0001-EVENT-0001",
+      "payload": {
+        "dnaHash": "sha256:c775e62b4bdd2feee5c587f4c8cd227a7d374b7121937194a9cf902d7efafe53"
+      },
+      "previousEventHash": null,
+      "publicSafe": true,
+      "sequence": 1
+    },
+    {
+      "containsPII": false,
+      "eventHash": "sha256:5a3f97f03962e074c23629fa99fee7f4ab302231649b92b046822ff112c5e7f3",
+      "eventType": "NAME_ASSIGNED",
+      "lifecycleReference": "GENESIS-0001-EVENT-0002",
+      "payload": {
+        "canonicalName": "Azhurak Primordialis",
+        "title": "The Primordial Witness"
+      },
+      "previousEventHash": "sha256:0e198792814364d08daadae06cf3439b457bc39ef16b593dd143faf6fa516544",
+      "publicSafe": true,
+      "sequence": 2
+    },
+    {
+      "containsPII": false,
+      "eventHash": "sha256:32b000e1d7e4b23e29cd679f1f47c4846bd777df40d106c389f0b76b19f09707",
+      "eventType": "RESONANCE_CREATED",
+      "lifecycleReference": "GENESIS-0001-EVENT-0003",
+      "payload": {
+        "resonanceId": "OX-RES-GENESIS-0001",
+        "resonanceSignature": "sha256:66f2c3015b51ec76657902ca5f03d6fa1a34662d874c98bb5dc4f22f71b679c6"
+      },
+      "previousEventHash": "sha256:5a3f97f03962e074c23629fa99fee7f4ab302231649b92b046822ff112c5e7f3",
+      "publicSafe": true,
+      "sequence": 3
+    },
+    {
+      "containsPII": false,
+      "eventHash": "sha256:a777443cc20bf89190696b741546287d50f2b6c36617b3390bb80865d4676059",
+      "eventType": "RESONANCE_GLYPH_MANIFESTED",
+      "lifecycleReference": "GENESIS-0001-EVENT-0004",
+      "payload": {
+        "manifestHash": "sha256:62599fc9b92ffcb346f1d2b8d421604ec5898dc3a82e1a155460c611bf0cef2b",
+        "svgHash": "sha256:0a98e7baa09b6d4a3592921fbf91cb7df85cd0185537cb6dcb6b4804bd361131"
+      },
+      "previousEventHash": "sha256:32b000e1d7e4b23e29cd679f1f47c4846bd777df40d106c389f0b76b19f09707",
+      "publicSafe": true,
+      "sequence": 4
+    },
+    {
+      "containsPII": false,
+      "eventHash": "sha256:c4984b77a8a076a4b4495be73c7b72ab148cd2e7f914564b2e1c4abd34a67c97",
+      "eventType": "ART_CANONICALIZED",
+      "lifecycleReference": "FOUNDING-0001-EVENT-0005",
+      "payload": {
+        "artFamily": "NEON_ABSTRACT_DRAGON",
+        "canonicalName": "Azhurak Primordialis",
+        "height": 512,
+        "imageSha256": "sha256:cbdda8994a57ee0300a32d235c87f735c4e8a7985c28ef440d63aebafc1f653f",
+        "mediaType": "image/png",
+        "width": 512
+      },
+      "previousEventHash": "sha256:a777443cc20bf89190696b741546287d50f2b6c36617b3390bb80865d4676059",
+      "publicSafe": true,
+      "sequence": 5
+    },
+    {
+      "containsPII": false,
+      "eventHash": "sha256:4d6cc76c858686c8956fdd7664338e86dfa35ad0413187864c68c0c99b5cb01d",
+      "eventType": "COLLECTION_TIER_ASSIGNED",
+      "lifecycleReference": "FOUNDING-0001-EVENT-0006",
+      "payload": {
+        "collectionTier": "RARE",
+        "collectionWave": 1,
+        "foundingSerial": 1,
+        "serialEnd": 1000,
+        "serialStart": 1,
+        "tokenId": 1
+      },
+      "previousEventHash": "sha256:c4984b77a8a076a4b4495be73c7b72ab148cd2e7f914564b2e1c4abd34a67c97",
+      "publicSafe": true,
+      "sequence": 6
+    },
+    {
+      "containsPII": false,
+      "eventHash": "sha256:51169025ac3f5c1f03c10cde285541cc7a08586ba1151770d06a3dda8f6c3569",
+      "eventType": "ECONOMIC_PROFILE_BOUND",
+      "lifecycleReference": "FOUNDING-0001-EVENT-0007",
+      "payload": {
+        "currentTierWaterfall": {
+          "EPIC": 0,
+          "GENESIS": 0,
+          "RARE": 100
+        },
+        "economicModelVersion": "OX-FOUNDING-ECONOMICS-1",
+        "marketPriceGuaranteed": false,
+        "primaryPrice": {
+          "amount": "50.00",
+          "asset": "USDT"
+        },
+        "reserveContributionBps": 2500,
+        "reserveContributionPercent": 25,
+        "waterfallVersion": "OX-FOUNDING-WATERFALL-1"
+      },
+      "previousEventHash": "sha256:4d6cc76c858686c8956fdd7664338e86dfa35ad0413187864c68c0c99b5cb01d",
+      "publicSafe": true,
+      "sequence": 7
+    }
+  ],
+  "headHash": "sha256:51169025ac3f5c1f03c10cde285541cc7a08586ba1151770d06a3dda8f6c3569",
+  "inheritedInitialVersion": "OX-AKASHIC-1",
+  "initialHeadHash": "sha256:a777443cc20bf89190696b741546287d50f2b6c36617b3390bb80865d4676059",
+  "tamperEvident": true,
+  "tokenId": 1
+}

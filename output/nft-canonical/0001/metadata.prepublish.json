@@ -1,0 +1,111 @@
+{
+  "akashic": {
+    "eventCount": 7,
+    "headHash": "sha256:51169025ac3f5c1f03c10cde285541cc7a08586ba1151770d06a3dda8f6c3569",
+    "initialHeadHash": "sha256:a777443cc20bf89190696b741546287d50f2b6c36617b3390bb80865d4676059",
+    "version": "OX-AKASHIC-2"
+  },
+  "art": {
+    "canonical": true,
+    "family": "NEON_ABSTRACT_DRAGON",
+    "height": 512,
+    "mediaType": "image/png",
+    "sha256": "sha256:cbdda8994a57ee0300a32d235c87f735c4e8a7985c28ef440d63aebafc1f653f",
+    "uri": null,
+    "width": 512
+  },
+  "attributes": [
+    {
+      "trait_type": "Founding Serial",
+      "value": "0001"
+    },
+    {
+      "trait_type": "Collection Tier",
+      "value": "RARE"
+    },
+    {
+      "trait_type": "Collection Wave",
+      "value": 1
+    },
+    {
+      "trait_type": "Art Family",
+      "value": "Neon Abstract Dragon"
+    },
+    {
+      "trait_type": "Canonical Name",
+      "value": "Azhurak Primordialis"
+    },
+    {
+      "trait_type": "Title",
+      "value": "The Primordial Witness"
+    },
+    {
+      "trait_type": "Resonance Class",
+      "value": "MONOLITHIC"
+    }
+  ],
+  "blockchain": {
+    "chainId": null,
+    "contract": null,
+    "minted": false,
+    "network": null,
+    "owner": null,
+    "transactionHash": null
+  },
+  "canonicalState": "ART_CANONICAL_METADATA_PREPUBLISH",
+  "collection": {
+    "collectionTier": "RARE",
+    "collectionWave": 1,
+    "maximumSupply": 6000,
+    "name": "OriginX Founding 6000",
+    "tierSerialRange": {
+      "end": 1000,
+      "start": 1
+    }
+  },
+  "description": "OriginX Founding #0001. Azhurak Primordialis is the first RARE Founding NFT in the OriginX Founding 6000 collection.",
+  "economics": {
+    "economicModelVersion": "OX-FOUNDING-ECONOMICS-1",
+    "primaryPrice": {
+      "amount": "50.00",
+      "asset": "USDT"
+    },
+    "reserveContributionBps": 2500,
+    "reserveContributionSettled": false
+  },
+  "foundingSerial": 1,
+  "glyph": {
+    "manifestHash": "sha256:62599fc9b92ffcb346f1d2b8d421604ec5898dc3a82e1a155460c611bf0cef2b",
+    "svgHash": "sha256:0a98e7baa09b6d4a3592921fbf91cb7df85cd0185537cb6dcb6b4804bd361131",
+    "version": "OX-RESONANCE-GLYPH-1",
+    "watermarkRequired": false
+  },
+  "identity": {
+    "dnaHash": "sha256:c775e62b4bdd2feee5c587f4c8cd227a7d374b7121937194a9cf902d7efafe53",
+    "generationVersion": "OX-GENESIS-GENERATION-1",
+    "legacyGeneratorClassification": {
+      "cohort": "GENESIS",
+      "era": "PRIMORDIAL ORIGIN",
+      "tier": "LEGENDARY"
+    },
+    "seedHash": "sha256:c584b8f1432b827c3ce9b2e0b802c87a3cc67278465ffcb5cf27294d7d4233b5"
+  },
+  "metadataVersion": "OX-NFT-METADATA-1",
+  "name": "OriginX Founding #0001 — Azhurak Primordialis",
+  "resonance": {
+    "resonanceClass": "MONOLITHIC",
+    "resonanceId": "OX-RES-GENESIS-0001",
+    "resonanceSignature": "sha256:66f2c3015b51ec76657902ca5f03d6fa1a34662d874c98bb5dc4f22f71b679c6",
+    "spectrum": [
+      "deep-cyan",
+      "obsidian-black",
+      "mineral-white"
+    ]
+  },
+  "storage": {
+    "imageImmutable": false,
+    "metadataImmutable": false
+  },
+  "title": "The Primordial Witness",
+  "tokenId": 1
+}
